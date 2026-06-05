@@ -1,0 +1,2536 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#faf7f5">
+<title>学中文 · Studiare cinese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e7e5e4}
+*{margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;line-height:1.5;font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+body{line-height:inherit}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}
+ol,ul{list-style:none}
+button{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;background:transparent;cursor:pointer;-webkit-appearance:button}
+input,textarea,select{font-family:inherit;font-size:100%;line-height:inherit;color:inherit}
+svg{display:inline-block;vertical-align:middle}
+img,svg{flex-shrink:0}
+:focus{outline:none}
+.absolute{position:absolute}
+.active\:scale-90:active{transform:scale(0.9)}
+.active\:scale-95:active{transform:scale(0.95)}
+.active\:scale-\[0\.98\]:active{transform:scale(0.98)}
+.backdrop-blur{-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.bg-amber-50{background-color:#fffbeb}
+.bg-amber-500{background-color:#f59e0b}
+.bg-emerald-50{background-color:#ecfdf5}
+.bg-emerald-600{background-color:#059669}
+.bg-gradient-to-r{background-image:linear-gradient(to right,var(--g-from,transparent),var(--g-to,transparent))}
+.bg-red-50{background-color:#fef2f2}
+.bg-red-700{background-color:#b91c1c}
+.bg-red-800{background-color:#991b1b}
+.bg-sky-50{background-color:#f0f9ff}
+.bg-stone-100{background-color:#f5f5f4}
+.bg-stone-200{background-color:#e7e5e4}
+.bg-stone-50{background-color:#fafaf9}
+.bg-stone-50\/90{background-color:rgba(250,250,249,0.9)}
+.bg-stone-500{background-color:#78716c}
+.bg-stone-800{background-color:#292524}
+.bg-white{background-color:#ffffff}
+.border{border-width:1px}
+.border-amber-300{border-color:#fcd34d}
+.border-b{border-bottom-width:1px}
+.border-dashed{border-style:dashed}
+.border-emerald-500{border-color:#10b981}
+.border-red-400{border-color:#f87171}
+.border-stone-100{border-color:#f5f5f4}
+.border-stone-200{border-color:#e7e5e4}
+.border-stone-300{border-color:#d6d3d1}
+.cursor-pointer{cursor:pointer}
+.duration-300{transition-duration:300ms}
+.fill-amber-400{fill:#fbbf24}
+.flex{display:flex}
+.flex-1{flex:1 1 0%}
+.flex-col{flex-direction:column}
+.flex-wrap{flex-wrap:wrap}
+.font-bold{font-weight:700}
+.font-medium{font-weight:500}
+.font-semibold{font-weight:600}
+.from-red-700{--g-from:#b91c1c}
+.gap-1{gap:0.25rem}
+.gap-1\.5{gap:0.375rem}
+.gap-2{gap:0.5rem}
+.gap-3{gap:0.75rem}
+.gap-4{gap:1rem}
+.gap-x-4{column-gap:1rem}
+.gap-x-5{column-gap:1.25rem}
+.gap-y-1{row-gap:0.25rem}
+.grid{display:grid}
+.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}
+.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.h-1\.5{height:0.375rem}
+.h-11{height:2.75rem}
+.h-12{height:3rem}
+.h-14{height:3.5rem}
+.h-6{height:1.5rem}
+.h-7{height:1.75rem}
+.h-full{height:100%}
+.hover\:bg-amber-100:hover{background-color:#fef3c7}
+.hover\:bg-emerald-700:hover{background-color:#047857}
+.hover\:bg-red-50:hover{background-color:#fef2f2}
+.hover\:bg-red-900:hover{background-color:#7f1d1d}
+.hover\:bg-stone-200:hover{background-color:#e7e5e4}
+.hover\:bg-stone-900:hover{background-color:#1c1917}
+.hover\:border-red-300:hover{border-color:#fca5a5}
+.hover\:shadow-md:hover{box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1)}
+.hover\:text-red-700:hover{color:#b91c1c}
+.hover\:text-stone-800:hover{color:#292524}
+.inline{display:inline}
+.inline-flex{display:inline-flex}
+.italic{font-style:italic}
+.items-baseline{align-items:baseline}
+.items-center{align-items:center}
+.items-end{align-items:flex-end}
+.items-start{align-items:flex-start}
+.justify-between{justify-content:space-between}
+.justify-center{justify-content:center}
+.last\:border-0:last-child{border-width:0px}
+.leading-relaxed{line-height:1.625}
+.leading-tight{line-height:1.25}
+.left-4{left:1rem}
+.max-w-3xl{max-width:48rem}
+.max-w-md{max-width:28rem}
+.max-w-xl{max-width:36rem}
+.mb-1{margin-bottom:0.25rem}
+.mb-2{margin-bottom:0.5rem}
+.mb-3{margin-bottom:0.75rem}
+.mb-4{margin-bottom:1rem}
+.mb-5{margin-bottom:1.25rem}
+.mb-6{margin-bottom:1.5rem}
+.min-h-\[18rem\]{min-height:18rem}
+.min-h-\[8rem\]{min-height:8rem}
+.min-h-screen{min-height:100vh}
+.min-w-0{min-width:0}
+.mt-0\.5{margin-top:0.125rem}
+.mt-1{margin-top:0.25rem}
+.mt-2{margin-top:0.5rem}
+.mt-3{margin-top:0.75rem}
+.mt-4{margin-top:1rem}
+.mt-5{margin-top:1.25rem}
+.mt-6{margin-top:1.5rem}
+.mx-auto{margin-left:auto;margin-right:auto}
+.my-4{margin-top:1rem;margin-bottom:1rem}
+.overflow-hidden{overflow:hidden}
+.overflow-x-auto{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.p-1\.5{padding:0.375rem}
+.p-10{padding:2.5rem}
+.p-2{padding:0.5rem}
+.p-3{padding:0.75rem}
+.p-5{padding:1.25rem}
+.p-6{padding:1.5rem}
+.p-8{padding:2rem}
+.pb-2{padding-bottom:0.5rem}
+.pb-20{padding-bottom:5rem}
+.pb-8{padding-bottom:2rem}
+.px-3{padding-left:0.75rem;padding-right:0.75rem}
+.px-4{padding-left:1rem;padding-right:1rem}
+.px-5{padding-left:1.25rem;padding-right:1.25rem}
+.px-6{padding-left:1.5rem;padding-right:1.5rem}
+.py-1{padding-top:0.25rem;padding-bottom:0.25rem}
+.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}
+.py-2{padding-top:0.5rem;padding-bottom:0.5rem}
+.py-3{padding-top:0.75rem;padding-bottom:0.75rem}
+.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}
+.py-4{padding-top:1rem;padding-bottom:1rem}
+.py-6{padding-top:1.5rem;padding-bottom:1.5rem}
+.relative{position:relative}
+.right-4{right:1rem}
+.rounded-2xl{border-radius:1rem}
+.rounded-3xl{border-radius:1.5rem}
+.rounded-full{border-radius:9999px}
+.rounded-lg{border-radius:0.5rem}
+.rounded-xl{border-radius:0.75rem}
+.select-none{-webkit-user-select:none;user-select:none}
+.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.1)}
+.shadow-inner{box-shadow:inset 0 2px 4px 0 rgba(0,0,0,.05)}
+.shadow-lg{box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1)}
+.shadow-md{box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1)}
+.shadow-sm{box-shadow:0 1px 2px 0 rgba(0,0,0,.05)}
+.shadow-xl{box-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1)}
+.shrink-0{flex-shrink:0}
+.space-y-2>*+*{margin-top:0.5rem}
+.space-y-3>*+*{margin-top:0.75rem}
+.space-y-4>*+*{margin-top:1rem}
+.sticky{position:sticky}
+.text-2xl{font-size:1.5rem;line-height:2rem}
+.text-3xl{font-size:1.875rem;line-height:2.25rem}
+.text-4xl{font-size:2.25rem;line-height:2.5rem}
+.text-5xl{font-size:3rem;line-height:1}
+.text-6xl{font-size:3.75rem;line-height:1}
+.text-\[11px\]{font-size:11px}
+.text-amber-400{color:#fbbf24}
+.text-amber-600{color:#d97706}
+.text-amber-700{color:#b45309}
+.text-amber-800{color:#92400e}
+.text-center{text-align:center}
+.text-emerald-600{color:#059669}
+.text-emerald-800{color:#065f46}
+.text-left{text-align:left}
+.text-lg{font-size:1.125rem;line-height:1.75rem}
+.text-red-500{color:#ef4444}
+.text-red-700{color:#b91c1c}
+.text-red-800{color:#991b1b}
+.text-sky-800{color:#075985}
+.text-sm{font-size:0.875rem;line-height:1.25rem}
+.text-stone-300{color:#d6d3d1}
+.text-stone-400{color:#a8a29e}
+.text-stone-500{color:#78716c}
+.text-stone-600{color:#57534e}
+.text-stone-700{color:#44403c}
+.text-stone-800{color:#292524}
+.text-stone-900{color:#1c1917}
+.text-white{color:#ffffff}
+.text-xl{font-size:1.25rem;line-height:1.75rem}
+.text-xs{font-size:0.75rem;line-height:1rem}
+.to-amber-500{--g-to:#f59e0b}
+.top-0{top:0px}
+.top-4{top:1rem}
+.tracking-wide{letter-spacing:.025em}
+.tracking-widest{letter-spacing:.1em}
+.transition{transition-property:color,background-color,border-color,fill,stroke,opacity,box-shadow,transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
+.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
+.uppercase{text-transform:uppercase}
+.w-11{width:2.75rem}
+.w-12{width:3rem}
+.w-14{width:3.5rem}
+.w-24{width:6rem}
+.w-6{width:1.5rem}
+.w-7{width:1.75rem}
+.w-full{width:100%}
+.z-20{z-index:20}
+.shadow-emerald-700\/20{box-shadow:0 10px 22px -6px rgba(4,120,87,0.2)}
+.shadow-red-900\/20{box-shadow:0 10px 22px -6px rgba(127,29,29,0.2)}
+.shadow-stone-300\/30{box-shadow:0 10px 22px -6px rgba(214,211,209,0.3)}
+.shadow-stone-300\/40{box-shadow:0 10px 22px -6px rgba(214,211,209,0.4)}
+@media (min-width:640px){
+.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+
+
+body{background:#faf7f5}
+#root{min-height:100vh}
+.app-loading{display:flex;min-height:100vh;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:#9a3412;font-family:'Fraunces',Georgia,serif}
+.app-loading .big{font-family:'Noto Serif SC',serif;font-size:40px}
+.app-loading .sm{font-size:15px;color:#a8a29e;letter-spacing:.05em}
+
+</style>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+<div id="root">
+  <div class="app-loading">
+    <div class="big">学中文</div>
+    <div class="sm">caricamento…</div>
+  </div>
+</div>
+<script>
+"use strict";
+const { useState, useMemo, useEffect, useRef } = React;
+function LIcon(props) {
+    const o = props || {};
+    const name = o.name;
+    const size = o.size === undefined ? 24 : o.size;
+    const className = o.className;
+    const style = o.style;
+    const strokeWidth = o.strokeWidth === undefined ? 2 : o.strokeWidth;
+    const L = window.lucide || {};
+    const aliases = { CheckCircle2: ["CircleCheckBig", "CheckCircle"], Home: ["House"], Trash2: ["Trash"] };
+    const tryNames = [name].concat(aliases[name] || []);
+    let node = null;
+    for (let i = 0; i < tryNames.length; i++) {
+        const n = tryNames[i];
+        const c = L[n] || (L.icons && L.icons[n]);
+        if (Array.isArray(c)) {
+            node = c;
+            break;
+        }
+    }
+    if (!node)
+        return null;
+    return (React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: size, height: size, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: strokeWidth, strokeLinecap: "round", strokeLinejoin: "round", className: className, style: style }, node.map((ch, i) => React.createElement(ch[0], Object.assign({ key: i }, ch[1] || {})))));
+}
+const BookOpen = (p) => React.createElement(LIcon, { name: "BookOpen", ...p });
+const GraduationCap = (p) => React.createElement(LIcon, { name: "GraduationCap", ...p });
+const MessageSquare = (p) => React.createElement(LIcon, { name: "MessageSquare", ...p });
+const Users = (p) => React.createElement(LIcon, { name: "Users", ...p });
+const Hash = (p) => React.createElement(LIcon, { name: "Hash", ...p });
+const Palette = (p) => React.createElement(LIcon, { name: "Palette", ...p });
+const Sparkles = (p) => React.createElement(LIcon, { name: "Sparkles", ...p });
+const ScrollText = (p) => React.createElement(LIcon, { name: "ScrollText", ...p });
+const Languages = (p) => React.createElement(LIcon, { name: "Languages", ...p });
+const Check = (p) => React.createElement(LIcon, { name: "Check", ...p });
+const X = (p) => React.createElement(LIcon, { name: "X", ...p });
+const RotateCcw = (p) => React.createElement(LIcon, { name: "RotateCcw", ...p });
+const Shuffle = (p) => React.createElement(LIcon, { name: "Shuffle", ...p });
+const ArrowRightLeft = (p) => React.createElement(LIcon, { name: "ArrowRightLeft", ...p });
+const ChevronRight = (p) => React.createElement(LIcon, { name: "ChevronRight", ...p });
+const Lightbulb = (p) => React.createElement(LIcon, { name: "Lightbulb", ...p });
+const Volume2 = (p) => React.createElement(LIcon, { name: "Volume2", ...p });
+const Utensils = (p) => React.createElement(LIcon, { name: "Utensils", ...p });
+const Calendar = (p) => React.createElement(LIcon, { name: "Calendar", ...p });
+const Compass = (p) => React.createElement(LIcon, { name: "Compass", ...p });
+const Star = (p) => React.createElement(LIcon, { name: "Star", ...p });
+const Trash2 = (p) => React.createElement(LIcon, { name: "Trash2", ...p });
+const CheckCircle2 = (p) => React.createElement(LIcon, { name: "CheckCircle2", ...p });
+const Heart = (p) => React.createElement(LIcon, { name: "Heart", ...p });
+const PersonStanding = (p) => React.createElement(LIcon, { name: "PersonStanding", ...p });
+const Home = (p) => React.createElement(LIcon, { name: "Home", ...p });
+const PawPrint = (p) => React.createElement(LIcon, { name: "PawPrint", ...p });
+const Church = (p) => React.createElement(LIcon, { name: "Church", ...p });
+const Globe = (p) => React.createElement(LIcon, { name: "Globe", ...p });
+const BookMarked = (p) => React.createElement(LIcon, { name: "BookMarked", ...p });
+const Library = (p) => React.createElement(LIcon, { name: "Library", ...p });
+const Quote = (p) => React.createElement(LIcon, { name: "Quote", ...p });
+const BASE = [
+    { it: "adesso", cn: "现在", py: "xiànzài" },
+    { it: "allora", cn: "当时", py: "dāngshí" },
+    { it: "altro/a", cn: "别的", py: "biéde" },
+    { it: "amare", cn: "爱", py: "ài" },
+    { it: "amico/a", cn: "朋友", py: "péngyou" },
+    { it: "anche", cn: "也", py: "yě" },
+    { it: "ancora", cn: "还", py: "hái" },
+    { it: "andare", cn: "去", py: "qù" },
+    { it: "arrivederci", cn: "再见", py: "zàijiàn" },
+    { it: "avere", cn: "有", py: "yǒu" },
+    { it: "buono", cn: "好", py: "hǎo" },
+    { it: "chi", cn: "谁", py: "shuí" },
+    { it: "ciao", cn: "你好", py: "nǐ hǎo" },
+    { it: "come", cn: "怎么", py: "zěnme" },
+    { it: "con", cn: "与", py: "yǔ" },
+    { it: "conoscere", cn: "认识", py: "rènshi" },
+    { it: "cosa", cn: "什么", py: "shénme" },
+    { it: "cosa (oggetto)", cn: "东西", py: "dōngxi" },
+    { it: "così", cn: "这样", py: "zhèyàng" },
+    { it: "da", cn: "从", py: "cóng" },
+    { it: "dare", cn: "给", py: "gěi" },
+    { it: "di", cn: "的", py: "de" },
+    { it: "dire", cn: "说", py: "shuō" },
+    { it: "dopo", cn: "后来", py: "hòulái" },
+    { it: "dove", cn: "哪里", py: "nǎli" },
+    { it: "e", cn: "和", py: "hé" },
+    { it: "egli", cn: "他", py: "tā" },
+    { it: "ella / lei", cn: "她", py: "tā" },
+    { it: "essere", cn: "是", py: "shì" },
+    { it: "essi", cn: "他们", py: "tāmen" },
+    { it: "fare", cn: "做", py: "zuò" },
+    { it: "felice", cn: "高兴", py: "gāoxìng" },
+    { it: "fuori", cn: "外面", py: "wàimian" },
+    { it: "grande", cn: "大", py: "dà" },
+    { it: "grazie", cn: "谢谢", py: "xièxie" },
+    { it: "in (dentro)", cn: "在…里面", py: "zài…lǐmiàn" },
+    { it: "io", cn: "我", py: "wǒ" },
+    { it: "lì", cn: "那里", py: "nàli" },
+    { it: "loro", cn: "他们", py: "tāmen" },
+    { it: "ma", cn: "但是", py: "dànshì" },
+    { it: "mai", cn: "永远不", py: "yǒngyuǎn bù" },
+    { it: "me", cn: "我", py: "wǒ" },
+    { it: "mio/a", cn: "我的", py: "wǒde" },
+    { it: "molto (tempo)", cn: "很长时间", py: "hěn cháng shíjiān" },
+    { it: "molto / tanto", cn: "很多", py: "hěnduō" },
+    { it: "no", cn: "不 / 没有", py: "bù / méiyǒu" },
+    { it: "noi", cn: "我们", py: "wǒmen" },
+    { it: "non", cn: "不 / 没有", py: "bù / méiyǒu" },
+    { it: "nostro/a", cn: "我们的", py: "wǒmen de" },
+    { it: "nuovamente", cn: "重新", py: "chóngxīn" },
+    { it: "nuovo/a", cn: "新", py: "xīn" },
+    { it: "o", cn: "或", py: "huò" },
+    { it: "oltre", cn: "除了…以外", py: "chúle…yǐwài" },
+    { it: "oppure", cn: "或者", py: "huòzhě" },
+    { it: "pensare", cn: "想", py: "xiǎng" },
+    { it: "per", cn: "为了", py: "wèile" },
+    { it: "per favore", cn: "请问", py: "qǐngwèn" },
+    { it: "per sempre", cn: "永远", py: "yǒngyuǎn" },
+    { it: "perché", cn: "为什么", py: "wèishénme" },
+    { it: "persona/e", cn: "人", py: "rén" },
+    { it: "piacere", cn: "喜欢", py: "xǐhuan" },
+    { it: "piccolo", cn: "小", py: "xiǎo" },
+    { it: "più", cn: "更", py: "gèng" },
+    { it: "poiché", cn: "因为", py: "yīnwéi" },
+    { it: "posto", cn: "地方", py: "dìfang" },
+    { it: "potere (forza)", cn: "力量", py: "lìliang" },
+    { it: "potere (verbo)", cn: "可以 / 能", py: "kěyǐ / néng" },
+    { it: "prima / prima di", cn: "以前", py: "yǐqián" },
+    { it: "primo/a", cn: "第一", py: "dìyī" },
+    { it: "qualche", cn: "一些", py: "yìxiē" },
+    { it: "quale", cn: "那些", py: "nàxiē" },
+    { it: "quando?", cn: "什么时候", py: "shénme shíhou" },
+    { it: "quasi", cn: "差不多", py: "chàbuduō" },
+    { it: "quello/a", cn: "那 / 那个", py: "nà / nàge" },
+    { it: "questo", cn: "这 / 这个", py: "zhè / zhège" },
+    { it: "qui", cn: "这里", py: "zhèlǐ" },
+    { it: "se", cn: "如果", py: "rúguǒ" },
+    { it: "sempre", cn: "一直", py: "yìzhí" },
+    { it: "sì", cn: "是的", py: "shìde" },
+    { it: "solitudine", cn: "孤独", py: "gūdú" },
+    { it: "solo/a", cn: "只有", py: "zhǐyǒu" },
+    { it: "sopra", cn: "上", py: "shàng" },
+    { it: "sotto", cn: "下", py: "xià" },
+    { it: "spesso", cn: "常常", py: "chángcháng" },
+    { it: "stare", cn: "在", py: "zài" },
+    { it: "stesso", cn: "一样", py: "yíyàng" },
+    { it: "tale", cn: "这样", py: "zhèyàng" },
+    { it: "talvolta", cn: "有时", py: "yǒushí" },
+    { it: "tempo", cn: "时间", py: "shíjiān" },
+    { it: "trovare", cn: "找到", py: "zhǎodào" },
+    { it: "tu", cn: "你", py: "nǐ" },
+    { it: "tuo/a", cn: "你的", py: "nǐde" },
+    { it: "tutto", cn: "全部", py: "quánbù" },
+    { it: "ultimo/a", cn: "最后", py: "zuìhòu" },
+    { it: "un / uno / una", cn: "一个人", py: "yí gè rén" },
+    { it: "uno (numero)", cn: "一", py: "yī" },
+    { it: "usare", cn: "运用", py: "yùnyòng" },
+    { it: "vedere", cn: "看见", py: "kànjiàn" },
+    { it: "venire", cn: "来", py: "lái" },
+].map((w) => ({ ...w, cat: "base" }));
+const EXTRA = [
+    { it: "verdure", cn: "蔬菜", py: "shū cài", cat: "cibo" },
+    { it: "limone", cn: "柠檬", py: "níng méng", cat: "cibo" },
+    { it: "mela", cn: "苹果", py: "píng guǒ", cat: "cibo" },
+    { it: "banana", cn: "香蕉", py: "xiāng jiāo", cat: "cibo" },
+    { it: "uva", cn: "葡萄", py: "pú táo", cat: "cibo" },
+    { it: "oliva", cn: "橄榄", py: "gǎn lǎn", cat: "cibo" },
+    { it: "fragola", cn: "草莓", py: "cǎo méi", cat: "cibo" },
+    { it: "pomodoro", cn: "西红柿", py: "xī hóng shì", cat: "cibo" },
+    { it: "carota", cn: "胡萝卜", py: "hú luó bo", cat: "cibo" },
+    { it: "cipolla", cn: "洋葱", py: "yáng cōng", cat: "cibo" },
+    { it: "mais", cn: "玉米", py: "yù mǐ", cat: "cibo" },
+    { it: "grano", cn: "小麦", py: "xiǎo mài", cat: "cibo" },
+    { it: "patata", cn: "土豆", py: "tǔ dòu", cat: "cibo" },
+    { it: "riso (cotto)", cn: "米饭", py: "mǐ fàn", cat: "cibo" },
+    { it: "tè", cn: "茶", py: "chá", cat: "cibo" },
+    { it: "ieri", cn: "昨天", py: "zuó tiān", cat: "tempo" },
+    { it: "oggi", cn: "今天", py: "jīn tiān", cat: "tempo" },
+    { it: "domani", cn: "明天", py: "míng tiān", cat: "tempo" },
+    { it: "dopo / poi", cn: "以后", py: "yǐ hòu", cat: "tempo" },
+    { it: "lunedì", cn: "星期一", py: "xīngqī yī", cat: "tempo" },
+    { it: "martedì", cn: "星期二", py: "xīngqī èr", cat: "tempo" },
+    { it: "mercoledì", cn: "星期三", py: "xīngqī sān", cat: "tempo" },
+    { it: "giovedì", cn: "星期四", py: "xīngqī sì", cat: "tempo" },
+    { it: "venerdì", cn: "星期五", py: "xīngqī wǔ", cat: "tempo" },
+    { it: "sabato", cn: "星期六", py: "xīngqī liù", cat: "tempo" },
+    { it: "domenica", cn: "星期天", py: "xīngqī tiān", cat: "tempo" },
+    { it: "fine settimana", cn: "周末", py: "zhōu mò", cat: "tempo" },
+    { it: "giorni feriali", cn: "周中", py: "zhōu zhōng", cat: "tempo" },
+    { it: "gennaio", cn: "一月", py: "yī yuè", cat: "tempo" },
+    { it: "febbraio", cn: "二月", py: "èr yuè", cat: "tempo" },
+    { it: "marzo", cn: "三月", py: "sān yuè", cat: "tempo" },
+    { it: "aprile", cn: "四月", py: "sì yuè", cat: "tempo" },
+    { it: "maggio", cn: "五月", py: "wǔ yuè", cat: "tempo" },
+    { it: "giugno", cn: "六月", py: "liù yuè", cat: "tempo" },
+    { it: "luglio", cn: "七月", py: "qī yuè", cat: "tempo" },
+    { it: "agosto", cn: "八月", py: "bā yuè", cat: "tempo" },
+    { it: "settembre", cn: "九月", py: "jiǔ yuè", cat: "tempo" },
+    { it: "ottobre", cn: "十月", py: "shí yuè", cat: "tempo" },
+    { it: "novembre", cn: "十一月", py: "shí yī yuè", cat: "tempo" },
+    { it: "dicembre", cn: "十二月", py: "shí èr yuè", cat: "tempo" },
+    { it: "primavera", cn: "春天", py: "chūn tiān", cat: "stag" },
+    { it: "estate", cn: "夏天", py: "xià tiān", cat: "stag" },
+    { it: "autunno", cn: "秋天", py: "qiū tiān", cat: "stag" },
+    { it: "inverno", cn: "冬天", py: "dōng tiān", cat: "stag" },
+    { it: "davanti", cn: "前", py: "qián", cat: "pos" },
+    { it: "dietro", cn: "后", py: "hòu", cat: "pos" },
+    { it: "sinistra", cn: "左", py: "zuǒ", cat: "pos" },
+    { it: "destra", cn: "右", py: "yòu", cat: "pos" },
+    { it: "dentro", cn: "里", py: "lǐ", cat: "pos" },
+    { it: "centro / mezzo", cn: "中", py: "zhōng", cat: "pos" },
+    { it: "tra / spazio", cn: "间", py: "jiān", cat: "pos" },
+    { it: "fuori (esterno)", cn: "外", py: "wài", cat: "pos" },
+    { it: "alzarsi dal letto", cn: "起床", py: "qǐ chuáng", cat: "azioni" },
+    { it: "lavarsi il viso", cn: "洗脸", py: "xǐ liǎn", cat: "azioni" },
+    { it: "lavarsi i denti", cn: "刷牙", py: "shuā yá", cat: "azioni" },
+    { it: "indossare i pantaloni", cn: "穿裤子", py: "chuān kùzi", cat: "azioni" },
+    { it: "mangiare riso", cn: "吃米饭", py: "chī mǐfàn", cat: "azioni" },
+    { it: "bere tè", cn: "喝茶", py: "hē chá", cat: "azioni" },
+    { it: "scrivere una lettera", cn: "写信", py: "xiě xìn", cat: "azioni" },
+    { it: "leggere una rivista", cn: "读杂志", py: "dú zázhì", cat: "azioni" },
+    { it: "occasionalmente", cn: "偶尔", py: "ǒu ěr", cat: "azioni" },
+    { it: "velocemente", cn: "快快地", py: "kuàikuài de", cat: "azioni" },
+    { it: "lentamente", cn: "慢慢地", py: "mànmàn de", cat: "azioni" },
+    { it: "zelantemente", cn: "热心地", py: "rèxīn de", cat: "azioni" },
+    { it: "freddamente", cn: "冷淡地", py: "lěngdàn de", cat: "azioni" },
+    { it: "studiare la Bibbia", cn: "学习圣经", py: "xuéxí shèngjīng", cat: "azioni" },
+    { it: "uscire in predicazione", cn: "出去传道", py: "chūqù chuándào", cat: "azioni" },
+    { it: "pregare Dio", cn: "向上帝祷告", py: "xiàng shàngdì dǎogào", cat: "azioni" },
+    { it: "cantare cantici", cn: "唱诗歌", py: "chàng shīgē", cat: "azioni" },
+    { it: "fratello", cn: "弟兄", py: "dì xiōng", cat: "teo" },
+    { it: "sorella", cn: "姐妹", py: "jiě mèi", cat: "teo" },
+    { it: "congregazione", cn: "会众", py: "huì zhòng", cat: "teo" },
+    { it: "Sala del Regno", cn: "王国聚会所", py: "wáng guó jù huì suǒ", cat: "teo" },
+    { it: "libro", cn: "书", py: "shū", cat: "teo" },
+    { it: "Bibbia", cn: "圣经", py: "shèng jīng", cat: "teo" },
+    { it: "rivista", cn: "杂志", py: "zá zhì", cat: "teo" },
+    { it: "opuscolo", cn: "册子", py: "cè zǐ", cat: "teo" },
+    { it: "invito", cn: "邀请单", py: "yāo qǐng dān", cat: "teo" },
+    { it: "volantino", cn: "传单", py: "chuán dān", cat: "teo" },
+    { it: "podio", cn: "讲台", py: "jiǎng tái", cat: "teo" },
+    { it: "sedia", cn: "椅子", py: "yǐ zǐ", cat: "teo" },
+    { it: "microfono", cn: "麦克风", py: "mài kè fēng", cat: "teo" },
+    { it: "nonno (paterno)", cn: "爷爷", py: "yéye", cat: "fam" },
+    { it: "nonna (paterna)", cn: "奶奶", py: "nǎinai", cat: "fam" },
+    { it: "nonno (materno)", cn: "外公", py: "wàigōng", cat: "fam" },
+    { it: "nonna (materna)", cn: "外婆", py: "wàipó", cat: "fam" },
+    { it: "zio (paterno)", cn: "伯伯 / 叔叔", py: "bóbo / shūshu", cat: "fam" },
+    { it: "padre", cn: "爸爸", py: "bàba", cat: "fam" },
+    { it: "zia (moglie dello zio paterno)", cn: "婶婶", py: "shěnshen", cat: "fam" },
+    { it: "zio (materno)", cn: "舅舅", py: "jiùjiu", cat: "fam" },
+    { it: "madre", cn: "妈妈", py: "māma", cat: "fam" },
+    { it: "zia (materna)", cn: "姨妈", py: "yímā", cat: "fam" },
+    { it: "fratello maggiore", cn: "哥哥", py: "gēge", cat: "fam" },
+    { it: "sorella maggiore", cn: "姐姐", py: "jiějie", cat: "fam" },
+    { it: "fratello minore", cn: "弟弟", py: "dìdi", cat: "fam" },
+    { it: "sorella minore", cn: "妹妹", py: "mèimei", cat: "fam" },
+    { it: "cognata (moglie del fratello maggiore)", cn: "嫂子", py: "sǎozi", cat: "fam" },
+    { it: "cognato (marito della sorella maggiore)", cn: "姐夫", py: "jiěfu", cat: "fam" },
+    { it: "coniuge / sposo/a", cn: "爱人", py: "àirén", cat: "fam" },
+    { it: "cognata (moglie del fratello minore)", cn: "弟妹", py: "dìmèi", cat: "fam" },
+    { it: "cognato (marito della sorella minore)", cn: "妹夫", py: "mèifu", cat: "fam" },
+    { it: "figlio", cn: "儿子", py: "érzi", cat: "fam" },
+    { it: "figlia", cn: "女儿", py: "nǚ'ér", cat: "fam" },
+    { it: "nipote (figlio del figlio)", cn: "孙子", py: "sūnzi", cat: "fam" },
+    { it: "nipote (figlia del figlio)", cn: "孙女", py: "sūnnǚ", cat: "fam" },
+    { it: "nipote (figlio della figlia)", cn: "外孙", py: "wàisūn", cat: "fam" },
+    { it: "nipote (figlia della figlia)", cn: "外孙女", py: "wàisūnnǚ", cat: "fam" },
+    { it: "testa", cn: "头", py: "tóu", cat: "corpo" },
+    { it: "faccia", cn: "脸", py: "liǎn", cat: "corpo" },
+    { it: "orecchio", cn: "耳朵", py: "ěrduo", cat: "corpo" },
+    { it: "occhi", cn: "眼睛", py: "yǎnjing", cat: "corpo" },
+    { it: "naso", cn: "鼻子", py: "bízi", cat: "corpo" },
+    { it: "bocca", cn: "口", py: "kǒu", cat: "corpo" },
+    { it: "lingua", cn: "舌头", py: "shétou", cat: "corpo" },
+    { it: "dente", cn: "牙齿", py: "yáchǐ", cat: "corpo" },
+    { it: "gamba", cn: "腿", py: "tuǐ", cat: "corpo" },
+    { it: "capelli", cn: "头发", py: "tóufa", cat: "corpo" },
+    { it: "braccio", cn: "胳膊", py: "gēbo", cat: "corpo" },
+    { it: "mano", cn: "手", py: "shǒu", cat: "corpo" },
+    { it: "piede", cn: "脚", py: "jiǎo", cat: "corpo" },
+    { it: "camera / stanza", cn: "房间", py: "fángjiān", cat: "casa" },
+    { it: "bagno", cn: "卫生间", py: "wèishēngjiān", cat: "casa" },
+    { it: "cucina", cn: "厨房", py: "chúfáng", cat: "casa" },
+    { it: "tetto", cn: "房顶", py: "fángdǐng", cat: "casa" },
+    { it: "pavimento", cn: "地板", py: "dìbǎn", cat: "casa" },
+    { it: "finestra", cn: "窗户", py: "chuānghu", cat: "casa" },
+    { it: "porta", cn: "门", py: "mén", cat: "casa" },
+    { it: "chiave", cn: "钥匙", py: "yàoshi", cat: "casa" },
+    { it: "scale", cn: "楼梯", py: "lóutī", cat: "casa" },
+    { it: "divano", cn: "沙发", py: "shāfā", cat: "casa" },
+    { it: "tavolo", cn: "桌子", py: "zhuōzi", cat: "casa" },
+    { it: "armadio", cn: "衣柜", py: "yīguì", cat: "casa" },
+    { it: "cuscino", cn: "枕头", py: "zhěntou", cat: "casa" },
+    { it: "gatto", cn: "猫", py: "māo", cat: "animali" },
+    { it: "cane", cn: "狗", py: "gǒu", cat: "animali" },
+    { it: "orso", cn: "熊", py: "xióng", cat: "animali" },
+    { it: "elefante", cn: "大象", py: "dàxiàng", cat: "animali" },
+    { it: "leone", cn: "狮子", py: "shīzi", cat: "animali" },
+    { it: "scimmia", cn: "猴子", py: "hóuzi", cat: "animali" },
+    { it: "topo", cn: "老鼠", py: "lǎoshǔ", cat: "animali" },
+    { it: "tigre", cn: "老虎", py: "lǎohǔ", cat: "animali" },
+    { it: "serpente", cn: "蛇", py: "shé", cat: "animali" },
+    { it: "mucca", cn: "牛", py: "niú", cat: "animali" },
+    { it: "maiale", cn: "猪", py: "zhū", cat: "animali" },
+    { it: "pecora", cn: "绵羊", py: "miányáng", cat: "animali" },
+    { it: "capra", cn: "山羊", py: "shānyáng", cat: "animali" },
+    { it: "spazzare (il pavimento)", cn: "扫地", py: "sǎo dì", cat: "azioni" },
+    { it: "lavare il pavimento (mocio)", cn: "拖地", py: "tuō dì", cat: "azioni" },
+    { it: "lavare i vestiti", cn: "洗衣服", py: "xǐ yīfu", cat: "azioni" },
+    { it: "pulire il bagno (wc)", cn: "洗厕所", py: "xǐ cèsuǒ", cat: "azioni" },
+    { it: "aprire la porta", cn: "开门", py: "kāi mén", cat: "azioni" },
+    { it: "chiudere la finestra", cn: "关窗户", py: "guān chuānghu", cat: "azioni" },
+    { it: "bussare alla porta", cn: "敲门", py: "qiāo mén", cat: "azioni" },
+    { it: "suonare il campanello", cn: "按门铃", py: "àn ménlíng", cat: "azioni" },
+    { it: "Cina", cn: "中国", py: "zhōngguó", cat: "nazioni" },
+    { it: "Italia", cn: "意大利", py: "yìdàlì", cat: "nazioni" },
+    { it: "Francia", cn: "法国", py: "fǎguó", cat: "nazioni" },
+    { it: "Inghilterra", cn: "英国", py: "yīngguó", cat: "nazioni" },
+    { it: "Germania", cn: "德国", py: "déguó", cat: "nazioni" },
+    { it: "Grecia", cn: "希腊", py: "xīlà", cat: "nazioni" },
+    { it: "Cipro", cn: "塞浦路斯", py: "sāipǔlùsī", cat: "nazioni" },
+    { it: "America (USA)", cn: "美国", py: "měiguó", cat: "nazioni" },
+    { it: "Russia", cn: "俄罗斯", py: "éluósī", cat: "nazioni" },
+    { it: "Corea del Sud", cn: "韩国", py: "hánguó", cat: "nazioni" },
+    { it: "Giappone", cn: "日本", py: "rìběn", cat: "nazioni" },
+    { it: "Europa", cn: "欧洲", py: "ōuzhōu", cat: "nazioni" },
+    { it: "Asia", cn: "亚洲", py: "yàzhōu", cat: "nazioni" },
+    { it: "nazione / paese", cn: "国家", py: "guójiā", cat: "nazioni" },
+    { it: "cibo (in generale)", cn: "食物", py: "shíwù", cat: "cibo" },
+    { it: "carne di maiale", cn: "猪肉", py: "zhūròu", cat: "cibo" },
+    { it: "carne di pollo", cn: "鸡肉", py: "jīròu", cat: "cibo" },
+    { it: "ravioli cinesi (jiǎozi)", cn: "饺子", py: "jiǎozi", cat: "cibo" },
+    { it: "ravioli al vapore", cn: "水饺", py: "shuǐjiǎo", cat: "cibo" },
+    { it: "panini ripieni al vapore", cn: "包子", py: "bāozi", cat: "cibo" },
+    { it: "spaghetti / noodles", cn: "面条", py: "miàntiáo", cat: "cibo" },
+    { it: "ramen (spaghetti in brodo)", cn: "拉面", py: "lāmiàn", cat: "cibo" },
+    { it: "torta di riso (niángāo)", cn: "年糕", py: "niángāo", cat: "cibo" },
+    { it: "gelato", cn: "冰淇淋", py: "bīngqílín", cat: "cibo" },
+    { it: "bacchette", cn: "筷子", py: "kuàizi", cat: "cibo" },
+    { it: "caffè", cn: "咖啡", py: "kāfēi", cat: "cibo" },
+    { it: "corpo", cn: "身体", py: "shēntǐ", cat: "corpo" },
+    { it: "bello", cn: "漂亮", py: "piàoliang", cat: "agg" },
+    { it: "alto", cn: "高", py: "gāo", cat: "agg" },
+    { it: "basso (persone)", cn: "矮", py: "ǎi", cat: "agg" },
+    { it: "basso (cose)", cn: "低", py: "dī", cat: "agg" },
+    { it: "molto", cn: "多", py: "duō", cat: "agg" },
+    { it: "poco", cn: "少", py: "shǎo", cat: "agg" },
+    { it: "lontano", cn: "远", py: "yuǎn", cat: "agg" },
+    { it: "vicino", cn: "近", py: "jìn", cat: "agg" },
+    { it: "grasso", cn: "胖", py: "pàng", cat: "agg" },
+    { it: "magro", cn: "瘦", py: "shòu", cat: "agg" },
+    { it: "buono (da mangiare)", cn: "好吃", py: "hǎochī", cat: "agg" },
+    { it: "buono (da bere)", cn: "好喝", py: "hǎohē", cat: "agg" },
+    { it: "giovane", cn: "年轻", py: "niánqīng", cat: "agg" },
+    { it: "vecchio", cn: "老", py: "lǎo", cat: "agg" },
+    { it: "facile / semplice", cn: "简单", py: "jiǎndān", cat: "agg" },
+    { it: "difficile", cn: "难", py: "nán", cat: "agg" },
+    { it: "cattivo / guasto", cn: "坏", py: "huài", cat: "agg" },
+    { it: "lavoro", cn: "工作", py: "gōngzuò", cat: "varie" },
+    { it: "occupato / impegnato", cn: "忙", py: "máng", cat: "varie" },
+    { it: "studiare", cn: "学习", py: "xuéxí", cat: "varie" },
+    { it: "decidere", cn: "决定", py: "juédìng", cat: "varie" },
+    { it: "sapere / conoscere", cn: "知道", py: "zhīdào", cat: "varie" },
+    { it: "invitare", cn: "邀请", py: "yāoqǐng", cat: "varie" },
+    { it: "credere", cn: "相信", py: "xiāngxìn", cat: "varie" },
+    { it: "capire", cn: "明白", py: "míngbai", cat: "varie" },
+    { it: "dettato", cn: "听写", py: "tīngxiě", cat: "varie" },
+    { it: "musica", cn: "音乐", py: "yīnyuè", cat: "varie" },
+    { it: "sport", cn: "运动", py: "yùndòng", cat: "varie" },
+    { it: "ballare", cn: "跳舞", py: "tiàowǔ", cat: "varie" },
+    { it: "dormire", cn: "睡觉", py: "shuìjiào", cat: "varie" },
+    { it: "libreria", cn: "书店", py: "shūdiàn", cat: "varie" },
+    { it: "banca", cn: "银行", py: "yínháng", cat: "varie" },
+    { it: "dizionario", cn: "词典", py: "cídiǎn", cat: "varie" },
+    { it: "programma", cn: "节目", py: "jiémù", cat: "varie" },
+    { it: "bacio", cn: "亲吻", py: "qīnwěn", cat: "varie" },
+    { it: "sciarpa", cn: "围巾", py: "wéijīn", cat: "varie" },
+    { it: "quaderno", cn: "本子", py: "běnzi", cat: "varie" },
+    { it: "borsa", cn: "包", py: "bāo", cat: "varie" },
+    { it: "indirizzo", cn: "地址", py: "dìzhǐ", cat: "varie" },
+    { it: "WeChat", cn: "微信", py: "wēixìn", cat: "varie" },
+    { it: "recentemente", cn: "最近", py: "zuìjìn", cat: "varie" },
+    { it: "buona notizia", cn: "好消息", py: "hǎo xiāoxi", cat: "varie" },
+    { it: "cattiva notizia", cn: "坏消息", py: "huài xiāoxi", cat: "varie" },
+];
+const VOCAB = [...BASE, ...EXTRA];
+const vkey = (w) => w.cn + "|" + w.it;
+const CATS = [
+    { id: "all", label: "Tutte" },
+    { id: "base", label: "Base" },
+    { id: "fam", label: "Famiglia" },
+    { id: "corpo", label: "Corpo" },
+    { id: "casa", label: "Casa" },
+    { id: "animali", label: "Animali" },
+    { id: "nazioni", label: "Nazioni" },
+    { id: "cibo", label: "Cibo" },
+    { id: "tempo", label: "Tempo" },
+    { id: "stag", label: "Stagioni" },
+    { id: "pos", label: "Posizioni" },
+    { id: "azioni", label: "Azioni" },
+    { id: "teo", label: "Teocratici" },
+    { id: "agg", label: "Aggettivi" },
+    { id: "varie", label: "Varie" },
+];
+const PRONOUNS = [
+    { cn: "我", py: "wǒ", it: "io" },
+    { cn: "你", py: "nǐ", it: "tu" },
+    { cn: "他", py: "tā", it: "egli / lui" },
+    { cn: "我们", py: "wǒmen", it: "noi" },
+    { cn: "你们", py: "nǐmen", it: "voi" },
+    { cn: "他们", py: "tāmen", it: "essi / loro" },
+];
+const NUMBERS = [
+    { n: "0", cn: "零", py: "líng" },
+    { n: "1", cn: "一", py: "yī" },
+    { n: "2", cn: "二", py: "èr" },
+    { n: "3", cn: "三", py: "sān" },
+    { n: "4", cn: "四", py: "sì" },
+    { n: "5", cn: "五", py: "wǔ" },
+    { n: "6", cn: "六", py: "liù" },
+    { n: "7", cn: "七", py: "qī" },
+    { n: "8", cn: "八", py: "bā" },
+    { n: "9", cn: "九", py: "jiǔ" },
+    { n: "10", cn: "十", py: "shí" },
+];
+const COLORS = [
+    { cn: "红色", py: "hóng sè", it: "rosso", hex: "#D32F2F" },
+    { cn: "橙色", py: "chéng sè", it: "arancione", hex: "#F57C00" },
+    { cn: "黄色", py: "huáng sè", it: "giallo", hex: "#FBC02D" },
+    { cn: "绿色", py: "lǜ sè", it: "verde", hex: "#43A047" },
+    { cn: "蓝色", py: "lán sè", it: "blu", hex: "#1E88E5" },
+    { cn: "紫色", py: "zǐ sè", it: "viola", hex: "#8E24AA" },
+    { cn: "粉色", py: "fěn sè", it: "rosa", hex: "#EC407A" },
+    { cn: "棕色", py: "zōng sè", it: "marrone", hex: "#795548" },
+    { cn: "黑色", py: "hēi sè", it: "nero", hex: "#1A1A1A" },
+    { cn: "灰色", py: "huī sè", it: "grigio", hex: "#9E9E9E" },
+    { cn: "白色", py: "bái sè", it: "bianco", hex: "#FFFFFF" },
+];
+const COLOR_MODS = [
+    { cn: "浅", py: "qiǎn", it: "chiaro (modificatore)" },
+    { cn: "深", py: "shēn", it: "scuro (modificatore)" },
+];
+const FOOD = EXTRA.filter((w) => w.cat === "cibo");
+const SEASONS = EXTRA.filter((w) => w.cat === "stag");
+const FAMILY = EXTRA.filter((w) => w.cat === "fam");
+const BODY = EXTRA.filter((w) => w.cat === "corpo");
+const HOUSE = EXTRA.filter((w) => w.cat === "casa");
+const ANIMALS = EXTRA.filter((w) => w.cat === "animali");
+const NATIONS = EXTRA.filter((w) => w.cat === "nazioni");
+const ADJ = EXTRA.filter((w) => w.cat === "agg");
+const TIME_ADV = [
+    { cn: "前天", py: "qiántiān", it: "l'altro ieri" },
+    { cn: "昨天", py: "zuótiān", it: "ieri" },
+    { cn: "今天", py: "jīntiān", it: "oggi" },
+    { cn: "明天", py: "míngtiān", it: "domani" },
+    { cn: "后天", py: "hòutiān", it: "dopodomani" },
+    { cn: "以前", py: "yǐqián", it: "prima" },
+    { cn: "现在", py: "xiànzài", it: "adesso" },
+    { cn: "以后", py: "yǐhòu", it: "dopo / poi" },
+];
+const DAYS = [
+    { it: "Lunedì", xq: "星期一", zhou: "周一", lb: "礼拜一", py: "xīngqī yī" },
+    { it: "Martedì", xq: "星期二", zhou: "周二", lb: "礼拜二", py: "xīngqī èr" },
+    { it: "Mercoledì", xq: "星期三", zhou: "周三", lb: "礼拜三", py: "xīngqī sān" },
+    { it: "Giovedì", xq: "星期四", zhou: "周四", lb: "礼拜四", py: "xīngqī sì" },
+    { it: "Venerdì", xq: "星期五", zhou: "周五", lb: "礼拜五", py: "xīngqī wǔ" },
+    { it: "Sabato", xq: "星期六", zhou: "周六", lb: "礼拜六", py: "xīngqī liù" },
+    { it: "Domenica", xq: "星期天 / 日", zhou: "周日", lb: "礼拜天 / 日", py: "xīngqī tiān / rì" },
+];
+const MONTHS = [
+    { cn: "一月", py: "yī yuè", it: "gennaio" },
+    { cn: "二月", py: "èr yuè", it: "febbraio" },
+    { cn: "三月", py: "sān yuè", it: "marzo" },
+    { cn: "四月", py: "sì yuè", it: "aprile" },
+    { cn: "五月", py: "wǔ yuè", it: "maggio" },
+    { cn: "六月", py: "liù yuè", it: "giugno" },
+    { cn: "七月", py: "qī yuè", it: "luglio" },
+    { cn: "八月", py: "bā yuè", it: "agosto" },
+    { cn: "九月", py: "jiǔ yuè", it: "settembre" },
+    { cn: "十月", py: "shí yuè", it: "ottobre" },
+    { cn: "十一月", py: "shí yī yuè", it: "novembre" },
+    { cn: "十二月", py: "shí èr yuè", it: "dicembre" },
+];
+const POSITIONS = [
+    { cn: "上", py: "shàng", it: "sopra / su", ex: [
+            { cn: "书在桌子上。", py: "Shū zài zhuōzi shàng.", it: "Il libro è sopra il tavolo." },
+            { cn: "我们上楼去吧。", py: "Wǒmen shàng lóu qù ba.", it: "Saliamo le scale." }
+        ] },
+    { cn: "下", py: "xià", it: "sotto / giù", ex: [
+            { cn: "猫在椅子下面。", py: "Māo zài yǐzi xiàmiàn.", it: "Il gatto è sotto la sedia." },
+            { cn: "请下车。", py: "Qǐng xià chē.", it: "Per favore, scenda dal veicolo." }
+        ] },
+    { cn: "前", py: "qián", it: "davanti / prima", ex: [
+            { cn: "他的家在学校前面。", py: "Tā de jiā zài xuéxiào qiánmiàn.", it: "La sua casa è davanti alla scuola." },
+            { cn: "十年前我去了中国。", py: "Shí nián qián wǒ qùle Zhōngguó.", it: "Sono andato in Cina dieci anni fa." }
+        ] },
+    { cn: "后", py: "hòu", it: "dietro / dopo", ex: [
+            { cn: "餐厅在商店后面。", py: "Cāntīng zài shāngdiàn hòumiàn.", it: "Il ristorante è dietro il negozio." },
+            { cn: "下班后我们去看电影。", py: "Xiàbān hòu wǒmen qù kàn diànyǐng.", it: "Dopo il lavoro andiamo a vedere un film." }
+        ] },
+    { cn: "左", py: "zuǒ", it: "sinistra", ex: [
+            { cn: "请向左转。", py: "Qǐng xiàng zuǒ zhuǎn.", it: "Per favore, giri a sinistra." },
+            { cn: "他坐在我的左边。", py: "Tā zuò zài wǒ de zuǒbiān.", it: "Lui si siede alla mia sinistra." }
+        ] },
+    { cn: "右", py: "yòu", it: "destra", ex: [
+            { cn: "银行在公园的右边。", py: "Yínháng zài gōngyuán de yòubiān.", it: "La banca è alla destra del parco." },
+            { cn: "我用右手写字。", py: "Wǒ yòng yòushǒu xiězì.", it: "Scrivo con la mano destra." }
+        ] },
+    { cn: "里", py: "lǐ", it: "dentro / interno", ex: [
+            { cn: "手机在包里面。", py: "Shǒujī zài bāo lǐmiàn.", it: "Il telefono è dentro la borsa." }
+        ] },
+    { cn: "中", py: "zhōng", it: "centro / mezzo", ex: [
+            { cn: "那个公园在城市中心。", py: "Nàge gōngyuán zài chéngshì zhōngxīn.", it: "Quel parco è nel centro della città." },
+            { cn: "我在开会中。", py: "Wǒ zài kāihuì zhōng.", it: "Sono nel mezzo di una riunione." }
+        ] },
+    { cn: "间", py: "jiān", it: "tra / spazio", ex: [
+            { cn: "他坐在小明和我的中间。", py: "Tā zuò zài Xiǎomíng hé wǒ de zhōngjiān.", it: "Lui si siede tra Xiaoming e me." },
+            { cn: "这间房间很大。", py: "Zhè jiān fángjiān hěn dà.", it: "Questa stanza è molto grande." }
+        ] },
+    { cn: "外", py: "wài", it: "fuori / esterno", ex: [
+            { cn: "我们的猫在门外面。", py: "Wǒmen de māo zài mén wàimiàn.", it: "Il nostro gatto è fuori dalla porta." },
+            { cn: "你是外国人吗？", py: "Nǐ shì wàiguórén ma?", it: "Sei uno straniero?" }
+        ] },
+];
+const PHRASES_INTRO = [
+    { cn: "你好，我叫……", py: "nǐ hǎo, wǒ jiào…", it: "Ciao, mi chiamo…" },
+    { cn: "你叫什么名字？", py: "nǐ jiào shénme míngzi?", it: "Come ti chiami?" },
+    { cn: "你住在哪里？", py: "nǐ zhù zài nǎlǐ?", it: "Dove abiti?" },
+    { cn: "我很高兴认识你。", py: "wǒ hěn gāoxìng rènshi nǐ.", it: "Sono felice di conoscerti." },
+    { cn: "再见！", py: "zàijiàn!", it: "Arrivederci!" },
+];
+const PHRASES_HOWRU = [
+    { cn: "都好吗？", py: "dōu hǎo ma?", it: "Tutto bene?" },
+    { cn: "都好，谢谢，你呢？", py: "dōu hǎo, xièxie, nǐ ne?", it: "Tutto bene, grazie, e tu?" },
+    { cn: "我也好，谢谢！", py: "wǒ yě hǎo, xièxie!", it: "Anch'io bene, grazie!" },
+    { cn: "非常好！", py: "fēicháng hǎo!", it: "Molto bene!" },
+    { cn: "马马虎虎。", py: "mǎmǎ hūhū.", it: "Così così." },
+    { cn: "不好。", py: "bù hǎo.", it: "Non bene." },
+    { cn: "你现在有时间吗？", py: "nǐ xiànzài yǒu shíjiān ma?", it: "Hai tempo adesso?" },
+    { cn: "有时间。/ 没有。", py: "yǒu shíjiān / méiyǒu", it: "Ho tempo. / Non ne ho." },
+];
+const PHRASES_DOOR = [
+    { cn: "我想给你这份传单。", py: "wǒ xiǎng gěi nǐ zhè fèn chuándān.", it: "Vorrei darti questo volantino." },
+    { cn: "我想给你一张中文的邀请单。", py: "wǒ xiǎng gěi nǐ yì zhāng zhōngwén de yāoqǐngdān.", it: "Vorrei darti un invito in cinese." },
+    { cn: "你可以下来吗？", py: "nǐ kěyǐ xià lái ma?", it: "Puoi scendere?" },
+    { cn: "你可以到我这里上来吗？", py: "nǐ kěyǐ dào wǒ zhèlǐ shàng lái ma?", it: "Puoi salire da me?" },
+    { cn: "你在几楼？", py: "nǐ zài jǐ lóu?", it: "A che piano sei?" },
+    { cn: "我在四楼。", py: "wǒ zài sì lóu.", it: "Sono al quarto piano." },
+    { cn: "我们到了。", py: "wǒmen dào le.", it: "Siamo arrivati." },
+    { cn: "进来！", py: "jìn lái!", it: "Entra!" },
+    { cn: "如果你方便的话，我想回来继续谈这个话题。", py: "rúguǒ nǐ fāngbiàn de huà, wǒ xiǎng huí lái jìxù tán zhège huàtí.", it: "Se per lei va bene, vorrei tornare per continuare la conversazione." },
+];
+const INTERR_PRONOUNS = [
+    { cn: "谁", py: "shéi", it: "chi" },
+    { cn: "什么", py: "shénme", it: "che cosa / quale" },
+    { cn: "哪", py: "nǎ", it: "quale (di che paese sei?)" },
+    { cn: "哪里 / 哪儿", py: "nǎlǐ / nǎr", it: "dove" },
+    { cn: "几", py: "jǐ", it: "quanti (≤ 10)" },
+    { cn: "多少", py: "duōshǎo", it: "quanti / quanto" },
+    { cn: "为什么", py: "wèishénme", it: "perché" },
+    { cn: "怎么", py: "zěnme", it: "come / come mai" },
+    { cn: "怎么样", py: "zěnmeyàng", it: "come va" },
+    { cn: "什么时候", py: "shénme shíhou", it: "quando (dichiarativa: 的时候 de shíhou)" },
+    { cn: "是不是 / 对不对", py: "shì bú shì / duì bú duì", it: "è vero? / è giusto?" },
+    { cn: "好吗 / 行吗", py: "hǎo ma / xíng ma", it: "va bene?" },
+];
+const DAY_PARTS = [
+    { it: "Mattina", words: [{ cn: "上午", py: "shàngwǔ" }, { cn: "早上", py: "zǎoshang" }], greet: { cn: "早上好 / 早安", py: "zǎoshang hǎo / zǎo'ān", it: "Buongiorno" } },
+    { it: "Mezzogiorno", words: [{ cn: "中午", py: "zhōngwǔ" }] },
+    { it: "Pomeriggio", words: [{ cn: "下午", py: "xiàwǔ" }] },
+    { it: "Sera", words: [{ cn: "晚上", py: "wǎnshang" }], greet: { cn: "晚上好", py: "wǎnshang hǎo", it: "Buonasera" } },
+    { it: "Notte", words: [{ cn: "夜晚", py: "yèwǎn" }, { cn: "夜间", py: "yèjiān" }, { cn: "夜里", py: "yèlǐ" }], greet: { cn: "晚安", py: "wǎn'ān", it: "Buonanotte" } },
+];
+const REL_WEEK = [
+    { it: "Settimana scorsa", forms: ["上个星期", "上个礼拜", "上周"], py: "shàng ge xīngqī / lǐbài / shàng zhōu" },
+    { it: "Questa settimana", forms: ["这个星期", "这个礼拜", "这周"], py: "zhè ge xīngqī / lǐbài / zhè zhōu" },
+    { it: "Settimana prossima", forms: ["下个星期", "下个礼拜", "下周"], py: "xià ge xīngqī / lǐbài / xià zhōu" },
+];
+const REL_MONTH_YEAR = [
+    { cn: "上个月", py: "shàng ge yuè", it: "mese scorso" },
+    { cn: "这个月", py: "zhè ge yuè", it: "questo mese" },
+    { cn: "下个月", py: "xià ge yuè", it: "mese prossimo" },
+    { cn: "去年", py: "qùnián", it: "anno scorso" },
+    { cn: "今年", py: "jīnnián", it: "quest'anno" },
+    { cn: "明年", py: "míngnián", it: "anno prossimo" },
+];
+const BIG_UNITS = [
+    { cn: "百", py: "bǎi", n: "100", it: "cento" },
+    { cn: "千", py: "qiān", n: "1.000", it: "mille" },
+    { cn: "万", py: "wàn", n: "10.000", it: "diecimila" },
+];
+const APOSTLES = [
+    { it: "Pietro", cn: "彼得", py: "bǐdé" },
+    { it: "Giacomo", cn: "雅各", py: "yǎgè" },
+    { it: "Giovanni", cn: "约翰", py: "yuēhàn" },
+    { it: "Andrea", cn: "安得烈", py: "āndéliè" },
+    { it: "Filippo", cn: "腓力", py: "féilì" },
+    { it: "Tommaso", cn: "多马", py: "duōmǎ" },
+    { it: "Giuda", cn: "犹大", py: "yóudà" },
+    { it: "Matteo", cn: "马太", py: "mǎtài" },
+    { it: "Giacomo (figlio di Alfeo)", cn: "雅各", py: "yǎgè" },
+    { it: "Simone", cn: "西门", py: "xīmén" },
+    { it: "Taddeo", cn: "达太", py: "dátài" },
+    { it: "Bartolomeo (Tolomeo)", cn: "多罗买", py: "duōluómǎi" },
+];
+const CLASSIFIERS = [
+    { cn: "个", py: "gè", use: "Generico: persone e nomi comuni. Per rispetto verso le persone si usa 位 (wèi).", ex: "一个人 — una persona" },
+    { cn: "本", py: "běn", use: "Volumi, libri, riviste, opuscoli.", ex: "一本书 — un libro" },
+    { cn: "份", py: "fèn", use: "Volantini (foglio piegato in due o tre).", ex: "一份传单 — un volantino" },
+    { cn: "张", py: "zhāng", use: "Cose piane: foglio, biglietto, tavolo, letto, foto, cartina, manifesto.", ex: "五张照片 — cinque foto" },
+    { cn: "支", py: "zhī", use: "Cose a forma di bacchetta: penne, matite.", ex: "两支笔 — due penne" },
+    { cn: "把", py: "bǎ", use: "Cose che si impugnano: sedia, chiave, coltello.", ex: "一把椅子 — una sedia" },
+    { cn: "座", py: "zuò", use: "Montagne, grandi costruzioni (grattacieli), ponti, edifici storici.", ex: "一座山 — una montagna" },
+    { cn: "条", py: "tiáo", use: "Cose lunghe e strette: strade, cravatta, pesci, spaghetti, fiume.", ex: "一条路 — una strada" },
+    { cn: "辆", py: "liàng", use: "Veicoli a ruote: auto, bus, camion, tram, carro, bici.", ex: "一辆车 — un'auto" },
+    { cn: "只", py: "zhī", use: "Animali di piccola e media taglia: gatto, cane, formica, leone.", ex: "一只猫 — un gatto" },
+    { cn: "头", py: "tóu", use: "Animali di grossa taglia: elefante.", ex: "一头大象 — un elefante" },
+    { cn: "件", py: "jiàn", use: "Cosa, faccenda, impegni, affari, avvenimenti.", ex: "一件事 — una faccenda" },
+    { cn: "块", py: "kuài", use: "Cose in pezzi o tavolette: fetta di torta.", ex: "一块蛋糕 — una fetta di torta" },
+    { cn: "篇", py: "piān", use: "Articoli di rivista, racconti, testi (es. articolo della Torre di Guardia).", ex: "一篇文章 — un articolo" },
+    { cn: "节", py: "jié", use: "Versetto biblico singolo, sezione. Per più versetti si usa 段 (duàn).", ex: "5 节 — versetto 5" },
+    { cn: "首", py: "shǒu", use: "Cantico, poesia.", ex: "三首诗歌 — cantico n. 3" },
+];
+const DIALOGUE_PHONE = [
+    { who: "A", cn: "喂！?", py: "Wèi!?", it: "Pronto!?" },
+    { who: "B", cn: "你好，我是……", py: "Nǐ hǎo, wǒ shì…", it: "Ciao, sono…" },
+    { who: "A", cn: "哦，你好……", py: "Ó, nǐ hǎo…", it: "Oh, ciao…" },
+    { who: "B", cn: "你好吗？", py: "Nǐ hǎo ma?", it: "Come stai?" },
+    { who: "A", cn: "还行！", py: "Hái xíng!", it: "Insomma, abbastanza bene!" },
+    { who: "B", cn: "请问，星期五下午两点半，我可以去你家跟你一起学习吗？", py: "Qǐngwèn, xīngqīwǔ xiàwǔ liǎng diǎn bàn, wǒ kěyǐ qù nǐ jiā gēn nǐ yìqǐ xuéxí ma?", it: "Scusa, venerdì pomeriggio alle 2:30 posso venire a studiare da te?" },
+    { who: "A", cn: "星期五下午我不可以。星期六下午五点左右，好不好？", py: "Xīngqīwǔ xiàwǔ wǒ bù kěyǐ. Xīngqīliù xiàwǔ wǔ diǎn zuǒyòu, hǎo bu hǎo?", it: "Venerdì pomeriggio non posso. Sabato pomeriggio verso le 5, va bene?" },
+    { who: "B", cn: "好！星期六见！", py: "Hǎo! Xīngqīliù jiàn!", it: "Bene! A sabato!" },
+    { who: "A", cn: "星期六见！", py: "Xīngqīliù jiàn!", it: "A sabato!" },
+];
+const DIALOGUE_MEETING = [
+    { cn: "你好，今天怎么样？", py: "Nǐ hǎo, jīntiān zěnmeyàng?", it: "Ciao, come va oggi?" },
+    { cn: "你好，今天还好，谢谢！", py: "Nǐ hǎo, jīntiān hái hǎo, xièxie!", it: "Ciao, oggi va bene, grazie!" },
+    { cn: "欢迎你参加聚会。", py: "Huānyíng nǐ cānjiā jùhuì.", it: "Benvenuto all'adunanza." },
+    { cn: "谢谢。", py: "Xièxie.", it: "Grazie." },
+    { cn: "我可以跟你坐在一起。", py: "Wǒ kěyǐ gēn nǐ zuò zài yìqǐ.", it: "Posso sedermi insieme a te." },
+    { cn: "太好了，谢谢你！", py: "Tài hǎo le, xièxie nǐ!", it: "Benissimo, grazie!" },
+];
+const BIBLE_OT = [
+    { it: "Genesi", cn: "创世记", py: "Chuàngshìjì" },
+    { it: "Esodo", cn: "出埃及记", py: "Chū'āijíjì" },
+    { it: "Levitico", cn: "利未记", py: "Lìwèijì" },
+    { it: "Numeri", cn: "民数记", py: "Mínshùjì" },
+    { it: "Deuteronomio", cn: "申命记", py: "Shēnmìngjì" },
+    { it: "Giosuè", cn: "约书亚记", py: "Yuēshūyàjì" },
+    { it: "Giudici", cn: "士师记", py: "Shìshījì" },
+    { it: "Rut", cn: "路得记", py: "Lùdéjì" },
+    { it: "1 Samuele", cn: "撒母耳记上", py: "Sāmǔ'ěrjì shàng" },
+    { it: "2 Samuele", cn: "撒母耳记下", py: "Sāmǔ'ěrjì xià" },
+    { it: "1 Re", cn: "列王纪上", py: "Lièwángjì shàng" },
+    { it: "2 Re", cn: "列王纪下", py: "Lièwángjì xià" },
+    { it: "1 Cronache", cn: "历代志上", py: "Lìdàizhì shàng" },
+    { it: "2 Cronache", cn: "历代志下", py: "Lìdàizhì xià" },
+    { it: "Esdra", cn: "以斯拉记", py: "Yǐsīlājì" },
+    { it: "Neemia", cn: "尼希米记", py: "Níxīmǐjì" },
+    { it: "Ester", cn: "以斯帖记", py: "Yǐsītiějì" },
+    { it: "Giobbe", cn: "约伯记", py: "Yuēbójì" },
+    { it: "Salmi", cn: "诗篇", py: "Shīpiān" },
+    { it: "Proverbi", cn: "箴言", py: "Zhēnyán" },
+    { it: "Ecclesiaste", cn: "传道书", py: "Chuándàoshū" },
+    { it: "Cantico dei Cantici", cn: "雅歌", py: "Yǎgē" },
+    { it: "Isaia", cn: "以赛亚书", py: "Yǐsàiyàshū" },
+    { it: "Geremia", cn: "耶利米书", py: "Yēlìmǐshū" },
+    { it: "Lamentazioni", cn: "耶利米哀歌", py: "Yēlìmǐ'āigē" },
+    { it: "Ezechiele", cn: "以西结书", py: "Yǐxījiéshū" },
+    { it: "Daniele", cn: "但以理书", py: "Dànyǐlǐshū" },
+    { it: "Osea", cn: "何西阿书", py: "Héxī'āshū" },
+    { it: "Gioele", cn: "约珥书", py: "Yuē'ěrshū" },
+    { it: "Amos", cn: "阿摩司书", py: "Āmósīshū" },
+    { it: "Abdia", cn: "俄巴底亚书", py: "Ébādǐyàshū" },
+    { it: "Giona", cn: "约拿书", py: "Yuēnáshū" },
+    { it: "Michea", cn: "弥迦书", py: "Míjiāshū" },
+    { it: "Naum", cn: "那鸿书", py: "Nàhóngshū" },
+    { it: "Abacuc", cn: "哈巴谷书", py: "Hābāgǔshū" },
+    { it: "Sofonia", cn: "西番雅书", py: "Xīfānyǎshū" },
+    { it: "Aggeo", cn: "哈该书", py: "Hāgāishū" },
+    { it: "Zaccaria", cn: "撒迦利亚书", py: "Sājiālìyàshū" },
+    { it: "Malachia", cn: "玛拉基书", py: "Mǎlājīshū" },
+];
+const BIBLE_NT = [
+    { it: "Matteo", cn: "马太福音", py: "Mǎtài fúyīn" },
+    { it: "Marco", cn: "马可福音", py: "Mǎkě fúyīn" },
+    { it: "Luca", cn: "路加福音", py: "Lùjiā fúyīn" },
+    { it: "Giovanni", cn: "约翰福音", py: "Yuēhàn fúyīn" },
+    { it: "Atti", cn: "使徒行传", py: "Shǐtú xíngzhuàn" },
+    { it: "Romani", cn: "罗马书", py: "Luómǎshū" },
+    { it: "1 Corinti", cn: "哥林多前书", py: "Gēlínduō qiánshū" },
+    { it: "2 Corinti", cn: "哥林多后书", py: "Gēlínduō hòushū" },
+    { it: "Galati", cn: "加拉太书", py: "Jiālātàishū" },
+    { it: "Efesini", cn: "以弗所书", py: "Yǐfúsuǒshū" },
+    { it: "Filippesi", cn: "腓立比书", py: "Féilìbǐshū" },
+    { it: "Colossesi", cn: "歌罗西书", py: "Gēluóxīshū" },
+    { it: "1 Tessalonicesi", cn: "帖撒罗尼迦前书", py: "Tiēsāluóníjiā qiánshū" },
+    { it: "2 Tessalonicesi", cn: "帖撒罗尼迦后书", py: "Tiēsāluóníjiā hòushū" },
+    { it: "1 Timoteo", cn: "提摩太前书", py: "Tímótài qiánshū" },
+    { it: "2 Timoteo", cn: "提摩太后书", py: "Tímótài hòushū" },
+    { it: "Tito", cn: "提多书", py: "Tíduōshū" },
+    { it: "Filemone", cn: "腓利门书", py: "Féilìménshū" },
+    { it: "Ebrei", cn: "希伯来书", py: "Xībóláishū" },
+    { it: "Giacomo", cn: "雅各书", py: "Yǎgèshū" },
+    { it: "1 Pietro", cn: "彼得前书", py: "Bǐdé qiánshū" },
+    { it: "2 Pietro", cn: "彼得后书", py: "Bǐdé hòushū" },
+    { it: "1 Giovanni", cn: "约翰一书", py: "Yuēhàn yīshū" },
+    { it: "2 Giovanni", cn: "约翰二书", py: "Yuēhàn èrshū" },
+    { it: "3 Giovanni", cn: "约翰三书", py: "Yuēhàn sānshū" },
+    { it: "Giuda", cn: "犹大书", py: "Yóudàshū" },
+    { it: "Rivelazione (Apocalisse)", cn: "启示录", py: "Qǐshìlù" },
+];
+const TEO_ROLES = [
+    { it: "Anziano", cn: "长老", py: "zhǎnglǎo" },
+    { it: "Servitore di ministero", cn: "助理仆人", py: "zhùlǐ púrén" },
+    { it: "Pioniere", cn: "先驱", py: "xiānqū" },
+    { it: "Proclamatore", cn: "传道员", py: "chuándàoyuán" },
+    { it: "Studio biblico", cn: "圣经课程", py: "shèngjīng kèchéng" },
+    { it: "Adunanza per il servizio di campo", cn: "传道前聚会", py: "chuándào qián jùhuì" },
+    { it: "Discorso pubblico", cn: "公众演讲", py: "gōngzhòng yǎnjiǎng" },
+    { it: "Studio « Torre di Guardia »", cn: "守望台研究班", py: "shǒuwàngtái yánjiū bān" },
+    { it: "Commemorazione", cn: "牺牲纪念聚会", py: "xīshēng jìniàn jùhuì" },
+    { it: "Sorvegliante di circoscrizione", cn: "分区监督", py: "fēnqū jiāndū" },
+    { it: "Assemblea di circoscrizione", cn: "分区大会", py: "fēnqū dàhuì" },
+    { it: "Congresso di zona", cn: "区域大会", py: "qūyù dàhuì" },
+    { it: "Betel", cn: "伯特利", py: "bótèlì" },
+];
+const TEO_GLOSSARY = [
+    { it: "Geova", cn: "耶和华", py: "yēhéhuá" },
+    { it: "Dio", cn: "上帝", py: "shàngdì" },
+    { it: "vero Dio", cn: "真神", py: "zhēnshén" },
+    { it: "Gesù Cristo", cn: "耶稣基督", py: "yēsū jīdū" },
+    { it: "Bibbia", cn: "圣经", py: "shèngjīng" },
+    { it: "Regno di Dio", cn: "上帝的王国", py: "shàngdì de wángguó" },
+    { it: "Satana", cn: "撒旦", py: "sādàn" },
+    { it: "Baal", cn: "巴力", py: "bālì" },
+    { it: "spirito santo", cn: "神圣力量", py: "shénshèng lìliàng" },
+    { it: "preghiera", cn: "祷告", py: "dǎogào" },
+    { it: "cantico", cn: "诗歌", py: "shīgē" },
+    { it: "cantare cantici", cn: "唱诗", py: "chàng shī" },
+    { it: "scrittura (citata)", cn: "经文", py: "jīngwén" },
+    { it: "scrittura base", cn: "主题经文", py: "zhǔtí jīngwén" },
+    { it: "articolo di studio", cn: "课文", py: "kèwén" },
+    { it: "capitolo", cn: "章", py: "zhāng" },
+    { it: "versetto", cn: "节", py: "jié" },
+    { it: "fratello", cn: "弟兄", py: "dìxiōng" },
+    { it: "sorella", cn: "姐妹", py: "jiěmèi" },
+    { it: "congregazione", cn: "会众", py: "huìzhòng" },
+    { it: "studio biblico di congregazione", cn: "会众研经班", py: "huìzhòng yánjīng bān" },
+    { it: "studiare la Bibbia", cn: "学圣经", py: "xué shèngjīng" },
+    { it: "servizio / predicazione", cn: "传道", py: "chuándào" },
+    { it: "di casa in casa", cn: "挨家逐户", py: "āijiā zhúhù" },
+    { it: "visita ulteriore", cn: "续访", py: "xùfǎng" },
+    { it: "testimone", cn: "见证人", py: "jiànzhèngrén" },
+    { it: "Torre di Guardia", cn: "守望台", py: "shǒuwàngtái" },
+    { it: "Svegliatevi! (rivista)", cn: "警醒！", py: "jǐngxǐng" },
+    { it: "opuscolo", cn: "册子", py: "cèzi" },
+    { it: "volantino", cn: "传单", py: "chuándān" },
+    { it: "pubblicazioni", cn: "书刊", py: "shūkān" },
+    { it: "podio", cn: "讲台", py: "jiǎngtái" },
+    { it: "microfono", cn: "麦克风", py: "màikèfēng" },
+    { it: "conduttore", cn: "主持人", py: "zhǔchírén" },
+    { it: "oratore", cn: "讲者", py: "jiǎngzhě" },
+    { it: "presidente", cn: "主席", py: "zhǔxí" },
+    { it: "video", cn: "影片", py: "yǐngpiàn" },
+    { it: "commento", cn: "评论", py: "pínglùn" },
+    { it: "domande di ripasso", cn: "复习题", py: "fùxítí" },
+    { it: "cristiani", cn: "基督徒", py: "jīdūtú" },
+    { it: "incoraggiamento reciproco", cn: "彼此鼓励", py: "bǐcǐ gǔlì" },
+    { it: "tema / titolo", cn: "题目", py: "tímù" },
+    { it: "paragrafo", cn: "段", py: "duàn" },
+    { it: "domanda", cn: "问题", py: "wèntí" },
+    { it: "risposta", cn: "回答", py: "huídá" },
+    { it: "immagine", cn: "图片", py: "túpiàn" },
+    { it: "video (filmato breve)", cn: "短片", py: "duǎnpiàn" },
+    { it: "responsabilità", cn: "责任", py: "zérèn" },
+    { it: "voce del cuore", cn: "心声", py: "xīnshēng" },
+    { it: "aprire il cuore", cn: "敞开心扉", py: "chǎngkāi xīnfēi" },
+    { it: "amore (premuroso)", cn: "爱心", py: "àixīn" },
+    { it: "aiuto", cn: "帮助", py: "bāngzhù" },
+    { it: "consigli / esortazione", cn: "劝告", py: "quàngào" },
+    { it: "disciplina (educazione)", cn: "管教", py: "guǎnjiào" },
+    { it: "figli", cn: "儿女", py: "érnǚ" },
+    { it: "padre", cn: "父亲", py: "fùqīn" },
+    { it: "vita", cn: "生命", py: "shēngmìng" },
+    { it: "omosessuale", cn: "同性恋", py: "tóngxìngliàn" },
+    { it: "alzarsi in piedi", cn: "站起来", py: "zhàn qǐlái" },
+    { it: "gemme spirituali", cn: "经文宝石", py: "jīngwén bǎoshí" },
+    { it: "informale", cn: "非正式", py: "fēizhèngshì" },
+    { it: "lettera", cn: "信件", py: "xìnjiàn" },
+    { it: "volontario", cn: "义工", py: "yìgōng" },
+    { it: "stress", cn: "压力", py: "yālì" },
+    { it: "futuro", cn: "未来", py: "wèilái" },
+    { it: "lezione", cn: "课", py: "kè" },
+    { it: "kit per insegnare", cn: "教导工具箱", py: "jiàodǎo gōngjùxiāng" },
+    { it: "servizio di casa in casa", cn: "挨家逐户", py: "āijiā zhúhù" },
+];
+const RADICALS = [
+    { cn: "火", py: "huǒ", it: "fuoco" },
+    { cn: "水 / 氵", py: "shuǐ", it: "acqua" },
+    { cn: "日", py: "rì", it: "sole / giorno" },
+    { cn: "山", py: "shān", it: "montagna" },
+    { cn: "木", py: "mù", it: "legno / albero" },
+    { cn: "口", py: "kǒu", it: "bocca" },
+];
+const USEFUL_Q = [
+    { cn: "你好，我叫……", py: "Nǐ hǎo, wǒ jiào…", it: "Ciao, mi chiamo…" },
+    { cn: "你叫什么名字？", py: "Nǐ jiào shénme míngzi?", it: "Come ti chiami?" },
+    { cn: "你住在哪里？", py: "Nǐ zhù zài nǎlǐ?", it: "Dove vivi?" },
+    { cn: "你是中国人吗？", py: "Nǐ shì zhōngguó rén ma?", it: "Sei cinese?" },
+    { cn: "你是中国哪里的？", py: "Nǐ shì zhōngguó nǎlǐ de?", it: "Di che parte della Cina sei?" },
+    { cn: "你的手机号码是多少？", py: "Nǐ de shǒujī hàomǎ shì duōshǎo?", it: "Qual è il tuo numero di telefono?" },
+    { cn: "你几岁？", py: "Nǐ jǐ suì?", it: "Quanti anni hai? (bambini)" },
+    { cn: "你多大？", py: "Nǐ duō dà?", it: "Quanti anni hai? (adulti)" },
+    { cn: "你现在有时间吗？", py: "Nǐ xiànzài yǒu shíjiān ma?", it: "Hai tempo adesso?" },
+    { cn: "今天是几月几号？", py: "Jīntiān shì jǐ yuè jǐ hào?", it: "Che data è oggi?" },
+    { cn: "你家有几口人？", py: "Nǐ jiā yǒu jǐ kǒu rén?", it: "Quante persone ci sono nella tua famiglia?" },
+    { cn: "这个多少钱？", py: "Zhège duōshǎo qián?", it: "Quanto costa questo?" },
+    { cn: "你会说意大利语吗？", py: "Nǐ huì shuō yìdàlì yǔ ma?", it: "Parli italiano?" },
+    { cn: "我想邀请你参加聚会，你知道在哪里吗？", py: "Wǒ xiǎng yāoqǐng nǐ cānjiā jùhuì, nǐ zhīdào zài nǎlǐ ma?", it: "Vorrei invitarti all'adunanza, sai dov'è?" },
+];
+const PHRASES_GETTOKNOW = [
+    { cn: "我来自罗马。", py: "Wǒ láizì Luómǎ.", it: "Vengo da Roma." },
+    { cn: "你在意大利多久了？", py: "Nǐ zài Yìdàlì duō jiǔ le?", it: "Da quanto tempo sei in Italia?" },
+    { cn: "你的家人都在这里吗？", py: "Nǐ de jiārén dōu zài zhèlǐ ma?", it: "I tuoi familiari sono tutti qui?" },
+];
+const PHRASES_TASTES = [
+    { cn: "你喜欢什么运动？", py: "Nǐ xǐhuān shénme yùndòng?", it: "Che sport ti piace?" },
+    { cn: "你喜不喜欢跳舞？", py: "Nǐ xǐ bu xǐhuān tiào wǔ?", it: "Ti piace ballare (sì o no)?" },
+    { cn: "你特别喜欢吃什么？", py: "Nǐ tèbié xǐhuān chī shénme?", it: "Cosa ti piace mangiare in particolare?" },
+    { cn: "你喜欢中国菜吗？", py: "Nǐ xǐhuān Zhōngguó cài ma?", it: "Ti piace la cucina cinese?" },
+];
+const PHRASES_POLITE = [
+    { cn: "对不起。", py: "Duìbuqǐ.", it: "Scusa / mi dispiace." },
+    { cn: "不好意思。", py: "Bù hǎoyìsi.", it: "Chiedo scusa / che imbarazzo." },
+    { cn: "没关系。", py: "Méi guānxi.", it: "Non importa / nessun problema." },
+    { cn: "还行。", py: "Hái xíng.", it: "Così così / abbastanza bene." },
+    { cn: "请坐。", py: "Qǐng zuò.", it: "Prego, si sieda." },
+    { cn: "请慢慢说。", py: "Qǐng mànmàn shuō.", it: "Parli lentamente, per favore." },
+];
+const PHRASES_SERVICE2 = [
+    { cn: "请问，最近你的工作怎么样？", py: "Qǐng wèn, zuìjìn nǐ de gōngzuò zěnme yàng?", it: "Mi scusi, ultimamente come va il lavoro?" },
+    { cn: "最近我不忙。", py: "Zuìjìn wǒ bù máng.", it: "Ultimamente non ho molto da fare." },
+    { cn: "我想给你这本杂志。", py: "Wǒ xiǎng gěi nǐ zhè běn zázhì.", it: "Vorrei darle questa rivista." },
+    { cn: "请看一下。", py: "Qǐng kàn yíxià.", it: "La guardi un momento, per favore." },
+    { cn: "等一下。", py: "Děng yíxià.", it: "Aspetti un attimo." },
+    { cn: "请问你知道聚会在哪里吗？", py: "Qǐng wèn nǐ zhīdào jùhuì zài nǎlǐ ma?", it: "Scusa, sai dov'è l'adunanza?" },
+    { cn: "地址在这里。", py: "Dìzhǐ zài zhèlǐ.", it: "L'indirizzo è qui." },
+];
+const PHRASES_LEARNER = [
+    { cn: "这个中文怎么说？", py: "Zhège zhōngwén zěnme shuō?", it: "Questo come si dice in cinese?" },
+    { cn: "这个用中文怎么写？", py: "Zhège yòng zhōngwén zěnme xiě?", it: "Come si scrive questo in cinese?" },
+    { cn: "我会说一点儿中文。", py: "Wǒ huì shuō yìdiǎnr zhōngwén.", it: "So parlare un po' di cinese." },
+];
+const DIALOGUE_REVIEW = [
+    { who: "A", cn: "我们结束了第1课。现在关于圣经你有什么看法？", py: "Wǒmen jiéshùle dì-yī kè. Xiànzài guānyú shèngjīng nǐ yǒu shénme kànfǎ?", it: "Abbiamo finito la lezione 1. Ora, che opinione hai sulla Bibbia?" },
+    { who: "B", cn: "我觉得圣经很有用。", py: "Wǒ juéde shèngjīng hěn yǒuyòng.", it: "Penso che la Bibbia sia molto utile." },
+    { who: "A", cn: "你说得对，我很喜欢跟你聊聊圣经的内容。", py: "Nǐ shuō de duì, wǒ hěn xǐhuān gēn nǐ liáoliáo shèngjīng de nèiróng.", it: "Hai ragione, mi piace molto parlare con te del contenuto della Bibbia." },
+    { who: "B", cn: "我也很高兴。", py: "Wǒ yě hěn gāoxìng.", it: "Anch'io sono molto contento." },
+    { who: "A", cn: "下次我们看看第2课，好吗？", py: "Xià cì wǒmen kànkan dì-èr kè, hǎo ma?", it: "La prossima volta vediamo la lezione 2, va bene?" },
+    { who: "B", cn: "好的。", py: "Hǎo de.", it: "Va bene." },
+];
+const DIALOGUE_PREACH = [
+    { who: "A", cn: "你好，明天下午3点你有空和我一起去传道吗？", py: "Nǐ hǎo, míngtiān xiàwǔ sān diǎn nǐ yǒu kòng hé wǒ yìqǐ qù chuándào ma?", it: "Ciao, domani alle 15 hai tempo di venire a predicare con me?" },
+    { who: "B", cn: "不好意思，明天我没时间。", py: "Bù hǎoyìsi, míngtiān wǒ méi shíjiān.", it: "Mi dispiace, domani non ho tempo." },
+    { who: "A", cn: "你什么时候有空呢？", py: "Nǐ shénme shíhòu yǒu kòng ne?", it: "Quando hai tempo?" },
+    { who: "B", cn: "后天下午4点。", py: "Hòutiān xiàwǔ sì diǎn.", it: "Dopodomani alle 16." },
+    { who: "A", cn: "哦，在哪里见面？", py: "Ó, zài nǎlǐ jiànmiàn?", it: "Oh, dove ci vediamo?" },
+    { who: "B", cn: "火车站门口，可以吗？", py: "Huǒchēzhàn ménkǒu, kěyǐ ma?", it: "All'ingresso della stazione, va bene?" },
+    { who: "A", cn: "可以。", py: "Kěyǐ.", it: "Va bene." },
+];
+const DIALOGUE_VIDEO = [
+    { who: "A", cn: "请问名人传记是放在这一区吗？", py: "Qǐngwèn míngrén zhuànjì shì fàng zài zhè yī qū ma?", it: "Scusi, le biografie di personaggi famosi sono in questa zona?" },
+    { who: "B", cn: "是啊，都在这里。", py: "Shì a, dōu zài zhèlǐ.", it: "Sì, sono tutte qui." },
+    { who: "A", cn: "今天这家店有很多客人，请问今天有打折活动吗？", py: "Jīntiān zhè jiādiàn yǒu hěn duō kèrén, qǐngwèn jīntiān yǒu dǎzhé huódòng ma?", it: "Oggi questo negozio ha molti clienti: c'è una promozione oggi?" },
+    { who: "A", cn: "是你的孩子吗？长得很像你，很漂亮。", py: "Shì nǐ de háizi ma? Zhǎng de hěn xiàng nǐ, hěn piàoliang.", it: "È tuo figlio? Ti somiglia molto, è bellissimo." },
+    { who: "A", cn: "哇，这是拉布拉多狗吗？", py: "Wā, zhè shì lābùlāduō gǒu ma?", it: "Wow, è un labrador?" },
+    { who: "B", cn: "对呀。", py: "Duì ya.", it: "Sì." },
+    { who: "A", cn: "它好可爱呀，我可以摸一下吗？", py: "Tā hǎo kě'ài ya, wǒ kěyǐ mō yíxià ma?", it: "È adorabile, posso accarezzarlo un attimo?" },
+    { who: "A", cn: "您这孩子多大了？有没有两岁半？", py: "Nín zhè háizi duō dà le? Yǒu méiyǒu liǎng suì bàn?", it: "(formale) Quanti anni ha il bambino? Ha due anni e mezzo?" },
+    { who: "A", cn: "你经常来这个公园吗？", py: "Nǐ jīngcháng lái zhège gōngyuán ma?", it: "Vieni spesso in questo parco?" },
+    { who: "B", cn: "是啊，我家离这很近，所以我经常过来。", py: "Shì a, wǒ jiā lí zhè hěn jìn, suǒyǐ wǒ jīngcháng guòlái.", it: "Sì, casa mia è qui vicino, quindi vengo spesso." },
+    { who: "A", cn: "这地方真的很舒服。", py: "Zhè dìfāng zhēn de hěn shūfú.", it: "Questo posto è davvero piacevole." },
+    { who: "A", cn: "这美术馆的环境很不错，请问你是大学生吗？", py: "Zhè měishùguǎn de huánjìng hěn búcuò, qǐngwèn nǐ shì dàxuéshēng ma?", it: "L'ambiente di questo museo è molto bello: sei uno studente universitario?" },
+    { who: "A", cn: "你很了解你们的产品，你做这份工作多久了呢？", py: "Nǐ hěn liǎojiě nǐmen de chǎnpǐn, nǐ zuò zhè fèn gōngzuò duōjiǔ le ne?", it: "Conosci bene i vostri prodotti: da quanto fai questo lavoro?" },
+];
+const TONES = [
+    { mark: "ā", name: "1° tono", desc: "piatto e alto — costante", color: "#1E88E5" },
+    { mark: "á", name: "2° tono", desc: "ascendente — come una domanda", color: "#43A047" },
+    { mark: "ǎ", name: "3° tono", desc: "scende e poi risale", color: "#F57C00" },
+    { mark: "à", name: "4° tono", desc: "discendente — secco e deciso", color: "#D32F2F" },
+    { mark: "a", name: "tono neutro", desc: "leggero, senza accento", color: "#9E9E9E" },
+];
+const PRON_NOTES = [
+    ["zh / ch / sh / r", "suoni retroflessi: la lingua si arriccia verso il palato."],
+    ["j / q / x", "dopo questi, la « ü » si scrive « u » (ju, qu, xu) ma si legge « ü »."],
+    ["ü (ü)", "« u » a bocca stretta, come la « u » francese di « lune »."],
+    ["g (finale -ng)", "la « g » non si pronuncia: dà un suono nasale (come in « -ang »)."],
+    ["i dopo zh/ch/sh/r/z/c/s", "non è « i »: è un suono sordo, quasi muto."],
+    ["b / d / g — non aspirate", "suonano vicine a p / t / k ma senza sbuffo d'aria; la « g » iniziale è « di gola »."],
+    ["p / t / k — aspirate", "forte sbuffo d'aria, « come se si sputasse »."],
+    ["x ≈ s · q ≈ c · j ≈ g", "suoni « dolci » palatali: x come una « s » sottile, q come « c » di cielo, j come « g » di gelo."],
+    ["finali -an / -ian", "« -an » tende a « -en » (bocca che sorride); « -ian » suona « -ien » (tian → tien)."],
+    ["finali -un / -ui", "« -un » suona « -uen » (lun → luen); « -ui » suona « -uei » (dui → duei)."],
+    ["y- / w- d'appoggio", "« yi » = i, « you » = iou, « yan » = ien, « ying » = inn: la y/w serve solo da appoggio alla vocale."],
+];
+const METHODS = [
+    "Audio-orale: imparare ascoltando e ripetendo.",
+    "Approccio comunicativo: ripetere continuamente in dialogo.",
+    "Materiale audio-visivo / lettura a eco.",
+    "Frasario personale: ognuno crea il proprio frasario IT–CIN.",
+    "Approccio « in movimento »: ripetere mentre si fa qualcosa.",
+    "Suoni e spelling: il suono delle lettere e il loro uso.",
+    "Formare mappe concettuali.",
+    "Schede didattiche: nuovi vocaboli con immagini e ripetizione.",
+    "Associazione di parole: legare un'immagine alla parola.",
+    "Risposta fisica totale: imparare indicando, senza parlare.",
+    "Lingua universale: tabella Soggetto + Verbo + Oggetto.",
+    "Frequenza: le 100 parole più comuni ≈ 50% delle conversazioni.",
+    "Umorismo: più si sbaglia, più si impara.",
+    "Dettato musicale: scrivere ciò che si capisce, a prescindere dal tono.",
+    "Memoria muscolare: usare gesti per descrivere la parola.",
+    "Lettura e pronuncia: sussurrare.",
+    "Apprendimento collettivo.",
+];
+const CHENGYU = [
+    { cn: "知足常乐", py: "zhī zú cháng lè", it: "Essere contenti di ciò che si ha porta gioia duratura.", ref: "1 Timoteo 6:8" },
+    { cn: "近朱者赤，近墨者黑", py: "jìn zhū zhě chì, jìn mò zhě hēi", it: "Chi tocca l'inchiostro si macchia di nero: le compagnie influenzano nel bene e nel male.", ref: "1 Corinti 15:33" },
+    { cn: "饮水思源", py: "yǐn shuǐ sī yuán", it: "Quando bevi l'acqua, pensa alla fonte: essere riconoscenti verso chi ci dà ogni cosa.", ref: "Giacomo 1:17 · Rivelazione 4:11 · Ebrei 3:4" },
+    { cn: "己所不欲，勿施于人", py: "jǐ suǒ bù yù, wù shī yú rén", it: "Non fare agli altri ciò che non vorresti fosse fatto a te.", ref: "Matteo 7:12" },
+];
+const speak = (text) => {
+    try {
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = "zh-CN";
+        u.rate = 0.8;
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(u);
+    }
+    catch (e) { }
+};
+const shuffle = (arr) => {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+};
+const cleanForSpeech = (t) => t.replace(/[，。！？、""''…\/]/g, " ").replace(/\s+/g, " ").trim();
+const cn = "'Noto Serif SC', serif";
+const display = "'Fraunces', Georgia, serif";
+const STORAGE_KEY = "cinese_progress_v1";
+async function loadProgress() {
+    try {
+        const r = localStorage.getItem(STORAGE_KEY);
+        if (r)
+            return JSON.parse(r);
+    }
+    catch (e) { }
+    return { known: [], review: [] };
+}
+async function saveProgress(data) {
+    try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    }
+    catch (e) { }
+}
+function Speak({ text, size = 18 }) {
+    return (React.createElement("button", { onClick: (e) => { e.stopPropagation(); speak(cleanForSpeech(text)); }, className: "shrink-0 rounded-full p-1.5 text-stone-400 transition hover:bg-red-50 hover:text-red-700 active:scale-90", title: "Ascolta" },
+        React.createElement(Volume2, { size: size })));
+}
+function SectionTitle({ cnLabel, it }) {
+    return (React.createElement("div", { className: "mb-5 flex items-end gap-3" },
+        React.createElement("h2", { className: "text-3xl text-red-800", style: { fontFamily: cn } }, cnLabel),
+        React.createElement("span", { className: "mb-1 text-sm font-medium uppercase tracking-widest text-stone-400" }, it)));
+}
+function CardBox({ children }) {
+    return React.createElement("div", { className: "rounded-2xl border border-stone-200 bg-white px-5 shadow-sm" }, children);
+}
+function RefRow({ cnText, py, it, swatch }) {
+    return (React.createElement("div", { className: "flex items-center gap-4 border-b border-stone-100 py-3 last:border-0" },
+        swatch && React.createElement("span", { className: "h-7 w-7 shrink-0 rounded-full border border-stone-200 shadow-inner", style: { background: swatch } }),
+        React.createElement("span", { className: "w-24 shrink-0 text-stone-900", style: { fontFamily: cn, fontSize: "1.7rem", lineHeight: 1.1 } }, cnText),
+        React.createElement("div", { className: "min-w-0 flex-1" },
+            React.createElement("div", { className: "italic text-stone-500" }, py),
+            React.createElement("div", { className: "font-medium text-stone-800" }, it)),
+        React.createElement(Speak, { text: cnText })));
+}
+function PhraseRow({ cnText, py, it }) {
+    return (React.createElement("div", { className: "flex items-start gap-3 border-b border-stone-100 py-3 last:border-0" },
+        React.createElement("div", { className: "min-w-0 flex-1" },
+            React.createElement("div", { className: "leading-relaxed text-stone-900", style: { fontFamily: cn, fontSize: "1.45rem" } }, cnText),
+            React.createElement("div", { className: "text-sm italic text-stone-500" }, py),
+            React.createElement("div", { className: "text-sm font-medium text-stone-700" }, it)),
+        React.createElement(Speak, { text: cnText })));
+}
+function Example({ cnText, py, it }) {
+    return (React.createElement("div", { className: "rounded-xl bg-stone-50 p-3" },
+        React.createElement("div", { className: "flex items-center gap-2" },
+            React.createElement("span", { className: "text-stone-900", style: { fontFamily: cn, fontSize: "1.35rem", lineHeight: 1.25 } }, cnText),
+            React.createElement(Speak, { text: cnText, size: 16 })),
+        React.createElement("div", { className: "text-sm italic text-stone-500" }, py),
+        React.createElement("div", { className: "text-sm font-medium text-stone-700" }, it)));
+}
+function NoteCard({ title, children }) {
+    return (React.createElement("div", { className: "mb-4 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm" },
+        React.createElement("h4", { className: "mb-2 font-bold text-red-800" }, title),
+        React.createElement("div", { className: "space-y-2 text-sm leading-relaxed text-stone-700" }, children)));
+}
+const H = ({ c }) => React.createElement("span", { style: { fontFamily: cn }, className: "text-stone-900" }, c);
+function GrammarBlock({ char, py, title, sub, items }) {
+    return (React.createElement("div", { className: "mb-5 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm" },
+        React.createElement("div", { className: "mb-3 flex items-center gap-3" },
+            React.createElement("span", { className: "flex h-14 w-14 items-center justify-center rounded-xl bg-red-800 text-white shadow-md", style: { fontFamily: cn, fontSize: "2rem" } }, char),
+            React.createElement("div", null,
+                React.createElement("div", { className: "text-lg font-bold text-stone-800" },
+                    title,
+                    " ",
+                    React.createElement("span", { className: "italic text-stone-400" }, py)),
+                React.createElement("div", { className: "text-sm text-stone-500" }, sub))),
+        React.createElement("div", { className: "space-y-2" }, items.map((it, i) => (React.createElement("div", { key: i },
+            it.label && React.createElement("p", { className: "mb-1 mt-2 text-xs font-semibold uppercase tracking-wide text-red-700" }, it.label),
+            React.createElement(Example, { cnText: it.cn, py: it.py, it: it.it })))))));
+}
+function Flashcards({ known, review, mark, clearProgress }) {
+    const [dir, setDir] = useState("it2cn");
+    const [cat, setCat] = useState("all");
+    const [reviewMode, setReviewMode] = useState(false);
+    const [deck, setDeck] = useState(() => shuffle(VOCAB));
+    const [pos, setPos] = useState(0);
+    const [flipped, setFlipped] = useState(false);
+    const [confirmReset, setConfirmReset] = useState(false);
+    const poolFor = (c, rev) => rev ? VOCAB.filter((w) => review.has(vkey(w)))
+        : (c === "all" ? VOCAB : VOCAB.filter((w) => w.cat === c));
+    const rebuild = (c, rev) => {
+        setDeck(shuffle(poolFor(c, rev)));
+        setPos(0);
+        setFlipped(false);
+    };
+    const card = deck[pos];
+    const finished = deck.length > 0 && pos >= deck.length;
+    const next = (status) => {
+        if (card)
+            mark(vkey(card), status);
+        setPos((p) => p + 1);
+        setFlipped(false);
+    };
+    return (React.createElement("div", { className: "mx-auto max-w-md" },
+        React.createElement("div", { className: "mb-3 flex items-center justify-between gap-2 text-sm" },
+            React.createElement("div", { className: "flex items-center gap-3" },
+                React.createElement("span", { className: "inline-flex items-center gap-1 text-emerald-600" },
+                    React.createElement(CheckCircle2, { size: 15 }),
+                    " ",
+                    known.size),
+                React.createElement("span", { className: "inline-flex items-center gap-1 text-amber-600" },
+                    React.createElement(Star, { size: 15 }),
+                    " ",
+                    review.size)),
+            React.createElement("button", { onClick: () => { if (confirmReset) {
+                    clearProgress();
+                    setConfirmReset(false);
+                    rebuild(cat, false);
+                    setReviewMode(false);
+                }
+                else {
+                    setConfirmReset(true);
+                    setTimeout(() => setConfirmReset(false), 3000);
+                } }, className: `inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-medium transition active:scale-95 ${confirmReset ? "bg-red-700 text-white" : "border border-stone-300 bg-white text-stone-500 hover:text-red-700"}` },
+                React.createElement(Trash2, { size: 14 }),
+                " ",
+                confirmReset ? "Confermi?" : "Azzera")),
+        React.createElement("button", { onClick: () => { const v = !reviewMode; setReviewMode(v); rebuild(cat, v); }, className: `mb-3 flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-semibold transition active:scale-95 ${reviewMode ? "bg-amber-500 text-white shadow" : "border border-amber-300 bg-amber-50 text-amber-700"}` },
+            React.createElement(Star, { size: 16 }),
+            " ",
+            reviewMode ? "Modalità ripasso ATTIVA" : "Ripassa solo le parole da rivedere"),
+        !reviewMode && (React.createElement("div", { className: "mb-3 overflow-x-auto", style: { scrollbarWidth: "none" } },
+            React.createElement("div", { className: "flex gap-1.5" }, CATS.map((c) => (React.createElement("button", { key: c.id, onClick: () => { setCat(c.id); rebuild(c.id, false); }, className: `shrink-0 rounded-full px-3 py-1.5 text-xs font-medium transition active:scale-95 ${cat === c.id ? "bg-stone-800 text-white shadow" : "border border-stone-300 bg-white text-stone-500 hover:text-stone-800"}` }, c.label)))))),
+        React.createElement("div", { className: "mb-4 flex items-center justify-between gap-3" },
+            React.createElement("button", { onClick: () => setDir(dir === "it2cn" ? "cn2it" : "it2cn"), className: "inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white px-4 py-2 text-sm font-medium text-stone-700 shadow-sm transition hover:border-red-300 hover:text-red-700 active:scale-95" },
+                React.createElement(ArrowRightLeft, { size: 16 }),
+                dir === "it2cn" ? "ITA → 中文" : "中文 → ITA"),
+            deck.length > 0 && !finished && React.createElement("span", { className: "text-sm font-medium text-stone-400" },
+                pos + 1,
+                " / ",
+                deck.length)),
+        deck.length === 0 ? (React.createElement("div", { className: "rounded-3xl border border-dashed border-stone-300 bg-white p-10 text-center text-stone-500" },
+            React.createElement("div", { className: "mb-2 text-4xl" }, "\uD83C\uDF31"),
+            reviewMode ? "Nessuna parola da rivedere. Studia le flashcard e segna « Da rivedere » quelle difficili." : "Nessuna parola in questa categoria.")) : finished ? (React.createElement("div", { className: "text-center" },
+            React.createElement("div", { className: "mb-4 text-6xl" }, "\uD83C\uDF89"),
+            React.createElement("h3", { className: "mb-2 text-2xl font-bold text-stone-800", style: { fontFamily: display } }, "Mazzo completato!"),
+            React.createElement("p", { className: "mb-6 text-stone-500" },
+                "Hai ripassato ",
+                deck.length,
+                " parole."),
+            React.createElement("button", { onClick: () => rebuild(cat, reviewMode), className: "inline-flex items-center gap-2 rounded-full bg-red-800 px-6 py-3 font-semibold text-white shadow-lg shadow-red-900/20 transition hover:bg-red-900 active:scale-95" },
+                React.createElement(Shuffle, { size: 18 }),
+                " Rimescola"))) : (React.createElement(React.Fragment, null,
+            React.createElement("div", { className: "mb-5 h-1.5 w-full overflow-hidden rounded-full bg-stone-200" },
+                React.createElement("div", { className: "h-full rounded-full bg-gradient-to-r from-red-700 to-amber-500 transition-all duration-300", style: { width: `${(pos / deck.length) * 100}%` } })),
+            React.createElement("div", { onClick: () => setFlipped((f) => !f), className: "relative flex min-h-[18rem] cursor-pointer select-none flex-col items-center justify-center rounded-3xl border border-stone-200 bg-white p-8 text-center shadow-xl shadow-stone-300/40 transition active:scale-[0.98]" },
+                React.createElement("span", { className: "absolute right-4 top-4 text-[11px] font-medium uppercase tracking-widest text-stone-300" }, flipped ? "risposta" : "domanda"),
+                review.has(vkey(card)) && React.createElement(Star, { size: 16, className: "absolute left-4 top-4 fill-amber-400 text-amber-400" }),
+                !flipped ? (React.createElement("div", { className: "flex flex-col items-center gap-3" },
+                    dir === "cn2it" ? (React.createElement(React.Fragment, null,
+                        React.createElement("div", { className: "text-stone-900", style: { fontFamily: cn, fontSize: "3.5rem", lineHeight: 1.1 } }, card.cn),
+                        React.createElement(Speak, { text: card.cn, size: 22 }))) : (React.createElement("div", { className: "text-stone-800", style: { fontFamily: display, fontSize: "2.1rem" } }, card.it)),
+                    React.createElement("span", { className: "mt-2 text-xs text-stone-400" }, "tocca per girare"))) : (React.createElement("div", { className: "flex flex-col items-center gap-2" }, dir === "it2cn" ? (React.createElement(React.Fragment, null,
+                    React.createElement("span", { className: "text-red-800", style: { fontFamily: cn, fontSize: "3.25rem", lineHeight: 1.1 } }, card.cn),
+                    React.createElement(Speak, { text: card.cn, size: 22 }),
+                    React.createElement("span", { className: "text-lg italic text-stone-500" }, card.py))) : (React.createElement(React.Fragment, null,
+                    React.createElement("div", { className: "text-stone-800", style: { fontFamily: display, fontSize: "2rem" } }, card.it),
+                    React.createElement("span", { className: "text-lg italic text-stone-500" }, card.py)))))),
+            React.createElement("div", { className: "mt-6 grid grid-cols-2 gap-3" },
+                React.createElement("button", { onClick: () => next("review"), className: "inline-flex items-center justify-center gap-2 rounded-2xl border border-amber-300 bg-amber-50 py-3.5 font-semibold text-amber-700 shadow-sm transition hover:bg-amber-100 active:scale-95" },
+                    React.createElement(Star, { size: 18 }),
+                    " Da rivedere"),
+                React.createElement("button", { onClick: () => next("known"), className: "inline-flex items-center justify-center gap-2 rounded-2xl bg-emerald-600 py-3.5 font-semibold text-white shadow-lg shadow-emerald-700/20 transition hover:bg-emerald-700 active:scale-95" },
+                    React.createElement(Check, { size: 18 }),
+                    " Lo so"))))));
+}
+const QUIZ_LEN = 10;
+function buildQuestion(dir, pool) {
+    const d = dir === "mix" ? (Math.random() < 0.5 ? "it2cn" : "cn2it") : dir;
+    const word = pool[Math.floor(Math.random() * pool.length)];
+    const promptText = d === "it2cn" ? word.it : word.cn;
+    const answer = d === "it2cn" ? word.cn : word.it;
+    const src = pool.length >= 6 ? pool : VOCAB;
+    const distractors = [];
+    for (const w of shuffle(src)) {
+        const val = d === "it2cn" ? w.cn : w.it;
+        if (val === answer || distractors.includes(val))
+            continue;
+        distractors.push(val);
+        if (distractors.length === 3)
+            break;
+    }
+    const options = shuffle([answer, ...distractors]);
+    return { dir: d, promptText, answer, options, py: word.py, cn: word.cn, word };
+}
+function Quiz({ mark }) {
+    const [dir, setDir] = useState("mix");
+    const [cat, setCat] = useState("all");
+    const pool = useMemo(() => (cat === "all" ? VOCAB : VOCAB.filter((w) => w.cat === cat)), [cat]);
+    const [q, setQ] = useState(() => buildQuestion("mix", VOCAB));
+    const [selected, setSelected] = useState(null);
+    const [score, setScore] = useState(0);
+    const [count, setCount] = useState(1);
+    const [finished, setFinished] = useState(false);
+    const start = (newDir, newPool) => {
+        setQ(buildQuestion(newDir, newPool));
+        setSelected(null);
+        setScore(0);
+        setCount(1);
+        setFinished(false);
+    };
+    const choose = (opt) => {
+        if (selected !== null)
+            return;
+        setSelected(opt);
+        if (opt === q.answer)
+            setScore((s) => s + 1);
+        else
+            mark(vkey(q.word), "review");
+    };
+    const advance = () => {
+        if (count >= QUIZ_LEN) {
+            setFinished(true);
+            return;
+        }
+        setQ(buildQuestion(dir, pool));
+        setSelected(null);
+        setCount((c) => c + 1);
+    };
+    if (finished) {
+        const pct = Math.round((score / QUIZ_LEN) * 100);
+        const msg = pct >= 80 ? "Eccellente! 太棒了" : pct >= 50 ? "Bel lavoro, continua così!" : "Ripassa e riprova 加油！";
+        return (React.createElement("div", { className: "mx-auto max-w-md text-center" },
+            React.createElement("div", { className: "mb-3 text-6xl" }, pct >= 80 ? "🏆" : pct >= 50 ? "👍" : "📚"),
+            React.createElement("h3", { className: "text-2xl font-bold text-stone-800", style: { fontFamily: display } }, msg),
+            React.createElement("p", { className: "my-4 text-5xl font-bold text-red-800" },
+                score,
+                React.createElement("span", { className: "text-2xl text-stone-400" },
+                    "/",
+                    QUIZ_LEN)),
+            React.createElement("p", { className: "mb-6 text-sm text-stone-500" }, "Le parole sbagliate sono finite tra quelle \u00AB da rivedere \u00BB."),
+            React.createElement("button", { onClick: () => start(dir, pool), className: "inline-flex items-center gap-2 rounded-full bg-red-800 px-6 py-3 font-semibold text-white shadow-lg shadow-red-900/20 transition hover:bg-red-900 active:scale-95" },
+                React.createElement(RotateCcw, { size: 18 }),
+                " Nuovo quiz")));
+    }
+    const promptIsCn = q.dir === "cn2it";
+    const optionsAreCn = q.dir === "it2cn";
+    return (React.createElement("div", { className: "mx-auto max-w-md" },
+        React.createElement("div", { className: "mb-2 flex gap-2" }, [["mix", "Misto"], ["it2cn", "ITA→中文"], ["cn2it", "中文→ITA"]].map(([k, label]) => (React.createElement("button", { key: k, onClick: () => { setDir(k); start(k, pool); }, className: `flex-1 rounded-full px-2 py-2 text-xs font-semibold transition active:scale-95 ${dir === k ? "bg-red-800 text-white shadow" : "border border-stone-300 bg-white text-stone-500 hover:text-stone-800"}` }, label)))),
+        React.createElement("div", { className: "mb-4 overflow-x-auto", style: { scrollbarWidth: "none" } },
+            React.createElement("div", { className: "flex gap-1.5" }, CATS.map((c) => (React.createElement("button", { key: c.id, onClick: () => { setCat(c.id); const np = c.id === "all" ? VOCAB : VOCAB.filter((w) => w.cat === c.id); start(dir, np); }, className: `shrink-0 rounded-full px-3 py-1 text-xs font-medium transition active:scale-95 ${cat === c.id ? "bg-stone-800 text-white" : "border border-stone-300 bg-white text-stone-500"}` }, c.label))))),
+        React.createElement("div", { className: "mb-4 flex items-center justify-between text-sm font-medium text-stone-400" },
+            React.createElement("span", null,
+                "Domanda ",
+                count,
+                " / ",
+                QUIZ_LEN),
+            React.createElement("span", null,
+                "Punti: ",
+                React.createElement("span", { className: "font-bold text-emerald-600" }, score))),
+        React.createElement("div", { className: "mb-6 flex min-h-[8rem] flex-col items-center justify-center gap-2 rounded-3xl border border-stone-200 bg-white p-6 text-center shadow-lg shadow-stone-300/30" },
+            React.createElement("span", { className: "text-[11px] font-medium uppercase tracking-widest text-stone-300" }, "come si dice?"),
+            React.createElement("div", { className: promptIsCn ? "text-stone-900" : "text-stone-800", style: promptIsCn ? { fontFamily: cn, fontSize: "2.6rem", lineHeight: 1.1 } : { fontFamily: display, fontSize: "1.9rem" } }, q.promptText),
+            promptIsCn && React.createElement(Speak, { text: q.cn, size: 20 })),
+        React.createElement("div", { className: "grid gap-3" }, q.options.map((opt, i) => {
+            let style = "border-stone-200 bg-white text-stone-800 hover:border-red-300";
+            if (selected !== null) {
+                if (opt === q.answer)
+                    style = "border-emerald-500 bg-emerald-50 text-emerald-800";
+                else if (opt === selected)
+                    style = "border-red-400 bg-red-50 text-red-700";
+                else
+                    style = "border-stone-200 bg-stone-50 text-stone-400";
+            }
+            return (React.createElement("button", { key: i, onClick: () => choose(opt), disabled: selected !== null, className: `flex items-center justify-between rounded-2xl border px-5 py-4 text-left shadow-sm transition active:scale-[0.98] ${style}` },
+                React.createElement("span", { style: optionsAreCn ? { fontFamily: cn, fontSize: "1.5rem" } : { fontSize: "1.05rem" } }, opt),
+                selected !== null && opt === q.answer && React.createElement(Check, { size: 20, className: "text-emerald-600" }),
+                selected !== null && opt === selected && opt !== q.answer && React.createElement(X, { size: 20, className: "text-red-500" })));
+        })),
+        selected !== null && (React.createElement("div", { className: "mt-5 flex items-center justify-between rounded-2xl bg-stone-100 px-4 py-3" },
+            React.createElement("span", { className: "text-sm text-stone-500" },
+                React.createElement("span", { className: "italic" }, q.py),
+                q.dir === "it2cn" && React.createElement(React.Fragment, null,
+                    " \u00B7 ",
+                    q.promptText)),
+            React.createElement("button", { onClick: advance, className: "inline-flex items-center gap-1 rounded-full bg-stone-800 px-5 py-2 text-sm font-semibold text-white transition hover:bg-stone-900 active:scale-95" },
+                count >= QUIZ_LEN ? "Risultato" : "Avanti",
+                " ",
+                React.createElement(ChevronRight, { size: 16 }))))));
+}
+function DialogueAB({ items }) {
+    return (React.createElement(CardBox, null, items.map((d, i) => (React.createElement("div", { key: i, className: "flex items-start gap-3 border-b border-stone-100 py-3 last:border-0" },
+        React.createElement("span", { className: `mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white ${d.who === "A" ? "bg-red-800" : "bg-stone-500"}` }, d.who),
+        React.createElement("div", { className: "min-w-0 flex-1" },
+            React.createElement("div", { className: "leading-relaxed text-stone-900", style: { fontFamily: cn, fontSize: "1.35rem" } }, d.cn),
+            React.createElement("div", { className: "text-sm italic text-stone-500" }, d.py),
+            React.createElement("div", { className: "text-sm font-medium text-stone-700" }, d.it)),
+        React.createElement(Speak, { text: d.cn }))))));
+}
+function Phrases() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u5BF9\u8BDD", it: "Frasi utili" }),
+        React.createElement("h3", { className: "mb-2 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Presentarsi"),
+        React.createElement(CardBox, null, PHRASES_INTRO.map((p, i) => React.createElement(PhraseRow, { key: i, cnText: p.cn, py: p.py, it: p.it }))),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Come stai?"),
+        React.createElement(CardBox, null, PHRASES_HOWRU.map((p, i) => React.createElement(PhraseRow, { key: i, cnText: p.cn, py: p.py, it: p.it }))),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "In predicazione / al citofono"),
+        React.createElement(CardBox, null, PHRASES_DOOR.map((p, i) => React.createElement(PhraseRow, { key: i, cnText: p.cn, py: p.py, it: p.it }))),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Al telefono \u00B7 \u6253\u7535\u8BDD"),
+        React.createElement(CardBox, null, DIALOGUE_PHONE.map((d, i) => (React.createElement("div", { key: i, className: "flex items-start gap-3 border-b border-stone-100 py-3 last:border-0" },
+            React.createElement("span", { className: `mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white ${d.who === "A" ? "bg-red-800" : "bg-stone-500"}` }, d.who),
+            React.createElement("div", { className: "min-w-0 flex-1" },
+                React.createElement("div", { className: "leading-relaxed text-stone-900", style: { fontFamily: cn, fontSize: "1.35rem" } }, d.cn),
+                React.createElement("div", { className: "text-sm italic text-stone-500" }, d.py),
+                React.createElement("div", { className: "text-sm font-medium text-stone-700" }, d.it)),
+            React.createElement(Speak, { text: d.cn }))))),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "All'adunanza \u00B7 \u805A\u4F1A"),
+        React.createElement(CardBox, null, DIALOGUE_MEETING.map((p, i) => React.createElement(PhraseRow, { key: i, cnText: p.cn, py: p.py, it: p.it }))),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Domande utili"),
+        React.createElement(CardBox, null, USEFUL_Q.map((p, i) => React.createElement(PhraseRow, { key: i, cnText: p.cn, py: p.py, it: p.it }))),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Invitare alla predicazione \u00B7 \u7EA6\u4F20\u9053\u540C\u4F34"),
+        React.createElement(DialogueAB, { items: DIALOGUE_PREACH }),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Conversazioni informali \u00B7 \u89C6\u9891"),
+        React.createElement(DialogueAB, { items: DIALOGUE_VIDEO }),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Ripasso della lezione 1 \u00B7 \u7B2C1\u8BFE\u590D\u4E60"),
+        React.createElement(DialogueAB, { items: DIALOGUE_REVIEW }),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Conoscersi \u00B7 \u8BA4\u8BC6"),
+        React.createElement(CardBox, null, PHRASES_GETTOKNOW.map((p, i) => React.createElement(PhraseRow, { key: i, cnText: p.cn, py: p.py, it: p.it }))),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Gusti e preferenze \u00B7 \u7231\u597D"),
+        React.createElement(CardBox, null, PHRASES_TASTES.map((p, i) => React.createElement(PhraseRow, { key: i, cnText: p.cn, py: p.py, it: p.it }))),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Cortesia e reazioni"),
+        React.createElement(CardBox, null, PHRASES_POLITE.map((p, i) => React.createElement(PhraseRow, { key: i, cnText: p.cn, py: p.py, it: p.it }))),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Al servizio \u00B7 visita ulteriore"),
+        React.createElement(CardBox, null, PHRASES_SERVICE2.map((p, i) => React.createElement(PhraseRow, { key: i, cnText: p.cn, py: p.py, it: p.it }))),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Per chi studia cinese"),
+        React.createElement(CardBox, null, PHRASES_LEARNER.map((p, i) => React.createElement(PhraseRow, { key: i, cnText: p.cn, py: p.py, it: p.it })))));
+}
+function Pronouns() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u4EE3\u8BCD", it: "Pronomi e dimostrativi" }),
+        React.createElement("h3", { className: "mb-3 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Pronomi personali"),
+        React.createElement(CardBox, null, PRONOUNS.map((p, i) => React.createElement(RefRow, { key: i, cnText: p.cn, py: p.py, it: p.it }))),
+        React.createElement("p", { className: "mt-4 rounded-xl bg-amber-50 p-3 text-sm text-amber-800" },
+            "\uD83D\uDCA1 Il plurale si forma aggiungendo ",
+            React.createElement(H, { c: "\u4EEC" }),
+            " (men): \u6211 \u2192 \u6211\u4EEC, \u4F60 \u2192 \u4F60\u4EEC, \u4ED6 \u2192 \u4ED6\u4EEC."),
+        React.createElement("h3", { className: "mb-3 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Dimostrativi \u00B7 \u8FD9 / \u90A3"),
+        React.createElement("p", { className: "mb-3 text-sm text-stone-500" },
+            "Indicano la posizione nello spazio: ",
+            React.createElement("b", null, "vicino"),
+            " (\u8FD9 zh\u00E8) o ",
+            React.createElement("b", null, "lontano"),
+            " (\u90A3 n\u00E0) da chi parla."),
+        React.createElement(GrammarBlock, { char: "\u8FD9\u91CC", py: "zh\u00E8l\u01D0", title: "Qui / questo posto", sub: "luogo vicino \u00B7 variante \u8FD9\u513F zh\u00E8r (nord) \u00B7 struttura: Sogg. + \u5728 + \u8FD9\u91CC", items: [
+                { cn: "他们在这里。", py: "Tāmen zài zhèlǐ.", it: "Loro sono qui." },
+                { cn: "这里的风景很漂亮。", py: "Zhèlǐ de fēngjǐng hěn piàoliang.", it: "Il panorama qui è molto bello." },
+            ] }),
+        React.createElement(GrammarBlock, { char: "\u90A3\u91CC", py: "n\u00E0l\u01D0", title: "L\u00EC / quel posto", sub: "luogo lontano \u00B7 variante \u90A3\u513F n\u00E0r (nord) \u00B7 struttura: Sogg. + \u53BB + \u90A3\u91CC", items: [
+                { cn: "我们去那里看看。", py: "Wǒmen qù nàlǐ kànkan.", it: "Andiamo a vedere lì." },
+                { cn: "桌子在那里。", py: "Zhuōzi zài nàlǐ.", it: "Il tavolo è lì." },
+            ] }),
+        React.createElement(GrammarBlock, { char: "\u8FD9\u4E2A", py: "zh\u00E8ge", title: "Questo", sub: "oggetto/persona vicino \u00B7 \u8FD9 zh\u00E8 + classificatore \u4E2A ge \u00B7 struttura: \u8FD9\u4E2A + nome", items: [
+                { cn: "我想买这个手机。", py: "Wǒ xiǎng mǎi zhège shǒujī.", it: "Voglio comprare questo cellulare." },
+                { cn: "这个是什么？", py: "Zhège shì shénme?", it: "Questo cos'è?" },
+            ] }),
+        React.createElement(GrammarBlock, { char: "\u90A3\u4E2A", py: "n\u00E0ge", title: "Quello", sub: "oggetto/persona lontano \u00B7 \u90A3 n\u00E0 + classificatore \u4E2A ge \u00B7 struttura: \u90A3\u4E2A + nome", items: [
+                { cn: "他不喜欢那个颜色。", py: "Tā bù xǐhuān nàge yánsè.", it: "A lui non piace quel colore." },
+            ] }),
+        React.createElement(NoteCard, { title: "Vicino vs. lontano \u00B7 esempi chiave" },
+            React.createElement(Example, { cnText: "\u4F60\u53EF\u4EE5\u628A\u8FD9\u4E2A\u7ED9\u6211\u5417\uFF1F\u90A3\u4E2A\u592A\u5927\u4E86\u3002", py: "N\u01D0 k\u011By\u01D0 b\u01CE zh\u00E8ge g\u011Bi w\u01D2 ma? N\u00E0ge t\u00E0i d\u00E0 le.", it: "Puoi darmi questo? Quello \u00E8 troppo grande." }),
+            React.createElement(Example, { cnText: "\u6211\u4EEC\u559C\u6B22\u8FD9\u91CC\uFF0C\u53EF\u662F\u670B\u53CB\u5728\u90A3\u91CC\u3002", py: "W\u01D2men x\u01D0hu\u0101n zh\u00E8l\u01D0, k\u011Bsh\u00EC p\u00E9ngy\u01D2u z\u00E0i n\u00E0l\u01D0.", it: "A noi piace qui, ma gli amici sono l\u00EC." }))));
+}
+function Numbers() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u6570\u5B57", it: "Numeri" }),
+        React.createElement("div", { className: "grid grid-cols-3 gap-3 sm:grid-cols-4" }, NUMBERS.map((n) => (React.createElement("button", { key: n.n, onClick: () => speak(n.cn), className: "flex flex-col items-center rounded-2xl border border-stone-200 bg-white py-4 shadow-sm transition hover:border-red-300 hover:shadow-md active:scale-95" },
+            React.createElement("span", { className: "text-xs font-bold text-stone-300" }, n.n),
+            React.createElement("span", { className: "text-stone-900", style: { fontFamily: cn, fontSize: "2.4rem", lineHeight: 1.1 } }, n.cn),
+            React.createElement("span", { className: "text-sm italic text-stone-500" }, n.py))))),
+        React.createElement("h3", { className: "mb-2 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Oltre il 10"),
+        React.createElement(NoteCard, { title: "11\u201319 \u00B7 struttura additiva (10 + unit\u00E0)" },
+            React.createElement("p", null,
+                React.createElement(H, { c: "\u5341" }),
+                " sh\u00ED + unit\u00E0. Es. 11 = ",
+                React.createElement(H, { c: "\u5341\u4E00" }),
+                " (sh\u00ED y\u012B), 15 = ",
+                React.createElement(H, { c: "\u5341\u4E94" }),
+                " (sh\u00ED w\u01D4), 19 = ",
+                React.createElement(H, { c: "\u5341\u4E5D" }),
+                " (sh\u00ED ji\u01D4).")),
+        React.createElement(NoteCard, { title: "Decine 20\u201390 \u00B7 struttura moltiplicativa (\u00D7 10)" },
+            React.createElement("p", null,
+                "Moltiplicatore + ",
+                React.createElement(H, { c: "\u5341" }),
+                " sh\u00ED. Es. 20 = ",
+                React.createElement(H, { c: "\u4E8C\u5341" }),
+                " (\u00E8r sh\u00ED), 50 = ",
+                React.createElement(H, { c: "\u4E94\u5341" }),
+                " (w\u01D4 sh\u00ED), 90 = ",
+                React.createElement(H, { c: "\u4E5D\u5341" }),
+                " (ji\u01D4 sh\u00ED).")),
+        React.createElement(NoteCard, { title: "21\u201399 \u00B7 numeri composti" },
+            React.createElement("p", null,
+                "Decina + ",
+                React.createElement(H, { c: "\u5341" }),
+                " + unit\u00E0. Es. 21 = ",
+                React.createElement(H, { c: "\u4E8C\u5341\u4E00" }),
+                " (\u00E8r sh\u00ED y\u012B), 35 = ",
+                React.createElement(H, { c: "\u4E09\u5341\u4E94" }),
+                " (s\u0101n sh\u00ED w\u01D4), 99 = ",
+                React.createElement(H, { c: "\u4E5D\u5341\u4E5D" }),
+                " (ji\u01D4 sh\u00ED ji\u01D4).")),
+        React.createElement("div", { className: "mt-2 space-y-3" },
+            React.createElement("p", { className: "rounded-xl bg-amber-50 p-3 text-sm text-amber-800" },
+                "\uD83D\uDCA1 ",
+                React.createElement("b", null, "Numeri seriali"),
+                " (telefono, stanze, targhe): 1 ",
+                React.createElement(H, { c: "\u4E00" }),
+                " si pronuncia ",
+                React.createElement("b", null, "y\u0101o"),
+                " invece di y\u012B, per non confonderlo con 7 ",
+                React.createElement("b", null, "q\u012B"),
+                "."),
+            React.createElement("p", { className: "rounded-xl bg-sky-50 p-3 text-sm text-sky-800" },
+                "\uD83D\uDCA1 Per ",
+                React.createElement("b", null, "contare oggetti"),
+                " si usa ",
+                React.createElement(H, { c: "\u4E24" }),
+                " ",
+                React.createElement("b", null, "li\u01CEng"),
+                "; ",
+                React.createElement(H, { c: "\u4E8C" }),
+                " ",
+                React.createElement("b", null, "\u00E8r"),
+                " si usa in sequenze o numeri grandi (20, 200\u2026).")),
+        React.createElement("h3", { className: "mb-2 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Grandi numeri"),
+        React.createElement("div", { className: "mb-3 grid grid-cols-3 gap-3" }, BIG_UNITS.map((u) => (React.createElement("button", { key: u.cn, onClick: () => speak(u.cn), className: "flex flex-col items-center rounded-2xl border border-stone-200 bg-white py-4 shadow-sm transition hover:border-red-300 active:scale-95" },
+            React.createElement("span", { className: "text-xs font-bold text-stone-300" }, u.n),
+            React.createElement("span", { className: "text-stone-900", style: { fontFamily: cn, fontSize: "2.4rem", lineHeight: 1.1 } }, u.cn),
+            React.createElement("span", { className: "text-sm italic text-stone-500" }, u.py),
+            React.createElement("span", { className: "text-xs text-stone-500" }, u.it))))),
+        React.createElement(NoteCard, { title: "Centinaia e migliaia" },
+            React.createElement("p", null,
+                "Cifra + unit\u00E0, nell'ordine in cui si scrive. Davanti a \u767E / \u5343 / \u4E07 il ",
+                React.createElement("b", null, "2"),
+                " diventa ",
+                React.createElement(H, { c: "\u4E24" }),
+                " li\u01CEng."),
+            React.createElement("div", { className: "grid gap-2 sm:grid-cols-2" },
+                React.createElement(Example, { cnText: "\u4E00\u767E", py: "y\u012B b\u01CEi", it: "100" }),
+                React.createElement(Example, { cnText: "\u4E09\u767E\u56DB\u5341\u4E94", py: "s\u0101n b\u01CEi s\u00EC sh\u00ED w\u01D4", it: "345" }),
+                React.createElement(Example, { cnText: "\u4E24\u5343", py: "li\u01CEng qi\u0101n", it: "2.000" }),
+                React.createElement(Example, { cnText: "\u516D\u5343\u4E03\u767E\u516B\u5341\u4E5D", py: "li\u00F9 qi\u0101n q\u012B b\u01CEi b\u0101 sh\u00ED ji\u01D4", it: "6.789" }))),
+        React.createElement(NoteCard, { title: "Lo zero interno \u00B7 \u96F6 l\u00EDng" },
+            React.createElement("p", null,
+                "Se uno zero \u00E8 ",
+                React.createElement("b", null, "dentro"),
+                " il numero (non alla fine) si pronuncia con ",
+                React.createElement(H, { c: "\u96F6" }),
+                " l\u00EDng."),
+            React.createElement("div", { className: "grid gap-2 sm:grid-cols-2" },
+                React.createElement(Example, { cnText: "\u4E00\u767E\u96F6\u4E00", py: "y\u012B b\u01CEi l\u00EDng y\u012B", it: "101" }),
+                React.createElement(Example, { cnText: "\u4E94\u767E\u96F6\u4E09", py: "w\u01D4 b\u01CEi l\u00EDng s\u0101n", it: "503" }),
+                React.createElement(Example, { cnText: "\u4E8C\u767E\u96F6\u4E8C", py: "\u00E8r b\u01CEi l\u00EDng \u00E8r", it: "202" }),
+                React.createElement(Example, { cnText: "\u4E24\u5343\u96F6\u56DB", py: "li\u01CEng qi\u0101n l\u00EDng s\u00EC", it: "2004" }))),
+        React.createElement(NoteCard, { title: "La base 10.000 \u00B7 \u4E07 w\u00E0n" },
+            React.createElement("p", null,
+                "Il cinese raggruppa le cifre a blocchi di ",
+                React.createElement("b", null, "diecimila"),
+                ", non di mille."),
+            React.createElement("div", { className: "grid gap-2 sm:grid-cols-2" },
+                React.createElement(Example, { cnText: "\u4E00\u4E07", py: "y\u012B w\u00E0n", it: "10.000" }),
+                React.createElement(Example, { cnText: "\u5341\u4E07", py: "sh\u00ED w\u00E0n", it: "100.000 (\u00AB dieci diecimila \u00BB)" }),
+                React.createElement(Example, { cnText: "\u4E00\u767E\u4E07", py: "y\u012B b\u01CEi w\u00E0n", it: "1.000.000 (\u00AB cento diecimila \u00BB)" }),
+                React.createElement(Example, { cnText: "\u5341\u56DB\u4E07\u56DB\u5343", py: "sh\u00EDs\u00EC w\u00E0n s\u00EC qi\u0101n", it: "144.000 (\u00AB 14 diecimila e 4 mila \u00BB)" })))));
+}
+function Colors() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u989C\u8272", it: "Colori \u00B7 y\u00E1n s\u00E8" }),
+        React.createElement(CardBox, null, COLORS.map((c, i) => React.createElement(RefRow, { key: i, cnText: c.cn, py: c.py, it: c.it, swatch: c.hex }))),
+        React.createElement("p", { className: "mt-4 mb-2 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Modificatori"),
+        React.createElement(CardBox, null, COLOR_MODS.map((c, i) => React.createElement(RefRow, { key: i, cnText: c.cn, py: c.py, it: c.it })))));
+}
+function Food() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u98DF\u7269", it: "Frutta e cibo \u00B7 shu\u01D0gu\u01D2" }),
+        React.createElement(CardBox, null, FOOD.map((f, i) => React.createElement(RefRow, { key: i, cnText: f.cn, py: f.py, it: f.it })))));
+}
+function TimeSection() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u65F6\u95F4", it: "Tempo, giorni e date" }),
+        React.createElement("h3", { className: "mb-2 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Avverbi di tempo"),
+        React.createElement(CardBox, null, TIME_ADV.map((t, i) => React.createElement(RefRow, { key: i, cnText: t.cn, py: t.py, it: t.it }))),
+        React.createElement("div", { className: "mt-2 grid gap-2 sm:grid-cols-2" },
+            React.createElement("p", { className: "rounded-xl bg-sky-50 p-3 text-sm text-sky-800" },
+                "\uD83D\uDCA1 Per pi\u00F9 giorni: ",
+                React.createElement("i", null, "numero"),
+                " + ",
+                React.createElement(H, { c: "\u5929" }),
+                " + ",
+                React.createElement(H, { c: "\u524D" }),
+                " qi\u00E1n (fa) o ",
+                React.createElement(H, { c: "\u540E" }),
+                " h\u00F2u (tra). Es. ",
+                React.createElement(H, { c: "\u4E24\u5929\u524D" }),
+                " li\u01CEng ti\u0101n qi\u00E1n = due giorni fa."),
+            React.createElement("p", { className: "rounded-xl bg-amber-50 p-3 text-sm text-amber-800" },
+                "\uD83D\uDCA1 Stesso schema per settimane/mesi/anni: ",
+                React.createElement(H, { c: "\u4E0A/\u8FD9/\u4E0B" }),
+                " sh\u00E0ng/zh\u00E8/xi\u00E0 (scorso/questo/prossimo); ",
+                React.createElement(H, { c: "\u53BB\u5E74/\u4ECA\u5E74/\u660E\u5E74" }),
+                " per gli anni.")),
+        React.createElement("h3", { className: "mb-2 mt-6 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Che ore sono? \u00B7 \u51E0\u70B9"),
+        React.createElement(NoteCard, { title: "L'orario" },
+            React.createElement("p", null,
+                "Domanda: ",
+                React.createElement(H, { c: "\u51E0\u70B9\uFF1F" }),
+                " j\u01D0 di\u01CEn? = \u00AB che ore sono? \u00BB. L'ora si forma con ",
+                React.createElement("i", null, "numero"),
+                " + ",
+                React.createElement(H, { c: "\u70B9" }),
+                " di\u01CEn (\u00AB ora / punto \u00BB); ",
+                React.createElement(H, { c: "\u534A" }),
+                " b\u00E0n = mezza; ",
+                React.createElement(H, { c: "\u5DE6\u53F3" }),
+                " zu\u01D2y\u00F2u = \u00AB circa, all'incirca \u00BB."),
+            React.createElement("div", { className: "grid gap-2 sm:grid-cols-2" },
+                React.createElement(Example, { cnText: "\u4E0B\u5348\u4E24\u70B9\u534A", py: "xi\u00E0w\u01D4 li\u01CEng di\u01CEn b\u00E0n", it: "le 14:30 (due e mezza del pomeriggio)" }),
+                React.createElement(Example, { cnText: "\u4E0B\u5348\u4E94\u70B9\u5DE6\u53F3", py: "xi\u00E0w\u01D4 w\u01D4 di\u01CEn zu\u01D2y\u00F2u", it: "verso le 17:00" })),
+            React.createElement("p", { className: "text-stone-500" },
+                "Si premette la parte del giorno: ",
+                React.createElement(H, { c: "\u4E0A\u5348" }),
+                " mattina \u00B7 ",
+                React.createElement(H, { c: "\u4E2D\u5348" }),
+                " mezzogiorno \u00B7 ",
+                React.createElement(H, { c: "\u4E0B\u5348" }),
+                " pomeriggio \u00B7 ",
+                React.createElement(H, { c: "\u665A\u4E0A" }),
+                " sera.")),
+        React.createElement("h3", { className: "mb-2 mt-6 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Parti del giorno e saluti"),
+        React.createElement("div", { className: "space-y-2" }, DAY_PARTS.map((p, i) => (React.createElement("div", { key: i, className: "rounded-xl border border-stone-200 bg-white p-3 shadow-sm" },
+            React.createElement("div", { className: "flex items-center justify-between" },
+                React.createElement("b", { className: "text-stone-800" }, p.it),
+                React.createElement(Speak, { text: p.words[0].cn })),
+            React.createElement("div", { className: "mt-1 flex flex-wrap items-baseline gap-x-4 gap-y-1" }, p.words.map((w, j) => (React.createElement("span", { key: j, className: "text-stone-900", style: { fontFamily: cn, fontSize: "1.4rem" } },
+                w.cn,
+                " ",
+                React.createElement("span", { className: "text-sm italic text-stone-400" }, w.py))))),
+            p.greet && (React.createElement("div", { className: "mt-2 flex items-center justify-between gap-2 rounded-lg bg-amber-50 px-3 py-1.5 text-sm text-amber-800" },
+                React.createElement("span", null,
+                    React.createElement("span", { style: { fontFamily: cn, fontSize: "1.1rem" } }, p.greet.cn),
+                    " \u00B7 ",
+                    React.createElement("span", { className: "italic" }, p.greet.py),
+                    " \u2014 ",
+                    p.greet.it),
+                React.createElement(Speak, { text: p.greet.cn, size: 15 }))))))),
+        React.createElement("h3", { className: "mb-2 mt-6 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Settimane, mesi e anni"),
+        React.createElement("p", { className: "mb-3 text-sm text-stone-500" },
+            React.createElement(H, { c: "\u4E0A" }),
+            " sh\u00E0ng = scorso \u00B7 ",
+            React.createElement(H, { c: "\u8FD9" }),
+            " zh\u00E8 = questo \u00B7 ",
+            React.createElement(H, { c: "\u4E0B" }),
+            " xi\u00E0 = prossimo."),
+        React.createElement("div", { className: "space-y-2" }, REL_WEEK.map((w, i) => (React.createElement("div", { key: i, className: "rounded-xl border border-stone-200 bg-white p-3 shadow-sm" },
+            React.createElement("div", { className: "flex items-center justify-between" },
+                React.createElement("b", { className: "text-stone-800" }, w.it),
+                React.createElement(Speak, { text: w.forms[0] })),
+            React.createElement("div", { className: "mt-1 flex flex-wrap gap-x-5 gap-y-1 text-stone-900", style: { fontFamily: cn, fontSize: "1.4rem" } }, w.forms.map((f, j) => React.createElement("span", { key: j }, f))),
+            React.createElement("div", { className: "text-xs italic text-stone-500" }, w.py))))),
+        React.createElement("div", { className: "mt-2" },
+            React.createElement(CardBox, null, REL_MONTH_YEAR.map((m, i) => React.createElement(RefRow, { key: i, cnText: m.cn, py: m.py, it: m.it })))),
+        React.createElement("h3", { className: "mb-2 mt-6 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Giorni della settimana"),
+        React.createElement("p", { className: "mb-3 text-sm text-stone-500" },
+            "Tre forme equivalenti: ",
+            React.createElement(H, { c: "\u661F\u671F" }),
+            " x\u012Bngq\u012B \u00B7 ",
+            React.createElement(H, { c: "\u5468" }),
+            " zh\u014Du \u00B7 ",
+            React.createElement(H, { c: "\u793C\u62DC" }),
+            " l\u01D0b\u00E0i."),
+        React.createElement("div", { className: "space-y-2" }, DAYS.map((d, i) => (React.createElement("div", { key: i, className: "rounded-xl border border-stone-200 bg-white p-3 shadow-sm" },
+            React.createElement("div", { className: "flex items-center justify-between" },
+                React.createElement("b", { className: "text-stone-800" }, d.it),
+                React.createElement(Speak, { text: d.xq.split(" ")[0] })),
+            React.createElement("div", { className: "mt-1 flex flex-wrap gap-x-5 gap-y-1 text-stone-900", style: { fontFamily: cn, fontSize: "1.5rem" } },
+                React.createElement("span", null, d.xq),
+                React.createElement("span", null, d.zhou),
+                React.createElement("span", null, d.lb)),
+            React.createElement("div", { className: "text-xs italic text-stone-500" }, d.py))))),
+        React.createElement("div", { className: "mt-3 grid gap-2 sm:grid-cols-2" },
+            React.createElement("p", { className: "rounded-xl bg-sky-50 p-3 text-sm text-sky-800" },
+                React.createElement(H, { c: "\u5468\u4E2D" }),
+                " zh\u014Du zh\u014Dng = giorni feriali (lun\u2013ven)."),
+            React.createElement("p", { className: "rounded-xl bg-amber-50 p-3 text-sm text-amber-800" },
+                React.createElement(H, { c: "\u5468\u672B" }),
+                " zh\u014Du m\u00F2 = fine settimana (weekend).")),
+        React.createElement("h3", { className: "mb-2 mt-6 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Mesi"),
+        React.createElement("div", { className: "grid grid-cols-2 gap-2 sm:grid-cols-3" }, MONTHS.map((m, i) => (React.createElement("button", { key: i, onClick: () => speak(m.cn), className: "flex flex-col items-start rounded-xl border border-stone-200 bg-white px-3 py-2 text-left shadow-sm transition hover:border-red-300 active:scale-95" },
+            React.createElement("span", { className: "text-stone-900", style: { fontFamily: cn, fontSize: "1.5rem" } }, m.cn),
+            React.createElement("span", { className: "text-xs italic text-stone-500" }, m.py),
+            React.createElement("span", { className: "text-sm font-medium text-stone-700" }, m.it))))),
+        React.createElement("h3", { className: "mb-2 mt-6 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Stagioni"),
+        React.createElement(CardBox, null, SEASONS.map((s, i) => React.createElement(RefRow, { key: i, cnText: s.cn, py: s.py, it: s.it }))),
+        React.createElement("h3", { className: "mb-2 mt-6 text-sm font-medium uppercase tracking-widest text-stone-400" }, "La data"),
+        React.createElement(NoteCard, { title: "Ordine: dal grande al piccolo (come in inglese)" },
+            React.createElement("p", null,
+                "Anno ",
+                React.createElement(H, { c: "\u5E74" }),
+                " ni\u00E1n \u2192 mese ",
+                React.createElement(H, { c: "\u6708" }),
+                " yu\u00E8 \u2192 giorno ",
+                React.createElement(H, { c: "\u53F7" }),
+                " h\u00E0o (forma scritta ",
+                React.createElement(H, { c: "\u65E5" }),
+                " r\u00EC)."),
+            React.createElement(Example, { cnText: "2019\u5E745\u67084\u53F7 \u661F\u671F\u516D", py: "2019 ni\u00E1n 5 yu\u00E8 4 h\u00E0o, x\u012Bngq\u012B li\u00F9", it: "Sabato 4 maggio 2019." }),
+            React.createElement(Example, { cnText: "\u4E03\u6708\u6211\u4EEC\u6709\u4E2D\u6587\u7684\u5927\u4F1A\u3002", py: "q\u012B yu\u00E8 w\u01D2men y\u01D2u zh\u014Dngw\u00E9n de d\u00E0hu\u00EC.", it: "A luglio abbiamo l'assemblea cinese." }),
+            React.createElement("p", { className: "text-stone-500" },
+                "Classificatore: giorni e anni \u2192 niente ",
+                React.createElement(H, { c: "\u4E2A" }),
+                "; settimane e mesi \u2192 con ",
+                React.createElement(H, { c: "\u4E2A" }),
+                "."))));
+}
+function Positions() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u65B9\u4F4D", it: "Posizioni spaziali" }),
+        POSITIONS.map((p, i) => (React.createElement("div", { key: i, className: "mb-4 rounded-2xl border border-stone-200 bg-white p-5 shadow-sm" },
+            React.createElement("div", { className: "mb-3 flex items-center gap-3" },
+                React.createElement("span", { className: "flex h-12 w-12 items-center justify-center rounded-xl bg-red-800 text-white shadow-md", style: { fontFamily: cn, fontSize: "1.8rem" } }, p.cn),
+                React.createElement("div", null,
+                    React.createElement("div", { className: "font-bold text-stone-800" }, p.it),
+                    React.createElement("div", { className: "text-sm italic text-stone-400" }, p.py))),
+            React.createElement("div", { className: "space-y-2" }, p.ex.map((e, j) => React.createElement(Example, { key: j, cnText: e.cn, py: e.py, it: e.it }))))))));
+}
+function Actions() {
+    const byCn = (list) => list.map((c) => EXTRA.find((w) => w.cn === c)).filter(Boolean);
+    const daily = byCn(["起床", "洗脸", "刷牙", "穿裤子", "吃米饭", "喝茶", "写信", "读杂志"]);
+    const clean = byCn(["扫地", "拖地", "洗衣服", "洗厕所"]);
+    const door = byCn(["开门", "关窗户", "敲门", "按门铃"]);
+    const advs = byCn(["快快地", "慢慢地", "热心地", "冷淡地", "偶尔"]);
+    const relig = byCn(["学习圣经", "出去传道", "向上帝祷告", "唱诗歌"]);
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u52A8\u4F5C", it: "Azioni e avverbi" }),
+        React.createElement("h3", { className: "mb-2 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Vita quotidiana"),
+        React.createElement(CardBox, null, daily.map((a, i) => React.createElement(RefRow, { key: i, cnText: a.cn, py: a.py, it: a.it }))),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Pulizie \u00B7 \u6253\u626B d\u01CEs\u01CEo"),
+        React.createElement(CardBox, null, clean.map((a, i) => React.createElement(RefRow, { key: i, cnText: a.cn, py: a.py, it: a.it }))),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Alla porta"),
+        React.createElement(CardBox, null, door.map((a, i) => React.createElement(RefRow, { key: i, cnText: a.cn, py: a.py, it: a.it }))),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Avverbi di modo"),
+        React.createElement(CardBox, null, advs.map((a, i) => React.createElement(RefRow, { key: i, cnText: a.cn, py: a.py, it: a.it }))),
+        React.createElement("h3", { className: "mb-2 mt-5 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Attivit\u00E0 teocratiche"),
+        React.createElement(CardBox, null, relig.map((a, i) => React.createElement(RefRow, { key: i, cnText: a.cn, py: a.py, it: a.it })))));
+}
+function Family() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u5BB6\u5EAD", it: "Albero genealogico \u00B7 ji\u0101t\u00EDng" }),
+        React.createElement("p", { className: "mb-3 text-sm text-stone-500" },
+            "Il cinese distingue il lato ",
+            React.createElement("b", null, "paterno"),
+            " da quello ",
+            React.createElement("b", null, "materno"),
+            " e i fratelli ",
+            React.createElement("b", null, "maggiori"),
+            " dai ",
+            React.createElement("b", null, "minori"),
+            ". Il prefisso ",
+            React.createElement(H, { c: "\u5916" }),
+            " w\u00E0i (\u00AB esterno \u00BB) marca i parenti del lato materno."),
+        React.createElement(CardBox, null, FAMILY.map((f, i) => React.createElement(RefRow, { key: i, cnText: f.cn, py: f.py, it: f.it })))));
+}
+function Body() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u8EAB\u4F53", it: "Parti del corpo \u00B7 sh\u0113nt\u01D0 b\u00F9w\u00E8i" }),
+        React.createElement(CardBox, null, BODY.map((b, i) => React.createElement(RefRow, { key: i, cnText: b.cn, py: b.py, it: b.it })))));
+}
+function House() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u623F\u5B50", it: "Casa e arredamento \u00B7 f\u00E1ngzi h\u00E9 ji\u0101j\u00F9" }),
+        React.createElement(CardBox, null, HOUSE.map((h, i) => React.createElement(RefRow, { key: i, cnText: h.cn, py: h.py, it: h.it })))));
+}
+function Animals() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u52A8\u7269", it: "Animali \u00B7 d\u00F2ngw\u00F9" }),
+        React.createElement(CardBox, null, ANIMALS.map((a, i) => React.createElement(RefRow, { key: i, cnText: a.cn, py: a.py, it: a.it })))));
+}
+function Apostles() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u4F7F\u5F92", it: "I 12 apostoli \u00B7 sh\u01D0t\u00FA" }),
+        React.createElement("p", { className: "mb-4 text-sm text-stone-500" }, "I nomi propri si rendono per traslitterazione fonetica: ogni carattere riproduce un suono del nome originale."),
+        React.createElement("div", { className: "grid gap-2 sm:grid-cols-2" }, APOSTLES.map((a, i) => (React.createElement("button", { key: i, onClick: () => speak(a.cn), className: "flex items-center justify-between gap-3 rounded-2xl border border-stone-200 bg-white px-4 py-3 text-left shadow-sm transition hover:border-red-300 active:scale-95" },
+            React.createElement("div", { className: "min-w-0" },
+                React.createElement("div", { className: "font-semibold text-stone-800" }, a.it),
+                React.createElement("div", { className: "text-xs italic text-stone-500" }, a.py)),
+            React.createElement("span", { className: "shrink-0 text-stone-900", style: { fontFamily: cn, fontSize: "1.7rem", lineHeight: 1.1 } }, a.cn)))))));
+}
+function Nations() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u56FD\u5BB6\u548C\u5927\u6D32", it: "Nazioni e continenti \u00B7 gu\u00F3ji\u0101 h\u00E9 d\u00E0zh\u014Du" }),
+        React.createElement("p", { className: "mb-3 text-sm text-stone-500" },
+            "Molti nomi di nazione finiscono in ",
+            React.createElement(H, { c: "\u56FD" }),
+            " gu\u00F3 (\u00AB paese \u00BB): \u4E2D\u56FD, \u6CD5\u56FD, \u7F8E\u56FD\u2026 I continenti finiscono in ",
+            React.createElement(H, { c: "\u6D32" }),
+            " zh\u014Du."),
+        React.createElement(CardBox, null, NATIONS.map((n, i) => React.createElement(RefRow, { key: i, cnText: n.cn, py: n.py, it: n.it })))));
+}
+function Bible() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u5723\u7ECF\u7684\u4E66\u5377", it: "Libri della Bibbia \u00B7 sh\u00E8ngj\u012Bng de sh\u016Bju\u00E0n" }),
+        React.createElement("p", { className: "mb-3 text-sm text-stone-500" },
+            "Quasi tutti i nomi sono traslitterazioni foniche. Molti aggiungono ",
+            React.createElement(H, { c: "\u4E66" }),
+            " sh\u016B (\u00AB libro \u00BB); i Vangeli usano ",
+            React.createElement(H, { c: "\u798F\u97F3" }),
+            " f\u00FAy\u012Bn (\u00AB vangelo \u00BB); ",
+            React.createElement(H, { c: "\u4E0A/\u4E0B" }),
+            " sh\u00E0ng/xi\u00E0 distinguono primo/secondo."),
+        React.createElement("h3", { className: "mb-2 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Scritture Ebraiche \u00B7 39"),
+        React.createElement(CardBox, null, BIBLE_OT.map((b, i) => React.createElement(RefRow, { key: i, cnText: b.cn, py: b.py, it: b.it }))),
+        React.createElement("h3", { className: "mb-2 mt-6 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Scritture Greche \u00B7 27"),
+        React.createElement(CardBox, null, BIBLE_NT.map((b, i) => React.createElement(RefRow, { key: i, cnText: b.cn, py: b.py, it: b.it })))));
+}
+function Teocratic() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u4E0E\u5D07\u62DC\u6709\u5173\u7684\u8BCD\u8BED", it: "Termini teocratici \u00B7 y\u01D4 ch\u00F3ngb\u00E0i y\u01D2ugu\u0101n de c\u00EDy\u01D4" }),
+        React.createElement("h3", { className: "mb-2 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Ruoli, adunanze e assemblee \u00B7 2\u00B0 livello"),
+        React.createElement(CardBox, null, TEO_ROLES.map((t, i) => React.createElement(RefRow, { key: i, cnText: t.cn, py: t.py, it: t.it }))),
+        React.createElement("h3", { className: "mb-2 mt-6 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Glossario"),
+        React.createElement(CardBox, null, TEO_GLOSSARY.map((t, i) => React.createElement(RefRow, { key: i, cnText: t.cn, py: t.py, it: t.it })))));
+}
+function Grammar() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u8BED\u6CD5", it: "Grammatica" }),
+        React.createElement("h3", { className: "mb-3 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "La negazione \u4E0D / \u6CA1"),
+        React.createElement(NoteCard, { title: "\u4E0D (b\u00F9) \u2014 verbi e aggettivi" },
+            React.createElement("p", null,
+                "Rende negativa la frase negando il ",
+                React.createElement("b", null, "verbo"),
+                " o l'",
+                React.createElement("b", null, "aggettivo"),
+                ": ",
+                React.createElement(H, { c: "\u4E0D" }),
+                " + verbo / ",
+                React.createElement(H, { c: "\u4E0D" }),
+                " + aggettivo. Nega azioni nel ",
+                React.createElement("b", null, "presente e futuro"),
+                "."),
+            React.createElement(Example, { cnText: "\u4E0D\u77E5\u9053", py: "b\u00F9 zh\u012Bd\u00E0o", it: "non sapere" }),
+            React.createElement(Example, { cnText: "\u4E0D\u662F", py: "b\u00F9 sh\u00EC", it: "non essere" }),
+            React.createElement(Example, { cnText: "\u4E0D\u597D", py: "b\u00F9 h\u01CEo", it: "non buono" })),
+        React.createElement(NoteCard, { title: "\u6CA1 / \u6CA1\u6709 (m\u00E9i / m\u00E9iy\u01D2u) \u2014 il passato e il verbo \u6709" },
+            React.createElement("p", null,
+                React.createElement(H, { c: "\u6CA1" }),
+                " e il sinonimo ",
+                React.createElement(H, { c: "\u6CA1\u6709" }),
+                " negano l'azione nel ",
+                React.createElement("b", null, "passato"),
+                " (qualcosa che non si \u00E8 compiuto)."),
+            React.createElement(Example, { cnText: "\u6CA1\u6709", py: "m\u00E9iy\u01D2u", it: "non avere" }),
+            React.createElement("p", { className: "rounded-lg bg-amber-50 p-2 text-amber-800" },
+                "\u26A0\uFE0F Il verbo ",
+                React.createElement(H, { c: "\u6709" }),
+                " (avere) non si nega mai con ",
+                React.createElement(H, { c: "\u4E0D" }),
+                ", ma ",
+                React.createElement("b", null,
+                    "sempre con ",
+                    React.createElement(H, { c: "\u6CA1" })),
+                " \u2014 in passato, presente e futuro.")),
+        React.createElement("h3", { className: "mb-3 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Particelle verbali \u4E86 e \u8FC7"),
+        React.createElement(GrammarBlock, { char: "\u4E86", py: "le", title: "Azione completata / cambiamento di stato", sub: "subito dopo il verbo, oppure a fine frase", items: [
+                { label: "completamento (V + 了 + O)", cn: "我吃了饭。", py: "Wǒ chī le fàn.", it: "Ho mangiato." },
+                { label: "negazione", cn: "我没吃饭。", py: "Wǒ méi chī fàn.", it: "Non ho mangiato." },
+                { label: "cambiamento di stato (… + 了)", cn: "下雨了。", py: "Xià yǔ le.", it: "Ha iniziato a piovere." },
+                { cn: "她不高兴了。", py: "Tā bù gāoxìng le.", it: "Non è più felice." },
+            ] }),
+        React.createElement(GrammarBlock, { char: "\u8FC7", py: "gu\u00F2", title: "Esperienza di un'azione", sub: "\u00AB avere mai fatto \u00BB \u2014 subito dopo il verbo", items: [
+                { label: "esperienza (V + 过 + O)", cn: "我去过中国。", py: "Wǒ qù guò Zhōngguó.", it: "Ho visitato la Cina." },
+                { label: "negazione", cn: "我没去过中国。", py: "Wǒ méi qù guò Zhōngguó.", it: "Non ho mai visitato la Cina." },
+            ] }),
+        React.createElement(NoteCard, { title: "\u4E86 o \u8FC7? il confronto chiave" },
+            React.createElement(Example, { cnText: "\u6211\u6628\u5929\u5403\u4E86\u5BFF\u53F8\u3002", py: "W\u01D2 zu\u00F3ti\u0101n ch\u012B le sh\u00F2us\u012B.", it: "Ieri ho mangiato sushi (evento completato)." }),
+            React.createElement(Example, { cnText: "\u6211\u5403\u8FC7\u5BFF\u53F8\u3002", py: "W\u01D2 ch\u012B gu\u00F2 sh\u00F2us\u012B.", it: "Ho mangiato sushi in passato (esperienza di vita)." })),
+        React.createElement("h3", { className: "mb-3 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Futuro e azione in corso \u00B7 \u4F1A / \u6B63\u5728"),
+        React.createElement(GrammarBlock, { char: "\u4F1A", py: "hu\u00EC", title: "Futuro / intenzione", sub: "azione che avverr\u00E0 \u00B7 S + \u4F1A + V + O", items: [
+                { cn: "我会吃饭。", py: "Wǒ huì chī fàn.", it: "Mangerò." },
+                { cn: "下完中文课后，我们会去饭店。", py: "Xià wán zhōngwén kè hòu, wǒmen huì qù fàndiàn.", it: "Dopo la lezione di cinese andremo al ristorante." },
+            ] }),
+        React.createElement(GrammarBlock, { char: "\u6B63\u5728", py: "zh\u00E8ngz\u00E0i", title: "Azione in corso (gerundio)", sub: "\u00AB sto facendo \u00BB \u00B7 S + \u6B63\u5728 + V + O \u00B7 spesso si pu\u00F2 togliere \u6B63", items: [
+                { cn: "我正在吃饭。", py: "Wǒ zhèngzài chī fàn.", it: "Sto mangiando." },
+                { label: "negazione", cn: "我不在吃饭。", py: "Wǒ bù zài chī fàn.", it: "Non sto mangiando." },
+            ] }),
+        React.createElement(NoteCard, { title: "Le tre marche di tempo a confronto" },
+            React.createElement(Example, { cnText: "\u6211\u4F1A\u5403\u996D\u3002", py: "W\u01D2 hu\u00EC ch\u012B f\u00E0n.", it: "Manger\u00F2 (futuro)." }),
+            React.createElement(Example, { cnText: "\u6211\u6B63\u5728\u5403\u996D\u3002", py: "W\u01D2 zh\u00E8ngz\u00E0i ch\u012B f\u00E0n.", it: "Sto mangiando (in corso)." }),
+            React.createElement(Example, { cnText: "\u6211\u5403\u996D\u4E86\u3002", py: "W\u01D2 ch\u012B f\u00E0n le.", it: "Ho mangiato (passato / completato)." })),
+        React.createElement("h3", { className: "mb-3 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Il comparativo \u00B7 \u6BD4 b\u01D0"),
+        React.createElement(NoteCard, { title: "Struttura: A + \u6BD4 + B + aggettivo" },
+            React.createElement("p", null,
+                "\u6BD4 b\u01D0 confronta due termini: ",
+                React.createElement("i", null, "A"),
+                " + ",
+                React.createElement(H, { c: "\u6BD4" }),
+                " + ",
+                React.createElement("i", null, "B"),
+                " + ",
+                React.createElement("i", null, "aggettivo"),
+                ". Non si mette \u00AB pi\u00F9 \u00BB davanti all'aggettivo."),
+            React.createElement(Example, { cnText: "\u4E2D\u6587\u6BD4\u610F\u5927\u5229\u6587\u96BE\u3002", py: "Zh\u014Dngw\u00E9n b\u01D0 Y\u00ECd\u00E0l\u00ECw\u00E9n n\u00E1n.", it: "Il cinese \u00E8 pi\u00F9 difficile dell'italiano." }),
+            React.createElement(Example, { cnText: "\u54E5\u54E5\u6BD4\u5F1F\u5F1F\u9AD8\u3002", py: "G\u0113ge b\u01D0 d\u00ECdi g\u0101o.", it: "Il fratello maggiore \u00E8 pi\u00F9 alto del minore." }),
+            React.createElement("p", { className: "rounded-lg bg-sky-50 p-2 text-sky-800" },
+                "\uD83D\uDCA1 Per \u00AB ancora pi\u00F9 \u00BB: aggiungi ",
+                React.createElement(H, { c: "\u66F4" }),
+                " g\u00E8ng o ",
+                React.createElement(H, { c: "\u8FD8" }),
+                " h\u00E1i. Es. ",
+                React.createElement(H, { c: "\u66F4\u9AD8" }),
+                " = ancora pi\u00F9 alto.")),
+        React.createElement("h4", { className: "mb-2 mt-4 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Aggettivi utili"),
+        React.createElement(CardBox, null, ADJ.map((a, i) => React.createElement(RefRow, { key: i, cnText: a.cn, py: a.py, it: a.it }))),
+        React.createElement("p", { className: "mt-3 rounded-xl bg-amber-50 p-3 text-sm text-amber-800" },
+            "Coppie di contrari: ",
+            React.createElement(H, { c: "\u9AD8" }),
+            "/",
+            React.createElement(H, { c: "\u77EE" }),
+            " alto/basso \u00B7 ",
+            React.createElement(H, { c: "\u5927" }),
+            "/",
+            React.createElement(H, { c: "\u5C0F" }),
+            " grande/piccolo \u00B7 ",
+            React.createElement(H, { c: "\u591A" }),
+            "/",
+            React.createElement(H, { c: "\u5C11" }),
+            " molto/poco \u00B7 ",
+            React.createElement(H, { c: "\u8FDC" }),
+            "/",
+            React.createElement(H, { c: "\u8FD1" }),
+            " lontano/vicino \u00B7 ",
+            React.createElement(H, { c: "\u80D6" }),
+            "/",
+            React.createElement(H, { c: "\u7626" }),
+            " grasso/magro \u00B7 ",
+            React.createElement(H, { c: "\u96BE" }),
+            "/",
+            React.createElement(H, { c: "\u7B80\u5355" }),
+            " difficile/facile. Il \u00AB cattivo da... \u00BB si forma con ",
+            React.createElement(H, { c: "\u96BE" }),
+            " n\u00E1n: ",
+            React.createElement(H, { c: "\u96BE\u5403" }),
+            " n\u00E1n ch\u012B (cattivo da mangiare), ",
+            React.createElement(H, { c: "\u96BE\u559D" }),
+            " n\u00E1n h\u0113 (cattivo da bere)."),
+        React.createElement("h3", { className: "mb-3 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Chiedere quantit\u00E0 ed et\u00E0"),
+        React.createElement(GrammarBlock, { char: "\u51E0", py: "j\u01D0", title: "Quanti (piccola quantit\u00E0 \u2264 10)", sub: "quasi sempre seguito da un classificatore (\u4E2A, \u672C, \u53E3\u2026)", items: [
+                { cn: "你有几本书？", py: "Nǐ yǒu jǐ běn shū?", it: "Quanti libri hai?" },
+                { cn: "今天是几月几号？", py: "Jīntiān shì jǐ yuè jǐ hào?", it: "Che giorno è oggi?" },
+                { cn: "你家有几口人？", py: "Nǐ jiā yǒu jǐ kǒu rén?", it: "Quante persone ci sono in famiglia?" },
+            ] }),
+        React.createElement(GrammarBlock, { char: "\u591A\u5C11", py: "du\u014Dsh\u01CEo", title: "Quanti / quanto (grande quantit\u00E0 o prezzo)", sub: "di solito senza classificatore", items: [
+                { cn: "这个多少钱？", py: "Zhège duōshǎo qián?", it: "Quanto costa questo?" },
+                { cn: "你们班有多少学生？", py: "Nǐmen bān yǒu duōshǎo xuéshēng?", it: "Quanti studenti nella vostra classe?" },
+            ] }),
+        React.createElement(NoteCard, { title: "\u591A\u5927 (du\u014D d\u00E0) \u2014 chiedere l'et\u00E0" },
+            React.createElement("p", null,
+                "Bambini / amici: ",
+                React.createElement(H, { c: "\u4F60\u51E0\u5C81\u4E86\uFF1F" }),
+                " n\u01D0 j\u01D0 su\u00EC le?"),
+            React.createElement("p", null,
+                "Anziani / formale: ",
+                React.createElement(H, { c: "\u60A8\u591A\u5927\u5E74\u7EAA\u4E86\uFF1F" }),
+                " n\u00EDn du\u014D d\u00E0 ni\u00E1nj\u00EC le?"),
+            React.createElement("p", { className: "text-stone-500" },
+                "Riepilogo: ",
+                React.createElement(H, { c: "\u51E0" }),
+                " = numero piccolo + classificatore; ",
+                React.createElement(H, { c: "\u591A\u5C11" }),
+                " = qualsiasi numero / prezzo, senza classificatore.")),
+        React.createElement("h3", { className: "mb-3 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Frasi interrogative"),
+        React.createElement(NoteCard, { title: "Particelle finali" },
+            React.createElement("p", null,
+                React.createElement(H, { c: "\u5417" }),
+                " ma \u2014 rende interrogativa qualsiasi frase: S + V + (O) + ",
+                React.createElement(H, { c: "\u5417" }),
+                "."),
+            React.createElement("p", null,
+                React.createElement(H, { c: "\u5462" }),
+                " ne \u2014 riformula una domanda o \u00AB e tu? \u00BB; pu\u00F2 sottintendere \u00AB dov'\u00E8? \u00BB."),
+            React.createElement("p", null,
+                React.createElement(H, { c: "\u5427" }),
+                " ba \u2014 esprime un dubbio o chiede conferma: S + V + (O) + ",
+                React.createElement(H, { c: "\u5427" }),
+                ".")),
+        React.createElement(NoteCard, { title: "Forma affermativa-negativa" },
+            React.createElement("p", null,
+                "Struttura: S + V + ",
+                React.createElement(H, { c: "\u4E0D" }),
+                " b\u00F9 / ",
+                React.createElement(H, { c: "\u6CA1(\u6709)" }),
+                " m\u00E9i(y\u01D2u) + V + (O). Si chiede una risposta s\u00EC/no."),
+            React.createElement(Example, { cnText: "\u4F60\u662F\u4E0D\u662F\u4E2D\u56FD\u4EBA\uFF1F", py: "N\u01D0 sh\u00EC b\u00FA sh\u00EC Zh\u014Dnggu\u00F3 r\u00E9n?", it: "Sei cinese (s\u00EC o no)?" })),
+        React.createElement(NoteCard, { title: "Forma alternativa con \u8FD8\u662F" },
+            React.createElement("p", null,
+                "Si usa la congiunzione ",
+                React.createElement(H, { c: "\u8FD8\u662F" }),
+                " h\u00E1ishi (\u00AB o, oppure \u00BB): S1 + V1 + (O) + ",
+                React.createElement(H, { c: "\u8FD8\u662F" }),
+                " + S2 + V2 + (O)."),
+            React.createElement(Example, { cnText: "\u4F60\u559D\u8336\u8FD8\u662F\u559D\u5496\u5561\uFF1F", py: "N\u01D0 h\u0113 ch\u00E1 h\u00E1ishi h\u0113 k\u0101f\u0113i?", it: "Bevi t\u00E8 o caff\u00E8?" })),
+        React.createElement("h3", { className: "mb-3 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Pronomi interrogativi"),
+        React.createElement(CardBox, null, INTERR_PRONOUNS.map((p, i) => React.createElement(RefRow, { key: i, cnText: p.cn, py: p.py, it: p.it }))),
+        React.createElement("h3", { className: "mb-3 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Verbi di direzione"),
+        React.createElement(GrammarBlock, { char: "\u53BB", py: "q\u00F9", title: "Andare", sub: "movimento lontano da chi parla", items: [{ cn: "我去学校。", py: "wǒ qù xuéxiào", it: "Io vado a scuola." }, { cn: "他去吃饭。", py: "tā qù chīfàn", it: "Lui va a mangiare." }] }),
+        React.createElement(GrammarBlock, { char: "\u6765", py: "l\u00E1i", title: "Venire", sub: "movimento verso chi parla", items: [{ cn: "你来我家。", py: "nǐ lái wǒ jiā", it: "Tu vieni a casa mia." }, { cn: "请来看！", py: "qǐng lái kàn", it: "Per favore, vieni a vedere!" }] }),
+        React.createElement(GrammarBlock, { char: "\u4ECE", py: "c\u00F3ng", title: "Da", sub: "punto di partenza \u00B7 struttura \u4ECE A \u5230 B", items: [{ cn: "从北京。", py: "cóng běijīng", it: "Da Pechino." }, { cn: "我从法国来。", py: "wǒ cóng fàguó lái", it: "Io vengo dalla Francia." }] }),
+        React.createElement(GrammarBlock, { char: "\u5230", py: "d\u00E0o", title: "A / Fino a", sub: "punto di arrivo o limite", items: [{ cn: "我到公司了。", py: "wǒ dào gōngsī le", it: "Sono arrivato in ufficio." }, { cn: "从这里到那里。", py: "cóng zhèlǐ dào nàlǐ", it: "Da qui a lì." }] }),
+        React.createElement(NoteCard, { title: "Salire / scendere \u00B7 il punto di vista" },
+            React.createElement("p", null,
+                React.createElement(H, { c: "\u6765" }),
+                " l\u00E1i = verso chi parla; ",
+                React.createElement(H, { c: "\u53BB" }),
+                " q\u00F9 = lontano da chi parla. Combinati con su/gi\u00F9: ",
+                React.createElement(H, { c: "\u4E0A\u6765" }),
+                " venire su, ",
+                React.createElement(H, { c: "\u4E0B\u6765" }),
+                " scendere (verso di me); ",
+                React.createElement(H, { c: "\u4E0A\u53BB" }),
+                " salire, ",
+                React.createElement(H, { c: "\u4E0B\u53BB" }),
+                " scendere (lontano da me)."),
+            React.createElement(Example, { cnText: "\u4F60\u53EF\u4EE5\u5230\u6211\u8FD9\u91CC\u6765\u3002", py: "N\u01D0 k\u011By\u01D0 d\u00E0o w\u01D2 zh\u00E8l\u01D0 l\u00E1i.", it: "Puoi venire da me." }),
+            React.createElement(Example, { cnText: "\u6211\u53EF\u4EE5\u5230\u4F60\u90A3\u91CC\u53BB\u3002", py: "W\u01D2 k\u011By\u01D0 d\u00E0o n\u01D0 n\u00E0l\u01D0 q\u00F9.", it: "Io posso venire da te." })),
+        React.createElement("h3", { className: "mb-3 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Verbi ausiliari: potere"),
+        React.createElement(GrammarBlock, { char: "\u53EF\u4EE5", py: "k\u011By\u01D0", title: "Potere / essere permesso", sub: "il modo pi\u00F9 comune \u00B7 capacit\u00E0 o permesso", items: [
+                { cn: "你可以怎样知道上帝有什么要求？", py: "Nǐ kěyǐ zěnyàng zhīdào shàngdì yǒu shénme yāoqiú?", it: "Come si fa a sapere cosa richiede Dio?" },
+                { label: "permesso", cn: "我可以去他家吗？", py: "Wǒ kěyǐ qù tā jiā ma?", it: "Posso andare a casa sua?" },
+                { cn: "可以。/ 不可以。", py: "Kěyǐ. / Bù kěyǐ.", it: "Sì, puoi. / No, non puoi." },
+            ] }),
+        React.createElement(GrammarBlock, { char: "\u4F1A", py: "hu\u00EC", title: "Saper fare", sub: "capacit\u00E0 mentale / abilit\u00E0 appresa", items: [
+                { cn: "我会说普通话。", py: "Wǒ huì shuō Pǔtōnghuà.", it: "So parlare mandarino." },
+                { cn: "我会写中文。", py: "Wǒ huì xiě zhōngwén.", it: "So scrivere in cinese." },
+            ] }),
+        React.createElement(GrammarBlock, { char: "\u80FD", py: "n\u00E9ng", title: "Essere in grado (fisicamente)", sub: "capacit\u00E0 fisica di compiere un'azione", items: [
+                { cn: "我不能跑步。", py: "Wǒ bùnéng pǎobù.", it: "Non posso correre (es. per una ferita)." },
+                { cn: "我能跳舞。", py: "Wǒ néng tiàowǔ.", it: "Posso ballare (fisicamente capace)." },
+            ] }),
+        React.createElement("p", { className: "mb-4 rounded-xl bg-sky-50 p-3 text-sm text-sky-800" },
+            "\uD83D\uDCA1 ",
+            React.createElement(H, { c: "\u4F1A\u8DF3\u821E" }),
+            " hu\u00EC ti\u00E0ow\u01D4 = \u00AB so come ballare \u00BB (abilit\u00E0 appresa); ",
+            React.createElement(H, { c: "\u80FD\u8DF3\u821E" }),
+            " n\u00E9ng ti\u00E0ow\u01D4 = \u00AB sono in grado di ballare \u00BB (fisicamente)."),
+        React.createElement(NoteCard, { title: "Forma s\u00EC/no dei verbi \u00AB potere \u00BB" },
+            React.createElement("p", null,
+                "Si raddoppia il verbo con la negazione in mezzo: ",
+                React.createElement(H, { c: "\u53EF\u4E0D\u53EF\u4EE5" }),
+                " k\u011B bu k\u011By\u01D0 \u00B7 ",
+                React.createElement(H, { c: "\u4F1A\u4E0D\u4F1A" }),
+                " hu\u00EC bu hu\u00EC \u00B7 ",
+                React.createElement(H, { c: "\u80FD\u4E0D\u80FD" }),
+                " n\u00E9ng bu n\u00E9ng."),
+            React.createElement(Example, { cnText: "\u6211\u53EF\u4E0D\u53EF\u4EE5\u8DF3\u821E\uFF1F", py: "W\u01D2 k\u011B bu k\u011By\u01D0 ti\u00E0o w\u01D4?", it: "Posso ballare (\u00E8 permesso)?" }),
+            React.createElement(Example, { cnText: "\u4F60\u4F1A\u4E0D\u4F1A\u8BF4\u4E2D\u6587\uFF1F", py: "N\u01D0 hu\u00EC bu hu\u00EC shu\u014D zh\u014Dngw\u00E9n?", it: "Sai parlare cinese (s\u00EC o no)?" })),
+        React.createElement("h3", { className: "mb-3 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Le tre \u00AB de \u00BB: \u7684 \u00B7 \u5730 \u00B7 \u5F97"),
+        React.createElement(NoteCard, { title: "\u7684 (de) \u2014 descrizione + sostantivo" },
+            React.createElement("p", null,
+                "Collega una frase descrittiva a un sostantivo: ",
+                React.createElement("i", null, "descrizione"),
+                " + ",
+                React.createElement(H, { c: "\u7684" }),
+                " + ",
+                React.createElement("i", null, "sostantivo"),
+                "."),
+            React.createElement(Example, { cnText: "\u53EF\u7231\u7684\u5B69\u5B50", py: "k\u011B'\u00E0i de h\u00E1izi", it: "un bambino carino" })),
+        React.createElement(NoteCard, { title: "\u5730 (de) \u2014 aggettivo \u2192 avverbio" },
+            React.createElement("p", null,
+                "Trasforma un aggettivo in avverbio: ",
+                React.createElement("i", null, "aggettivo"),
+                " + ",
+                React.createElement(H, { c: "\u5730" }),
+                " + ",
+                React.createElement("i", null, "verbo"),
+                " (l'aggettivo monosillabico spesso si raddoppia)."),
+            React.createElement("div", { className: "grid gap-2 sm:grid-cols-2" },
+                React.createElement(Example, { cnText: "\u6162\u6162\u5730", py: "m\u00E0nm\u00E0n de", it: "lentamente" }),
+                React.createElement(Example, { cnText: "\u5FEB\u5FEB\u5730", py: "ku\u00E0iku\u00E0i de", it: "velocemente" }),
+                React.createElement(Example, { cnText: "\u70ED\u5FC3\u5730", py: "r\u00E8x\u012Bn de", it: "zelantemente" }),
+                React.createElement(Example, { cnText: "\u51B7\u6DE1\u5730", py: "l\u011Bngd\u00E0n de", it: "apaticamente" }))),
+        React.createElement(NoteCard, { title: "\u5F97 (de) \u2014 risultato o potenziale del verbo" },
+            React.createElement("p", null,
+                "Indica il risultato di un verbo: ",
+                React.createElement("i", null, "verbo"),
+                " + ",
+                React.createElement(H, { c: "\u5F97" }),
+                " + ",
+                React.createElement("i", null, "aggettivo"),
+                "."),
+            React.createElement(Example, { cnText: "\u4ED6\u5403\u5F97\u5F88\u9971\u3002", py: "T\u0101 ch\u012B de h\u011Bn b\u01CEo.", it: "\u00C8 molto sazio (perch\u00E9 ha mangiato)." }),
+            React.createElement(Example, { cnText: "\u6211\u7684\u8863\u670D\u6D17\u5F97\u5F88\u5E72\u51C0\u3002", py: "W\u01D2 de y\u012Bfu x\u01D0 de h\u011Bn g\u0101nj\u00ECng.", it: "I miei vestiti sono molto puliti (perch\u00E9 lavati)." }),
+            React.createElement("p", { className: "mt-1" }, "Costruzione avverbiale:"),
+            React.createElement(Example, { cnText: "\u4ED6\u5403\u5F97\u5F88\u5FEB\u3002", py: "T\u0101 ch\u012B de h\u011Bn ku\u00E0i.", it: "Lui mangia molto velocemente." }),
+            React.createElement(Example, { cnText: "\u6211\u8DD1\u5F97\u5F88\u6162\u3002", py: "W\u01D2 p\u01CEo de h\u011Bn m\u00E0n.", it: "Io corro molto lentamente." }),
+            React.createElement("p", { className: "mt-1" }, "Potenziale (riuscire a fare):"),
+            React.createElement("div", { className: "grid gap-2 sm:grid-cols-2" },
+                React.createElement(Example, { cnText: "\u6211\u770B\u5F97\u5230\u3002", py: "W\u01D2 k\u00E0n de d\u00E0o.", it: "Riesco a vedere." }),
+                React.createElement(Example, { cnText: "\u6211\u542C\u5F97\u5230\u3002", py: "W\u01D2 t\u012Bng de d\u00E0o.", it: "Riesco a sentire." }),
+                React.createElement(Example, { cnText: "\u6211\u505A\u5F97\u5230\u3002", py: "W\u01D2 zu\u00F2 de d\u00E0o.", it: "Riesco a fare." }),
+                React.createElement(Example, { cnText: "\u6211\u505A\u4E0D\u5230\u3002", py: "W\u01D2 zu\u00F2 b\u00F9 d\u00E0o.", it: "Non riesco a fare." }))),
+        React.createElement("h3", { className: "mb-3 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Complemento di grado"),
+        React.createElement(NoteCard, { title: "Struttura: S + V + O + V + \u5F97 + grado" },
+            React.createElement("p", null, "Descrive l'intensit\u00E0 o la qualit\u00E0 con cui si svolge l'azione del verbo."),
+            React.createElement(Example, { cnText: "\u4ED6\u8BF4\u4E2D\u6587\u8BF4\u5F97\u5F88\u597D\u3002", py: "T\u0101 shu\u014D zh\u014Dngw\u00E9n shu\u014D de h\u011Bn h\u01CEo.", it: "Lui parla cinese molto bene." }),
+            React.createElement(Example, { cnText: "\u4ED6\u5403\u5F97\u5F88\u591A\u3002", py: "T\u0101 ch\u012B de h\u011Bn du\u014D.", it: "Lui mangia molto." }),
+            React.createElement("p", { className: "mt-1" },
+                "Negativa \u2014 ",
+                React.createElement(H, { c: "\u4E0D" }),
+                " prima dell'avverbio:"),
+            React.createElement(Example, { cnText: "\u4ED6\u8BF4\u4E2D\u6587\u8BF4\u5F97\u4E0D\u597D\u3002", py: "T\u0101 shu\u014D zh\u014Dngw\u00E9n shu\u014D de b\u00F9 h\u01CEo.", it: "Lui non parla bene cinese (oppure \u4E0D\u592A\u597D = non troppo bene)." }),
+            React.createElement("p", { className: "mt-1" }, "Interrogativa:"),
+            React.createElement("div", { className: "grid gap-2" },
+                React.createElement(Example, { cnText: "\u4F60\u8BF4\u4E2D\u6587\u8BF4\u5F97\u597D\u5417\uFF1F", py: "N\u01D0 shu\u014D zh\u014Dngw\u00E9n shu\u014D de h\u01CEo ma?", it: "Parli bene cinese?" }),
+                React.createElement(Example, { cnText: "\u4F60\u8BF4\u4E2D\u6587\u8BF4\u5F97\u597D\u4E0D\u597D\uFF1F", py: "N\u01D0 shu\u014D zh\u014Dngw\u00E9n shu\u014D de h\u01CEo bu h\u01CEo?", it: "Parli bene cinese (s\u00EC o no)?" }),
+                React.createElement(Example, { cnText: "\u4F60\u8BF4\u4E2D\u6587\u8BF4\u5F97\u600E\u4E48\u6837\uFF1F", py: "N\u01D0 shu\u014D zh\u014Dngw\u00E9n shu\u014D de z\u011Bnmey\u00E0ng?", it: "Come parli il cinese?" }))),
+        React.createElement("h3", { className: "mb-3 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Frase relativa (\u00AB che \u00BB)"),
+        React.createElement(NoteCard, { title: "Resa con \u7684 (de)" },
+            React.createElement("p", null,
+                "La proposizione che descrive il sostantivo precede ",
+                React.createElement(H, { c: "\u7684" }),
+                ": ",
+                React.createElement("i", null, "frase"),
+                " + ",
+                React.createElement(H, { c: "\u7684" }),
+                " + ",
+                React.createElement("i", null, "sostantivo"),
+                "."),
+            React.createElement(Example, { cnText: "\u4E0A\u5E1D\u8D50\u7ED9\u6211\u4EEC\u7684\u529B\u91CF\u4F7F\u6211\u4EEC\u5FCD\u8010\u3002", py: "Sh\u00E0ngd\u00EC c\u00EC g\u011Bi w\u01D2men de l\u00ECli\u00E0ng sh\u01D0 w\u01D2men r\u011Bnn\u00E0i.", it: "La forza che Dio ci dona ci consente di perseverare." }),
+            React.createElement(Example, { cnText: "\u8036\u548C\u534E\u6240\u505A\u7684\u4FC3\u8FDB\u6211\u4EEC\u7231\u4ED6\u3002", py: "Y\u0113h\u00E9hu\u00E1 su\u01D2 zu\u00F2 de c\u00F9j\u00ECn w\u01D2men \u00E0i t\u0101.", it: "Tutto ci\u00F2 che fa Geova ci spinge ad amarlo." })),
+        React.createElement("h3", { className: "mb-3 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "I classificatori \u00B7 \u91CF\u8BCD"),
+        React.createElement(NoteCard, { title: "Come funzionano" },
+            React.createElement("p", null,
+                "In cinese non esistono gli articoli: si usano i ",
+                React.createElement("b", null, "classificatori"),
+                " per quantificare e identificare. Si collocano ",
+                React.createElement("b", null, "prima"),
+                " del nome, nella struttura ",
+                React.createElement("i", null, "numero + classificatore + nome"),
+                "."),
+            React.createElement(Example, { cnText: "\u4E00\u4E2A\u4EBA", py: "y\u00ED g\u00E8 r\u00E9n", it: "una persona (\u4E2A generico)" }),
+            React.createElement(Example, { cnText: "\u4E00\u672C\u4E66", py: "y\u00EC b\u011Bn sh\u016B", it: "un libro (\u672C per libri)" }),
+            React.createElement(Example, { cnText: "\u6211\u6709\u4E94\u5F20\u7167\u7247\u3002", py: "W\u01D2 y\u01D2u w\u01D4 zh\u0101ng zh\u00E0opi\u00E0n.", it: "Ho cinque foto (\u5F20 per cose piane)." }),
+            React.createElement("p", { className: "rounded-lg bg-amber-50 p-2 text-amber-800" },
+                "\u26A0\uFE0F Davanti al classificatore il ",
+                React.createElement("b", null, "2"),
+                " diventa ",
+                React.createElement(H, { c: "\u4E24" }),
+                " li\u01CEng, non ",
+                React.createElement(H, { c: "\u4E8C" }),
+                " \u00E8r. Es. ",
+                React.createElement(H, { c: "\u4E24\u652F\u7B14" }),
+                " li\u01CEng zh\u012B b\u01D0 = due penne."),
+            React.createElement("p", null,
+                "\u00AB Alcuni \u00BB = ",
+                React.createElement(H, { c: "\u4E00\u4E9B" }),
+                " y\u00ECxi\u0113 (vale per ogni tipo di nome): ",
+                React.createElement(H, { c: "\u6211\u7ED9\u4F60\u4E00\u4E9B\u6742\u5FD7\u3002" }),
+                " = ti do alcune riviste. ",
+                React.createElement(H, { c: "\u90A3\u4E9B" }),
+                " n\u00E0xi\u0113 = \u00AB quelli / alcuni \u00BB (lontani).")),
+        React.createElement("div", { className: "overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm" }, CLASSIFIERS.map((c, i) => (React.createElement("div", { key: i, className: "flex items-start gap-3 border-b border-stone-100 p-3 last:border-0" },
+            React.createElement("span", { className: "flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-800 text-white shadow-sm", style: { fontFamily: cn, fontSize: "1.7rem" } }, c.cn),
+            React.createElement("div", { className: "min-w-0 flex-1" },
+                React.createElement("div", { className: "flex items-center gap-2" },
+                    React.createElement("span", { className: "font-bold italic text-stone-800" }, c.py),
+                    React.createElement(Speak, { text: c.cn, size: 15 })),
+                React.createElement("p", { className: "text-sm text-stone-600" }, c.use),
+                React.createElement("p", { className: "mt-0.5 text-sm text-stone-400", style: { fontFamily: cn } }, c.ex)))))),
+        React.createElement("div", { className: "mt-4" },
+            React.createElement(NoteCard, { title: "Uso teocratico" },
+                React.createElement("p", null,
+                    "Cantici: ",
+                    React.createElement("i", null, "numero"),
+                    " + ",
+                    React.createElement(H, { c: "\u9996" }),
+                    " + ",
+                    React.createElement(H, { c: "\u8BD7\u6B4C" }),
+                    " sh\u012Bg\u0113, es. ",
+                    React.createElement(H, { c: "\u4E09\u9996\u8BD7\u6B4C" }),
+                    " = \u00AB cantico numero 3 \u00BB. Con ",
+                    React.createElement(H, { c: "\u7B2C" }),
+                    " d\u00EC + numero si forma l'ordinale (",
+                    React.createElement(H, { c: "\u7B2C\u4E09\u9996" }),
+                    " = il terzo)."),
+                React.createElement("p", null,
+                    "Riferimenti biblici: capitolo ",
+                    React.createElement(H, { c: "\u7AE0" }),
+                    " zh\u0101ng + versetto ",
+                    React.createElement(H, { c: "\u8282" }),
+                    " ji\u00E9. Es. ",
+                    React.createElement(H, { c: "\u4EE5\u8D5B\u4E9A 11 \u7AE0 5 \u8282" }),
+                    " = Isaia 11:5 \u00B7 ",
+                    React.createElement(H, { c: "\u8BD7\u7BC7 11 \u7BC7 3 \u8282" }),
+                    " = Salmo 11:3 (il libro dei Salmi usa ",
+                    React.createElement(H, { c: "\u7BC7" }),
+                    " pi\u0101n)."))),
+        React.createElement("h3", { className: "mb-3 mt-6 text-lg font-bold text-stone-700", style: { fontFamily: display } }, "Il \u7684 possessivo"),
+        React.createElement(NoteCard, { title: "Possessore + \u7684 + cosa posseduta" },
+            React.createElement("p", null,
+                "Lo stesso ",
+                React.createElement(H, { c: "\u7684" }),
+                " de che lega le frasi descrittive esprime anche il possesso: ",
+                React.createElement(H, { c: "\u8001\u5E08\u7684\u7B14" }),
+                " = \u00AB la penna dell'insegnante \u00BB. Spesso la frase termina con ",
+                React.createElement(H, { c: "\u5462" }),
+                " ne (tono pi\u00F9 morbido) o ",
+                React.createElement(H, { c: "\u5417" }),
+                " ma (s\u00EC/no)."),
+            React.createElement(Example, { cnText: "\u8FD9\u672C\u4E66\u662F\u8C01\u7684\uFF1F", py: "Zh\u00E8 b\u011Bn sh\u016B sh\u00EC shu\u00ED de?", it: "Di chi \u00E8 questo libro?" }),
+            React.createElement(Example, { cnText: "\u8001\u5E08\u7684\u7B14\u5728\u54EA\u91CC\u5462\uFF1F", py: "L\u01CEosh\u012B de b\u01D0 z\u00E0i n\u01CEl\u01D0 ne?", it: "Dov'\u00E8 la penna dell'insegnante?" }),
+            React.createElement(Example, { cnText: "\u8FD9\u4E2A\u662F\u4F60\u7684\u624B\u673A\u5417\uFF1F", py: "Zh\u00E8ge sh\u00EC n\u01D0 de sh\u01D2uj\u012B ma?", it: "Questo \u00E8 il tuo cellulare?" }),
+            React.createElement(Example, { cnText: "\u4F60\u7684\u88E4\u5B50\u662F\u4EC0\u4E48\u989C\u8272\u7684\u5462\uFF1F", py: "N\u01D0 de k\u00F9zi sh\u00EC sh\u00E9nme y\u00E1ns\u00E8 de ne?", it: "Di che colore sono i tuoi pantaloni?" }),
+            React.createElement(Example, { cnText: "\u4F60\u7684\u5C0F\u732B\u53EB\u4EC0\u4E48\u540D\u5B57\uFF1F", py: "N\u01D0 de xi\u01CEom\u0101o ji\u00E0o sh\u00E9nme m\u00EDngzi?", it: "Come si chiama il tuo gattino?" }))));
+}
+function Pronuncia() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u53D1\u97F3", it: "Pronuncia e toni" }),
+        React.createElement("div", { className: "mb-5 grid grid-cols-1 gap-2 sm:grid-cols-2" }, TONES.map((t, i) => (React.createElement("div", { key: i, className: "flex items-center gap-3 rounded-2xl border border-stone-200 bg-white p-3 shadow-sm" },
+            React.createElement("span", { className: "flex h-12 w-12 items-center justify-center rounded-xl text-2xl font-bold text-white", style: { background: t.color } }, t.mark),
+            React.createElement("div", null,
+                React.createElement("div", { className: "font-semibold text-stone-800" }, t.name),
+                React.createElement("div", { className: "text-sm text-stone-500" }, t.desc)))))),
+        React.createElement("h3", { className: "mb-2 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Regole chiave"),
+        React.createElement(CardBox, null, PRON_NOTES.map(([k, v], i) => (React.createElement("div", { key: i, className: "border-b border-stone-100 py-3 last:border-0" },
+            React.createElement("span", { className: "font-semibold text-red-800" }, k),
+            React.createElement("p", { className: "text-sm text-stone-600" }, v))))),
+        React.createElement("h3", { className: "mb-2 mt-6 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Cambi di tono \u00B7 \u53D8\u8C03"),
+        React.createElement(NoteCard, { title: "Due terzi toni di fila \u2192 2\u00B0 + 3\u00B0" },
+            React.createElement("p", null,
+                "Quando due sillabe di ",
+                React.createElement("b", null, "3\u00B0 tono"),
+                " si susseguono, la prima si pronuncia come un ",
+                React.createElement("b", null, "2\u00B0 tono"),
+                " (la scrittura con \u02C7 resta invariata)."),
+            React.createElement(Example, { cnText: "\u4F60\u597D", py: "n\u01D0 h\u01CEo \u2192 n\u00ED h\u01CEo", it: "ciao" }),
+            React.createElement(Example, { cnText: "\u6211\u5F88\u597D", py: "w\u01D2 h\u011Bn h\u01CEo \u2192 w\u00F3 h\u00E9n h\u01CEo", it: "sto molto bene" }),
+            React.createElement("p", { className: "rounded-lg bg-amber-50 p-2 text-amber-800" },
+                "Anche con ",
+                React.createElement("b", null, "3\u00B0 + 2\u00B0 tono"),
+                " si cerca di \u00AB unire \u00BB i due suoni in un'unica salita morbida (\u02C7 + \u00B4).")),
+        React.createElement("p", { className: "mb-2 rounded-xl bg-sky-50 p-3 text-sm text-sky-800" },
+            "\u2328\uFE0F Sulla tastiera la ",
+            React.createElement(H, { c: "\u00FC" }),
+            " si digita con la lettera ",
+            React.createElement("b", null, "v"),
+            ": \u00AB nv \u00BB \u2192 ",
+            React.createElement(H, { c: "\u5973" }),
+            " n\u01DA, \u00AB lv \u00BB \u2192 ",
+            React.createElement(H, { c: "\u7EFF" }),
+            " l\u01DC."),
+        React.createElement("p", { className: "mb-2 rounded-xl bg-stone-100 p-3 text-sm text-stone-700" },
+            "Suoni \u00AB di gola \u00BB ",
+            React.createElement("b", null, "g / k / h"),
+            ": la ",
+            React.createElement(H, { c: "g" }),
+            " iniziale \u00E8 non aspirata (vicino a una \u00AB k \u00BB dolce). Le retroflesse ",
+            React.createElement("b", null, "zh / ch / sh"),
+            " si dicono arricciando la lingua; ",
+            React.createElement("b", null, "ch / sh"),
+            " sono aspirate, ",
+            React.createElement("b", null, "zh"),
+            " no. Stessa logica per ",
+            React.createElement("b", null, "z / c / s"),
+            " (la z \u00E8 \u00AB esplosiva \u00BB)."),
+        React.createElement("h3", { className: "mb-2 mt-6 text-sm font-medium uppercase tracking-widest text-stone-400" }, "Radicali \u00B7 \u90E8\u9996"),
+        React.createElement("p", { className: "mb-3 text-sm text-stone-500" }, "I radicali sono i \u00AB mattoni \u00BB dei caratteri: spesso ne suggeriscono il significato."),
+        React.createElement("div", { className: "grid grid-cols-3 gap-3 sm:grid-cols-3" }, RADICALS.map((r, i) => (React.createElement("button", { key: i, onClick: () => speak(r.cn.split(" ")[0]), className: "flex flex-col items-center rounded-2xl border border-stone-200 bg-white py-4 shadow-sm transition hover:border-red-300 active:scale-95" },
+            React.createElement("span", { className: "text-stone-900", style: { fontFamily: cn, fontSize: "2.2rem", lineHeight: 1.1 } }, r.cn),
+            React.createElement("span", { className: "text-sm italic text-stone-500" }, r.py),
+            React.createElement("span", { className: "text-sm font-medium text-stone-700" }, r.it))))),
+        React.createElement(NoteCard, { title: "Dai radicali ai caratteri" },
+            React.createElement("p", null,
+                "Il radicale dell'acqua ",
+                React.createElement(H, { c: "\u6C35" }),
+                " compare in ",
+                React.createElement(H, { c: "\u6D77" }),
+                " h\u01CEi (mare) e ",
+                React.createElement(H, { c: "\u6D17" }),
+                " x\u01D0 (lavare). Il legno ",
+                React.createElement(H, { c: "\u6728" }),
+                " \u00E8 in ",
+                React.createElement(H, { c: "\u679D" }),
+                " zh\u012B (ramo) e ",
+                React.createElement(H, { c: "\u6905" }),
+                " y\u01D0 (sedia). Unendo fuoco e veicolo: ",
+                React.createElement(H, { c: "\u706B\u8F66" }),
+                " hu\u01D2ch\u0113 (treno). \u00AB Carattere cinese \u00BB si dice ",
+                React.createElement(H, { c: "\u6C49\u5B57" }),
+                " h\u00E0nz\u00EC."))));
+}
+function Methods() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u65B9\u6CD5", it: "Metodi di studio del corso" }),
+        React.createElement("ol", { className: "space-y-2" }, METHODS.map((m, i) => (React.createElement("li", { key: i, className: "flex gap-3 rounded-xl border border-stone-200 bg-white p-3 shadow-sm" },
+            React.createElement("span", { className: "flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-800 text-xs font-bold text-white" }, i + 1),
+            React.createElement("span", { className: "text-sm text-stone-700" }, m)))))));
+}
+function Chengyu() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u6210\u8BED", it: "Proverbi e modi di dire \u00B7 ch\u00E9ngy\u01D4" }),
+        React.createElement("p", { className: "mb-4 text-sm text-stone-500" },
+            "I ",
+            React.createElement(H, { c: "\u6210\u8BED" }),
+            " ch\u00E9ngy\u01D4 sono espressioni idiomatiche, spesso di quattro caratteri, che racchiudono un insegnamento. Qui sono accostati a un riferimento biblico."),
+        React.createElement("div", { className: "space-y-4" }, CHENGYU.map((c, i) => (React.createElement("div", { key: i, className: "rounded-2xl border border-stone-200 bg-white p-5 shadow-sm" },
+            React.createElement("div", { className: "flex items-start justify-between gap-3" },
+                React.createElement("span", { className: "text-stone-900", style: { fontFamily: cn, fontSize: "2rem", lineHeight: 1.2 } }, c.cn),
+                React.createElement(Speak, { text: c.cn })),
+            React.createElement("div", { className: "mt-1 text-sm italic text-stone-500" }, c.py),
+            React.createElement("div", { className: "mt-2 text-stone-700" }, c.it),
+            React.createElement("div", { className: "mt-3 inline-flex items-center gap-1.5 rounded-full bg-red-50 px-3 py-1 text-xs font-semibold text-red-800" },
+                React.createElement(BookMarked, { size: 13 }),
+                " ",
+                c.ref)))))));
+}
+const TABS = [
+    { id: "flash", label: "Flashcard", icon: BookOpen },
+    { id: "quiz", label: "Quiz", icon: GraduationCap },
+    { id: "frasi", label: "Frasi", icon: MessageSquare },
+    { id: "pronomi", label: "Pronomi", icon: Users },
+    { id: "numeri", label: "Numeri", icon: Hash },
+    { id: "colori", label: "Colori", icon: Palette },
+    { id: "cibo", label: "Cibo", icon: Utensils },
+    { id: "nazioni", label: "Nazioni", icon: Globe },
+    { id: "famiglia", label: "Famiglia", icon: Heart },
+    { id: "corpo", label: "Corpo", icon: PersonStanding },
+    { id: "casa", label: "Casa", icon: Home },
+    { id: "animali", label: "Animali", icon: PawPrint },
+    { id: "tempo", label: "Tempo", icon: Calendar },
+    { id: "pos", label: "Posizioni", icon: Compass },
+    { id: "azioni", label: "Azioni", icon: Sparkles },
+    { id: "gramm", label: "Grammatica", icon: ScrollText },
+    { id: "apostoli", label: "Apostoli", icon: Church },
+    { id: "bibbia", label: "Bibbia", icon: BookMarked },
+    { id: "teocratici", label: "Teocratici", icon: Library },
+    { id: "chengyu", label: "Proverbi", icon: Quote },
+    { id: "pron", label: "Pronuncia", icon: Languages },
+    { id: "metodi", label: "Metodi", icon: Lightbulb },
+];
+function App() {
+    const [tab, setTab] = useState("flash");
+    const [known, setKnown] = useState(() => new Set());
+    const [review, setReview] = useState(() => new Set());
+    const loaded = useRef(false);
+    useEffect(() => {
+        const id = "cinese-fonts";
+        if (!document.getElementById(id)) {
+            const link = document.createElement("link");
+            link.id = id;
+            link.rel = "stylesheet";
+            link.href = "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Noto+Serif+SC:wght@400;600;700&display=swap";
+            document.head.appendChild(link);
+        }
+        (async () => {
+            const p = await loadProgress();
+            setKnown(new Set(p.known || []));
+            setReview(new Set(p.review || []));
+            loaded.current = true;
+        })();
+    }, []);
+    const persist = (k, r) => { if (loaded.current)
+        saveProgress({ known: [...k], review: [...r] }); };
+    const mark = (key, status) => {
+        const nK = new Set(known);
+        const nR = new Set(review);
+        if (status === "known") {
+            nK.add(key);
+            nR.delete(key);
+        }
+        else {
+            nR.add(key);
+            nK.delete(key);
+        }
+        setKnown(nK);
+        setReview(nR);
+        persist(nK, nR);
+    };
+    const clearProgress = () => {
+        const e = new Set();
+        setKnown(e);
+        setReview(new Set());
+        persist(e, new Set());
+    };
+    return (React.createElement("div", { className: "min-h-screen w-full bg-stone-100 text-stone-900", style: { backgroundImage: "radial-gradient(circle at 1px 1px, rgba(120,53,15,0.06) 1px, transparent 0)", backgroundSize: "22px 22px" } },
+        React.createElement("header", { className: "sticky top-0 z-20 border-b border-stone-200 bg-stone-50/90 backdrop-blur" },
+            React.createElement("div", { className: "mx-auto flex max-w-3xl items-center gap-3 px-4 py-3" },
+                React.createElement("span", { className: "flex h-11 w-11 items-center justify-center rounded-lg bg-red-800 text-white shadow-md", style: { fontFamily: cn, fontSize: "1.1rem", lineHeight: 1 } }, "\u4E2D\u6587"),
+                React.createElement("div", { className: "leading-tight" },
+                    React.createElement("h1", { className: "text-xl font-semibold text-stone-800", style: { fontFamily: display } }, "\u5B66\u4E2D\u6587"),
+                    React.createElement("p", { className: "text-xs uppercase tracking-widest text-stone-400" }, "Cinese Mandarino \u00B7 studio"))),
+            React.createElement("nav", { className: "mx-auto max-w-3xl overflow-x-auto px-3 pb-2", style: { scrollbarWidth: "none" } },
+                React.createElement("div", { className: "flex gap-1.5" }, TABS.map((t) => {
+                    const Icon = t.icon;
+                    const active = tab === t.id;
+                    return (React.createElement("button", { key: t.id, onClick: () => setTab(t.id), className: `flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-medium transition active:scale-95 ${active ? "bg-red-800 text-white shadow" : "text-stone-500 hover:bg-stone-200 hover:text-stone-800"}` },
+                        React.createElement(Icon, { size: 15 }),
+                        " ",
+                        t.label));
+                })))),
+        React.createElement("main", { className: "mx-auto max-w-3xl px-4 py-6 pb-20" },
+            tab === "flash" && React.createElement(Flashcards, { known: known, review: review, mark: mark, clearProgress: clearProgress }),
+            tab === "quiz" && React.createElement(Quiz, { mark: mark }),
+            tab === "frasi" && React.createElement(Phrases, null),
+            tab === "pronomi" && React.createElement(Pronouns, null),
+            tab === "numeri" && React.createElement(Numbers, null),
+            tab === "colori" && React.createElement(Colors, null),
+            tab === "cibo" && React.createElement(Food, null),
+            tab === "nazioni" && React.createElement(Nations, null),
+            tab === "famiglia" && React.createElement(Family, null),
+            tab === "corpo" && React.createElement(Body, null),
+            tab === "casa" && React.createElement(House, null),
+            tab === "animali" && React.createElement(Animals, null),
+            tab === "tempo" && React.createElement(TimeSection, null),
+            tab === "pos" && React.createElement(Positions, null),
+            tab === "azioni" && React.createElement(Actions, null),
+            tab === "gramm" && React.createElement(Grammar, null),
+            tab === "apostoli" && React.createElement(Apostles, null),
+            tab === "bibbia" && React.createElement(Bible, null),
+            tab === "teocratici" && React.createElement(Teocratic, null),
+            tab === "chengyu" && React.createElement(Chengyu, null),
+            tab === "pron" && React.createElement(Pronuncia, null),
+            tab === "metodi" && React.createElement(Methods, null)),
+        React.createElement("footer", { className: "pb-8 text-center text-xs text-stone-400" },
+            VOCAB.length,
+            " parole \u00B7 i progressi si salvano sul dispositivo \u00B7 tocca ",
+            React.createElement(Volume2, { size: 12, className: "inline" }),
+            " per ascoltare \u00B7 \u52A0\u6CB9\uFF01")));
+}
+const __rootEl = document.getElementById("root");
+const __root = ReactDOM.createRoot(__rootEl);
+__root.render(React.createElement(App, null));
+
+</script>
+</body>
+</html>
