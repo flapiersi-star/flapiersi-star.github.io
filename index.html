@@ -302,6 +302,8 @@ const Globe = (p) => React.createElement(LIcon, { name: "Globe", ...p });
 const BookMarked = (p) => React.createElement(LIcon, { name: "BookMarked", ...p });
 const Library = (p) => React.createElement(LIcon, { name: "Library", ...p });
 const Quote = (p) => React.createElement(LIcon, { name: "Quote", ...p });
+const Layers = (p) => React.createElement(LIcon, { name: "Layers", ...p });
+const School = (p) => React.createElement(LIcon, { name: "School", ...p });
 const BASE = [
     { it: "adesso", cn: "现在", py: "xiànzài" },
     { it: "allora", cn: "当时", py: "dāngshí" },
@@ -629,7 +631,288 @@ const EXTRA = [
     { it: "buona notizia", cn: "好消息", py: "hǎo xiāoxi", cat: "varie" },
     { it: "cattiva notizia", cn: "坏消息", py: "huài xiāoxi", cat: "varie" },
 ];
-const VOCAB = [...BASE, ...EXTRA];
+const MEIXI = [
+    { it: "Ciao / Salve", cn: "你好", py: "nǐ hǎo", cat: "meixi" },
+    { it: "Come stai? (salute)", cn: "你好吗", py: "nǐ hǎo ma", cat: "meixi" },
+    { it: "Come stai? / Come va?", cn: "你怎么样", py: "nǐ zěnmeyàng", cat: "meixi" },
+    { it: "Tu", cn: "你", py: "nǐ", cat: "meixi" },
+    { it: "Io", cn: "我", py: "wǒ", cat: "meixi" },
+    { it: "Lui (uomo serpente)", cn: "他", py: "tā", cat: "meixi" },
+    { it: "Lei (donna serpente)", cn: "她", py: "tā", cat: "meixi" },
+    { it: "Voi", cn: "你们", py: "nǐmen", cat: "meixi" },
+    { it: "Noi", cn: "我们", py: "wǒmen", cat: "meixi" },
+    { it: "Papà", cn: "爸爸", py: "bàba", cat: "meixi" },
+    { it: "Mamma", cn: "妈妈", py: "māma", cat: "meixi" },
+    { it: "Fratello maggiore", cn: "哥哥", py: "gēge", cat: "meixi" },
+    { it: "Fratello minore", cn: "弟弟", py: "dìdi", cat: "meixi" },
+    { it: "Sorella maggiore", cn: "姐姐", py: "jiějie", cat: "meixi" },
+    { it: "Sorella minore", cn: "妹妹", py: "mèimei", cat: "meixi" },
+    { it: "Nonna paterna", cn: "奶奶", py: "nǎinai", cat: "meixi" },
+    { it: "Tesoro (marito/figlia)", cn: "宝贝", py: "bǎobèi", cat: "meixi" },
+    { it: "Gatto", cn: "猫", py: "māo", cat: "meixi" },
+    { it: "Gatto bianco", cn: "白猫", py: "bái māo", cat: "meixi" },
+    { it: "Cane", cn: "狗", py: "gǒu", cat: "meixi" },
+    { it: "Cane nero", cn: "黑狗", py: "hēi gǒu", cat: "meixi" },
+    { it: "Cavallo", cn: "马", py: "mǎ", cat: "meixi" },
+    { it: "Cavallo bianco", cn: "白马", py: "bái mǎ", cat: "meixi" },
+    { it: "Mucca", cn: "牛", py: "niú", cat: "meixi" },
+    { it: "Mucca (femmina)", cn: "母牛", py: "mǔ niú", cat: "meixi" },
+    { it: "Coniglio", cn: "兔子", py: "tùzi", cat: "meixi" },
+    { it: "Coniglio bianco", cn: "白兔子", py: "bái tùzi", cat: "meixi" },
+    { it: "Gallina / Pollo", cn: "鸡", py: "jī", cat: "meixi" },
+    { it: "Gallina (femmina)", cn: "母鸡", py: "mǔ jī", cat: "meixi" },
+    { it: "Gabbiano", cn: "海鸥", py: "hǎi ōu", cat: "meixi" },
+    { it: "Tigre", cn: "虎", py: "hǔ", cat: "meixi" },
+    { it: "Riso crudo", cn: "米", py: "mǐ", cat: "meixi" },
+    { it: "Soia", cn: "豆", py: "dòu", cat: "meixi" },
+    { it: "Latte", cn: "奶", py: "nǎi", cat: "meixi" },
+    { it: "Latte di mucca", cn: "牛奶", py: "niú nǎi", cat: "meixi" },
+    { it: "Caffè", cn: "咖啡", py: "kāfēi", cat: "meixi" },
+    { it: "Caffè amaro", cn: "苦咖啡", py: "kǔ kāfēi", cat: "meixi" },
+    { it: "Bevande alcoliche", cn: "酒", py: "jiǔ", cat: "meixi" },
+    { it: "Vino", cn: "葡萄酒", py: "pútao jiǔ", cat: "meixi" },
+    { it: "Anguria", cn: "西瓜", py: "xīguā", cat: "meixi" },
+    { it: "Pera", cn: "梨", py: "lí", cat: "meixi" },
+    { it: "Buono da mangiare", cn: "好吃", py: "hǎo chī", cat: "meixi" },
+    { it: "Buono da bere", cn: "好喝", py: "hǎo hē", cat: "meixi" },
+    { it: "Cibo cotto / Mangiare", cn: "饭", py: "fàn", cat: "meixi" },
+    { it: "Cucinare", cn: "做饭", py: "zuò fàn", cat: "meixi" },
+    { it: "Bianco", cn: "白", py: "bái", cat: "meixi" },
+    { it: "Nero", cn: "黑", py: "hēi", cat: "meixi" },
+    { it: "Grande", cn: "大", py: "dà", cat: "meixi" },
+    { it: "Piccolo", cn: "小", py: "xiǎo", cat: "meixi" },
+    { it: "Bene / Bravo / Buono", cn: "好", py: "hǎo", cat: "meixi" },
+    { it: "Non buono", cn: "不好", py: "bù hǎo", cat: "meixi" },
+    { it: "Alto", cn: "高", py: "gāo", cat: "meixi" },
+    { it: "Troppo alto", cn: "太高了", py: "tài gāo le", cat: "meixi" },
+    { it: "Troppo costoso", cn: "太贵了", py: "tài guì le", cat: "meixi" },
+    { it: "Piccante", cn: "辣", py: "là", cat: "meixi" },
+    { it: "Amaro", cn: "苦", py: "kǔ", cat: "meixi" },
+    { it: "Bene o male / Bianco e nero", cn: "黑白", py: "hēi bái", cat: "meixi" },
+    { it: "Bello / Bello da vedere", cn: "好看", py: "hǎo kàn", cat: "meixi" },
+    { it: "Bello da ascoltare", cn: "好听", py: "hǎo tīng", cat: "meixi" },
+    { it: "Essere (è/sono)", cn: "是", py: "shì", cat: "meixi" },
+    { it: "Avere", cn: "有", py: "yǒu", cat: "meixi" },
+    { it: "Mangiare", cn: "吃", py: "chī", cat: "meixi" },
+    { it: "Bere", cn: "喝", py: "hē", cat: "meixi" },
+    { it: "Bere alcolici", cn: "喝酒", py: "hē jiǔ", cat: "meixi" },
+    { it: "Comprare", cn: "买", py: "mǎi", cat: "meixi" },
+    { it: "Vendere", cn: "卖", py: "mài", cat: "meixi" },
+    { it: "Comprare e vendere / Commerciante", cn: "买卖", py: "mǎi mài", cat: "meixi" },
+    { it: "Non ho comprato", cn: "没买", py: "méi mǎi", cat: "meixi" },
+    { it: "Fare", cn: "做", py: "zuò", cat: "meixi" },
+    { it: "Andare", cn: "去", py: "qù", cat: "meixi" },
+    { it: "Venire", cn: "来", py: "lái", cat: "meixi" },
+    { it: "Guardare / Vedere", cn: "看", py: "kàn", cat: "meixi" },
+    { it: "Ascoltare", cn: "听", py: "tīng", cat: "meixi" },
+    { it: "Parlare / Dire", cn: "说", py: "shuō", cat: "meixi" },
+    { it: "Hai sbagliato a parlare", cn: "说错了", py: "shuō cuò le", cat: "meixi" },
+    { it: "Leggere", cn: "读", py: "dú", cat: "meixi" },
+    { it: "Hai sbagliato a leggere", cn: "读错了", py: "dú cuò le", cat: "meixi" },
+    { it: "Scrivere", cn: "写", py: "xiě", cat: "meixi" },
+    { it: "Imparare a memoria", cn: "背", py: "bèi", cat: "meixi" },
+    { it: "Sapere (una cosa)", cn: "知道", py: "zhīdao", cat: "meixi" },
+    { it: "Sapere (so fare)", cn: "会", py: "huì", cat: "meixi" },
+    { it: "Non so fare", cn: "不会", py: "bù huì", cat: "meixi" },
+    { it: "Volare", cn: "飞", py: "fēi", cat: "meixi" },
+    { it: "Correre", cn: "跑", py: "pǎo", cat: "meixi" },
+    { it: "Correre veloce", cn: "飞跑", py: "fēi pǎo", cat: "meixi" },
+    { it: "Correre (jogging)", cn: "跑步", py: "pǎo bù", cat: "meixi" },
+    { it: "È scappato via", cn: "跑了", py: "pǎo le", cat: "meixi" },
+    { it: "Abbracciare / Tenere in braccio", cn: "抱", py: "bào", cat: "meixi" },
+    { it: "Piangere", cn: "哭", py: "kū", cat: "meixi" },
+    { it: "Aprire (cosa grande)", cn: "开", py: "kāi", cat: "meixi" },
+    { it: "Iniziare", cn: "开始", py: "kāishǐ", cat: "meixi" },
+    { it: "Alzarsi", cn: "起来", py: "qǐlái", cat: "meixi" },
+    { it: "Sedersi / Stare seduti", cn: "坐", py: "zuò", cat: "meixi" },
+    { it: "Riposare / Riposo", cn: "休息", py: "xiūxi", cat: "meixi" },
+    { it: "Riparare (difficile)", cn: "修理", py: "xiū lǐ", cat: "meixi" },
+    { it: "Riparare (semplice)", cn: "修", py: "xiū", cat: "meixi" },
+    { it: "Salvare", cn: "救", py: "jiù", cat: "meixi" },
+    { it: "Continuare", cn: "继续", py: "jìxù", cat: "meixi" },
+    { it: "Prendere con le mani", cn: "拿", py: "ná", cat: "meixi" },
+    { it: "Tirare (porta)", cn: "拉", py: "lā", cat: "meixi" },
+    { it: "Pensare / volere", cn: "想", py: "xiǎng", cat: "meixi" },
+    { it: "Radunare", cn: "聚", py: "jù", cat: "meixi" },
+    { it: "Alzare (non da solo)", cn: "举", py: "jǔ", cat: "meixi" },
+    { it: "Cavalcare / andare in bici", cn: "骑", py: "qí", cat: "meixi" },
+    { it: "Cavalcare un cavallo", cn: "骑马", py: "qí mǎ", cat: "meixi" },
+    { it: "Piacere / Gradire", cn: "喜欢", py: "xǐhuān", cat: "meixi" },
+    { it: "Scalare / Arrampicarsi", cn: "爬", py: "pá", cat: "meixi" },
+    { it: "Sollevare / Alzare", cn: "举起来", py: "jǔ qǐlái", cat: "meixi" },
+    { it: "Avere paura", cn: "害怕", py: "hàipà", cat: "meixi" },
+    { it: "Lavare", cn: "洗", py: "xǐ", cat: "meixi" },
+    { it: "Lavare gli occhi", cn: "洗目", py: "xǐ mù", cat: "meixi" },
+    { it: "Bocca (class. persone)", cn: "口", py: "kǒu", cat: "meixi" },
+    { it: "Peli / Pelo", cn: "毛", py: "máo", cat: "meixi" },
+    { it: "Testa", cn: "头", py: "tóu", cat: "meixi" },
+    { it: "Sopracciglio", cn: "眉毛", py: "méi máo", cat: "meixi" },
+    { it: "Cappello", cn: "帽", py: "mào", cat: "meixi" },
+    { it: "Occhio / Occhi", cn: "目", py: "mù", cat: "meixi" },
+    { it: "Pelle", cn: "皮", py: "pí", cat: "meixi" },
+    { it: "Barba", cn: "胡子", py: "húzi", cat: "meixi" },
+    { it: "Pancia", cn: "肚子", py: "dùzi", cat: "meixi" },
+    { it: "Femmina / Femminile", cn: "女", py: "nǚ", cat: "meixi" },
+    { it: "Libro", cn: "书", py: "shū", cat: "meixi" },
+    { it: "Libro di cinese (didattico)", cn: "汉语书", py: "hànyǔ shū", cat: "meixi" },
+    { it: "Libro in cinese (letteratura)", cn: "中文书", py: "zhōngwén shū", cat: "meixi" },
+    { it: "Penna", cn: "笔", py: "bǐ", cat: "meixi" },
+    { it: "Tazze / Bicchieri", cn: "杯子", py: "bēizi", cat: "meixi" },
+    { it: "Borsa", cn: "包", py: "bāo", cat: "meixi" },
+    { it: "Borsa di pelle", cn: "皮包", py: "pí bāo", cat: "meixi" },
+    { it: "Cellulare", cn: "手机", py: "shǒujī", cat: "meixi" },
+    { it: "Televisione", cn: "电视", py: "diànshì", cat: "meixi" },
+    { it: "Aereo", cn: "飞机", py: "fēijī", cat: "meixi" },
+    { it: "Pantaloni", cn: "裤子", py: "kùzi", cat: "meixi" },
+    { it: "Sciarpa", cn: "围巾", py: "wéijīn", cat: "meixi" },
+    { it: "Rivista / Giornale", cn: "杂志", py: "zázhì", cat: "meixi" },
+    { it: "Palloncino", cn: "气球", py: "qì qiú", cat: "meixi" },
+    { it: "Strada", cn: "路", py: "lù", cat: "meixi" },
+    { it: "Grande strada", cn: "大路", py: "dà lù", cat: "meixi" },
+    { it: "Mare", cn: "海", py: "hǎi", cat: "meixi" },
+    { it: "Mare (il grande mare)", cn: "大海", py: "dà hǎi", cat: "meixi" },
+    { it: "Palazzo / Piano (edificio)", cn: "楼", py: "lóu", cat: "meixi" },
+    { it: "Roma", cn: "罗马", py: "Luó Mǎ", cat: "meixi" },
+    { it: "1 (uno)", cn: "一", py: "yī", cat: "meixi" },
+    { it: "2 (due)", cn: "二", py: "èr", cat: "meixi" },
+    { it: "3 (tre)", cn: "三", py: "sān", cat: "meixi" },
+    { it: "4 (quattro)", cn: "四", py: "sì", cat: "meixi" },
+    { it: "5 (cinque)", cn: "五", py: "wǔ", cat: "meixi" },
+    { it: "6 (sei)", cn: "六", py: "liù", cat: "meixi" },
+    { it: "7 (sette)", cn: "七", py: "qī", cat: "meixi" },
+    { it: "8 (otto)", cn: "八", py: "bā", cat: "meixi" },
+    { it: "9 (nove)", cn: "九", py: "jiǔ", cat: "meixi" },
+    { it: "10 (dieci)", cn: "十", py: "shí", cat: "meixi" },
+    { it: "Oggi", cn: "今天", py: "jīntiān", cat: "meixi" },
+    { it: "Settimana", cn: "星期", py: "xīngqī", cat: "meixi" },
+    { it: "Giorno", cn: "日", py: "rì", cat: "meixi" },
+    { it: "Anno", cn: "年", py: "nián", cat: "meixi" },
+    { it: "Stagione autunno", cn: "秋季", py: "qiūjì", cat: "meixi" },
+    { it: "Autunno", cn: "秋天", py: "qiūtiān", cat: "meixi" },
+    { it: "Ogni giorno", cn: "每天", py: "měi tiān", cat: "meixi" },
+    { it: "Non (negazione)", cn: "不", py: "bù / bú", cat: "meixi" },
+    { it: "Anche (avverbio)", cn: "也", py: "yě", cat: "meixi" },
+    { it: "Particella interrogativa", cn: "吗", py: "ma", cat: "meixi" },
+    { it: "Particella \"e tu?\"", cn: "呢", py: "ne", cat: "meixi" },
+    { it: "Particella completiva", cn: "了", py: "le", cat: "meixi" },
+    { it: "Particella possessiva", cn: "的", py: "de", cat: "meixi" },
+    { it: "Dare / Per / A", cn: "给", py: "gěi", cat: "meixi" },
+    { it: "Classificatore generico", cn: "个", py: "gè", cat: "meixi" },
+    { it: "Class. libri/quaderni", cn: "本", py: "běn", cat: "meixi" },
+    { it: "Class. animali piccoli", cn: "只", py: "zhī", cat: "meixi" },
+    { it: "Class. oggetti lunghi", cn: "条", py: "tiáo", cat: "meixi" },
+    { it: "Class. bicchieri/tazze", cn: "杯", py: "bēi", cat: "meixi" },
+    { it: "Due (con classificatore)", cn: "两", py: "liǎng", cat: "meixi" },
+    { it: "Quanti? (meno di 10)", cn: "几", py: "jǐ", cat: "meixi" },
+    { it: "Quanti? / Quanto?", cn: "多少", py: "duōshao", cat: "meixi" },
+    { it: "Questo", cn: "这", py: "zhè", cat: "meixi" },
+    { it: "Potere / Essere permesso", cn: "可以", py: "kěyǐ", cat: "meixi" },
+    { it: "Sinistra", cn: "左", py: "zuǒ", cat: "meixi" },
+    { it: "Sbagliato", cn: "错", py: "cuò", cat: "meixi" },
+    { it: "Ideogramma (singolo carattere)", cn: "字", py: "zì", cat: "meixi" },
+    { it: "Parola (almeno 2 ideogrammi)", cn: "词", py: "cí", cat: "meixi" },
+    { it: "Amore", cn: "爱", py: "ài", cat: "meixi" },
+    { it: "Ho fame", cn: "我饿了", py: "wǒ è le", cat: "meixi" },
+    { it: "Hai fame?", cn: "你饿吗", py: "nǐ è ma", cat: "meixi" },
+    { it: "Mi manchi", cn: "我想你", py: "wǒ xiǎng nǐ", cat: "meixi" },
+    { it: "Mangi piccante?", cn: "你吃辣吗", py: "nǐ chī là ma", cat: "meixi" },
+    { it: "Piovere", cn: "下雨", py: "xià yǔ", cat: "meixi" },
+    { it: "Quante persone abitano con te?", cn: "你家有几口人", py: "nǐ jiā yǒu jǐ kǒu rén", cat: "meixi" },
+    { it: "Hai la barba?", cn: "你有胡子吗", py: "nǐ yǒu húzi", cat: "meixi" },
+    { it: "Non so volare", cn: "我不会飞", py: "wǒ bù huì fēi", cat: "meixi" },
+    { it: "Hai sete?", cn: "你渴吗", py: "nǐ kě ma", cat: "meixi" },
+    { it: "Ho sete", cn: "我渴", py: "wǒ kě", cat: "meixi" },
+    { it: "Corri veloce", cn: "你跑得快", py: "nǐ pǎo de kuài", cat: "meixi" },
+    { it: "La vostra casa è grande?", cn: "你们家大吗", py: "nǐmen jiā dà ma", cat: "meixi" },
+    { it: "Ti piace correre?", cn: "你喜欢跑步吗", py: "nǐ xǐhuān pǎobù ma", cat: "meixi" },
+    { it: "Possiamo continuare?", cn: "我们可以继续吗", py: "wǒmen kěyǐ jìxù ma", cat: "meixi" },
+    { it: "Oggi ho la testa piena", cn: "今天我的头大", py: "jīntiān wǒ de tóu dà", cat: "meixi" },
+    { it: "La mamma abbraccia la sorellina", cn: "妈妈抱妹妹", py: "māma bào mèimei", cat: "meixi" },
+    { it: "Sei sazio?", cn: "你饱了吗", py: "nǐ bǎo le ma", cat: "meixi" },
+    { it: "Papà mi dà una rivista", cn: "爸爸给我一本杂志", py: "bàba gěi wǒ yī běn zázhì", cat: "meixi" },
+    { it: "Palla", cn: "球", py: "qiú", cat: "meixi" },
+    { it: "Pallavolo", cn: "排球", py: "pái qiú", cat: "meixi" },
+    { it: "Sollevare la palla", cn: "举球", py: "jǔ qiú", cat: "meixi" },
+    { it: "Clima", cn: "气候", py: "qì hòu", cat: "meixi" },
+    { it: "Mandarino (lingua parlata)", cn: "普通话", py: "pǔtōnghuà", cat: "meixi" },
+    { it: "Lingua degli Han", cn: "汉语", py: "hànyǔ", cat: "meixi" },
+    { it: "Caratteri cinesi / Ideogrammi", cn: "汉字", py: "hànzì", cat: "meixi" },
+    { it: "Sistema di romanizzazione", cn: "拼音", py: "pīnyīn", cat: "meixi" },
+    { it: "Cinese (scritto / letteratura)", cn: "中文", py: "zhōngwén", cat: "meixi" },
+    { it: "Frase", cn: "句子", py: "jùzi", cat: "meixi" },
+    { it: "Pioggia", cn: "雨", py: "yǔ", cat: "meixi" },
+    { it: "Pesce", cn: "鱼", py: "yú", cat: "meixi" },
+    { it: "Terriccio / Terra", cn: "土", py: "tǔ", cat: "meixi" },
+    { it: "Persona / Persone", cn: "人", py: "rén", cat: "meixi" },
+    { it: "Fame / Affamato", cn: "饿", py: "è", cat: "meixi" },
+    { it: "Sete", cn: "渴", py: "kě", cat: "meixi" },
+    { it: "Pericolo", cn: "危险", py: "wēixiǎn", cat: "meixi" },
+    { it: "Contento / Felice", cn: "高兴", py: "gāoxìng", cat: "meixi" },
+    { it: "Cliente / Ospite", cn: "客", py: "kè", cat: "meixi" },
+    { it: "Cliente (negozio)", cn: "顾客", py: "gùkè", cat: "meixi" },
+    { it: "Alto / Basso", cn: "高低", py: "gāodī", cat: "meixi" },
+    { it: "Sazio", cn: "饱", py: "bǎo", cat: "meixi" },
+    { it: "Naso", cn: "鼻子", py: "bízi", cat: "meixi" },
+    { it: "Piede", cn: "足", py: "zú", cat: "meixi" },
+    { it: "Piede grande", cn: "大足", py: "dà zú", cat: "meixi" },
+    { it: "Fuoco", cn: "火", py: "huǒ", cat: "meixi" },
+    { it: "Arrabbiarsi", cn: "发火", py: "fā huǒ", cat: "meixi" },
+    { it: "Fuoco forte / persona irascibile", cn: "火头大", py: "huǒ tóu dà", cat: "meixi" },
+    { it: "Incendio", cn: "大火", py: "dà huǒ", cat: "meixi" },
+    { it: "Erba", cn: "草", py: "cǎo", cat: "meixi" },
+    { it: "16 (sedici)", cn: "十六", py: "shíliù", cat: "meixi" },
+    { it: "60 (sessanta)", cn: "六十", py: "liùshí", cat: "meixi" },
+    { it: "Ieri", cn: "昨天", py: "zuótiān", cat: "meixi" },
+    { it: "Presto / Buongiorno", cn: "早", py: "zǎo", cat: "meixi" },
+    { it: "Essere in un luogo", cn: "在", py: "zài", cat: "meixi" },
+    { it: "Non avere / Non esserci", cn: "没有", py: "méiyǒu", cat: "meixi" },
+    { it: "Superlativo (il più…)", cn: "最", py: "zuì", cat: "meixi" },
+    { it: "Chi? (interrogativo)", cn: "谁", py: "shéi", cat: "meixi" },
+    { it: "Insegnante", cn: "老师", py: "lǎoshī", cat: "meixi" },
+    { it: "Numero di cellulare", cn: "手机号码", py: "shǒujī hàomǎ", cat: "meixi" },
+    { it: "Buongiorno a voi", cn: "你们早", py: "nǐmen zǎo", cat: "meixi" },
+    { it: "Oggi non ci sono più TV b/n", cn: "今天没有黑白电视了", py: "jīntiān méiyǒu hēibái diànshì le", cat: "meixi" },
+    { it: "Ieri ero alla riunione", cn: "昨天在聚会", py: "zuótiān zài jù huì", cat: "meixi" },
+];
+const CLASSIFIERS_FULL = [
+    { cn: "个", py: "gè", use: "Generico: persone, oggetti comuni. Per rispetto verso le persone si usa 位 (wèi).", ex: "一个人 — una persona" },
+    { cn: "本", py: "běn", use: "Volumi, libri, riviste, quaderni, opuscoli.", ex: "一本书 — un libro" },
+    { cn: "份", py: "fèn", use: "Copie, volantini, giornali, contratti, porzioni di cibo.", ex: "一份传单 — un volantino" },
+    { cn: "张", py: "zhāng", use: "Cose piane: foglio, biglietto, tavolo, letto, foto, carta, manifesto.", ex: "五张照片 — cinque foto" },
+    { cn: "支", py: "zhī", use: "Cose a forma di bacchetta: penne, matite, candele.", ex: "两支笔 — due penne" },
+    { cn: "把", py: "bǎ", use: "Cose che si impugnano: sedia, chiave, coltello, ombrello.", ex: "一把椅子 — una sedia" },
+    { cn: "座", py: "zuò", use: "Montagne, grandi costruzioni, ponti, edifici storici.", ex: "一座山 — una montagna" },
+    { cn: "条", py: "tiáo", use: "Cose lunghe e strette: strade, cravatte, pesci, spaghetti, fiumi, pantaloni.", ex: "一条路 — una strada" },
+    { cn: "辆", py: "liàng", use: "Veicoli a ruote: auto, bus, camion, bici, moto.", ex: "一辆车 — un'auto" },
+    { cn: "只", py: "zhī", use: "Animali di piccola e media taglia: gatto, cane, formica, uccello.", ex: "一只猫 — un gatto" },
+    { cn: "头", py: "tóu", use: "Animali di grossa taglia: elefante, mucca, maiale.", ex: "一头大象 — un elefante" },
+    { cn: "匹", py: "pǐ", use: "Cavalli, muli e tessuti.", ex: "一匹马 — un cavallo" },
+    { cn: "件", py: "jiàn", use: "Faccende, impegni, avvenimenti, capi di abbigliamento.", ex: "一件事 — una faccenda" },
+    { cn: "块", py: "kuài", use: "Pezzi, fette, tavolette: fetta di torta, pezzo di sapone.", ex: "一块蛋糕 — una fetta di torta" },
+    { cn: "篇", py: "piān", use: "Articoli, racconti, testi, saggi.", ex: "一篇文章 — un articolo" },
+    { cn: "节", py: "jié", use: "Versetti biblici, sezioni, lezioni. Per più versetti: 段 (duàn).", ex: "5 节 — versetto 5" },
+    { cn: "首", py: "shǒu", use: "Cantici, poesie, canzoni.", ex: "三首诗歌 — cantico n. 3" },
+    { cn: "杯", py: "bēi", use: "Bicchieri, tazze e contenuto di essi.", ex: "一杯茶 — una tazza di tè" },
+    { cn: "瓶", py: "píng", use: "Bottiglie e contenuto di esse.", ex: "一瓶水 — una bottiglia d'acqua" },
+    { cn: "位", py: "wèi", use: "Persone (forma cortese e rispettosa).", ex: "一位老师 — un insegnante" },
+    { cn: "双", py: "shuāng", use: "Coppie, paia: scarpe, bacchette, occhi.", ex: "一双鞋 — un paio di scarpe" },
+    { cn: "套", py: "tào", use: "Set completi, collezioni: set di mobili, serie di libri.", ex: "一套家具 — un set di mobili" },
+    { cn: "封", py: "fēng", use: "Lettere, buste, fax.", ex: "一封信 — una lettera" },
+    { cn: "幅", py: "fú", use: "Quadri, dipinti, immagini, fotografie.", ex: "一幅画 — un dipinto" },
+    { cn: "台", py: "tái", use: "Macchinari, apparecchi, computer, TV.", ex: "一台电脑 — un computer" },
+    { cn: "棵", py: "kē", use: "Alberi e piante.", ex: "一棵树 — un albero" },
+    { cn: "朵", py: "duǒ", use: "Fiori e nuvole.", ex: "一朵花 — un fiore" },
+    { cn: "顿", py: "dùn", use: "Pasti.", ex: "一顿饭 — un pasto" },
+    { cn: "间", py: "jiān", use: "Stanze, locali, ambienti.", ex: "一间房 — una stanza" },
+    { cn: "所", py: "suǒ", use: "Edifici, istituzioni (scuole, ospedali).", ex: "一所学校 — una scuola" },
+    { cn: "家", py: "jiā", use: "Famiglie, negozi, aziende, ristoranti.", ex: "一家餐厅 — un ristorante" },
+    { cn: "群", py: "qún", use: "Gruppi di persone o animali.", ex: "一群人 — un gruppo di persone" },
+    { cn: "对", py: "duì", use: "Coppie (di persone o cose accoppiate).", ex: "一对夫妻 — una coppia sposata" },
+    { cn: "次", py: "cì", use: "Volte, occorrenze.", ex: "一次机会 — un'opportunità" },
+    { cn: "场", py: "chǎng", use: "Spettacoli, partite, eventi.", ex: "一场比赛 — una partita" },
+    { cn: "层", py: "céng", use: "Strati, piani di un edificio.", ex: "一层楼 — un piano" },
+];
+const VOCAB = [...BASE, ...EXTRA, ...MEIXI];
 const vkey = (w) => w.cn + "|" + w.it;
 const CATS = [
     { id: "all", label: "Tutte" },
@@ -647,6 +930,7 @@ const CATS = [
     { id: "teo", label: "Teocratici" },
     { id: "agg", label: "Aggettivi" },
     { id: "varie", label: "Varie" },
+    { id: "meixi", label: "Corso MeiXi" },
 ];
 const PRONOUNS = [
     { cn: "我", py: "wǒ", it: "io" },
@@ -2389,6 +2673,194 @@ function Pronuncia() {
                 React.createElement(H, { c: "\u6C49\u5B57" }),
                 " h\u00E0nz\u00EC."))));
 }
+function ClassificatoriSection() {
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u91CF\u8BCD", it: "Classificatori \u00B7 li\u00E0ngc\u00ED" }),
+        React.createElement("p", { className: "mb-4 text-sm text-stone-500" },
+            "I ",
+            React.createElement(H, { c: "\u91CF\u8BCD" }),
+            " li\u00E0ngc\u00ED (classificatori o parole di misura) sono obbligatori in cinese tra un numero (o dimostrativo) e il nome. Struttura: ",
+            React.createElement("b", null, "numero + classificatore + nome"),
+            ". Se non sai quale usare, ",
+            React.createElement(H, { c: "\u4E2A" }),
+            " g\u00E8 \u00E8 il jolly generico."),
+        React.createElement("div", { className: "space-y-3" }, CLASSIFIERS_FULL.map((c, i) => (React.createElement("div", { key: i, className: "rounded-2xl border border-stone-200 bg-white p-4 shadow-sm" },
+            React.createElement("div", { className: "flex items-center gap-3" },
+                React.createElement("span", { className: "flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-800 text-white shadow-md", style: { fontFamily: cn, fontSize: "1.6rem" } }, c.cn),
+                React.createElement("div", { className: "flex-1" },
+                    React.createElement("div", { className: "flex items-center gap-2" },
+                        React.createElement("span", { className: "text-lg font-bold text-stone-800" }, c.py),
+                        React.createElement(Speak, { text: c.cn, size: 16 })),
+                    React.createElement("div", { className: "text-sm text-stone-600" }, c.use))),
+            React.createElement("div", { className: "mt-2 rounded-lg bg-stone-50 px-3 py-2 text-sm" },
+                React.createElement("span", { className: "text-stone-900", style: { fontFamily: cn, fontSize: "1.1rem" } }, c.ex.split(" — ")[0]),
+                React.createElement("span", { className: "text-stone-500" },
+                    " \u2014 ",
+                    c.ex.split(" — ")[1]))))))));
+}
+function MeiXiSection() {
+    const [mode, setMode] = useState("flash");
+    const [dir, setDir] = useState("it2cn");
+    const [subCat, setSubCat] = useState("all");
+    const [deck, setDeck] = useState(() => shuffle(MEIXI));
+    const [pos, setPos] = useState(0);
+    const [flipped, setFlipped] = useState(false);
+    const [finished, setFinished] = useState(false);
+    const [score, setScore] = useState({ ok: 0, ko: 0 });
+
+    const MEIXI_CATS = [
+        { id: "all", label: "Tutte" },
+        { id: "pronomi", match: /^(Tu$|Io$|Lui|Lei \(|Voi$|Noi$)/i },
+        { id: "famiglia", match: /^(Pap|Mam|Frat|Sorel|Nonn|Tesor)/i },
+        { id: "animali", match: /^(Gatt|Can[e ]|Caval|Mucc|Conigl|Gallin|Gabb|Tigr)/i },
+        { id: "cibo", match: /^(Ris[o ]|Soia|Latt|Caff|Vin|Angur|Per[a ]|Buon.*mangia|Buon.*bere|Cibo|Cucin|Bevand)/i },
+        { id: "aggettivi", match: /^(Bianc|Nero|Grand|Piccol|Ben[e ]|Non buon|Alto|Tropp|Piccan|Amar|Bianco.*nero|Bell)/i },
+        { id: "verbi", match: /^(Esser|Aver[e ]|Mangia|Ber[e ]|Compra|Vender|Fare$|Andar|Venir|Guard|Ascolt|Parla|Legger|Scriv|Impar|Saper|Volar|Correr|Abbrac|Piang|Aprir|Inizi|Alzar|Seder|Ripos|Ripar|Salvar|Contin|Prend|Tirar|Pensar|Radun|Cavalc|Piacer|Scalare|Sollev|Avere paur|Lavar|Non so far|È scapp|Non ho com)/i },
+        { id: "corpo", match: /^(Bocc|Pel[ie]|Test|Sopracc|Cappel|Occh|Pell|Barb|Panc|Femm|Naso|Pied)/i },
+        { id: "oggetti", match: /^(Libr|Penn|Tazz|Bors|Cellu|Telev|Aere|Pantal|Sciar|Rivist|Pallon)/i },
+        { id: "numeri", match: /^\d|^(uno|due|tre|quat|cinq|sei$|sett|otto|nov|diec|sedic|sessan)/i },
+        { id: "tempo", match: /^(Oggi$|Settim|Giorn|Anno$|Stagion|Autun|Ogni|Ieri$|Prest)/i },
+        { id: "grammatica", match: /^(Non \(|Anche|Partic|Dare|Class|Due \(|Quant|Quest|Poter|Sinist|Sbagl|Ideog|Parol[a ]|Amor[e ]|Essere in|Non aver|Superl|Chi\?)/i },
+        { id: "frasi", match: /^(Ho fame|Hai fame|Mi manc|Mangi picc|Piover|Quante pers|Hai la bar|Non so vol|Hai sete|Ho sete|Corri|La vostra|Ti piac|Possiam|Oggi ho|La mamma|Sei saz|Papà mi|Buongior|non ci|riunion|Numero di)/i },
+    ];
+
+    const poolFor = (c) => {
+        if (c === "all") return MEIXI;
+        const found = MEIXI_CATS.find((x) => x.id === c);
+        if (!found || !found.match) return MEIXI;
+        return MEIXI.filter((w) => found.match.test(w.it));
+    };
+
+    const rebuild = (c) => {
+        const pool = poolFor(c);
+        setDeck(shuffle(pool.length > 0 ? pool : MEIXI));
+        setPos(0);
+        setFlipped(false);
+        setFinished(false);
+        setScore({ ok: 0, ko: 0 });
+    };
+
+    const card = deck[pos];
+    const next = (good) => {
+        setScore((s) => good ? { ...s, ok: s.ok + 1 } : { ...s, ko: s.ko + 1 });
+        if (pos + 1 >= deck.length) {
+            setFinished(true);
+        } else {
+            setPos((p) => p + 1);
+            setFlipped(false);
+        }
+    };
+
+    // Vocabulary list grouping
+    const cats = {};
+    MEIXI.forEach((w) => {
+        const key = w.cn + w.py;
+        if (!cats[key]) cats[key] = w;
+    });
+    const unique = Object.values(cats);
+    const grouped = {};
+    unique.forEach((w) => {
+        const label =
+            /[\u4F60\u6211\u4ED6\u5979][\u4EEC]?$/.test(w.cn) && w.it.match(/^(Tu|Io|Lui|Lei|Voi|Noi)/) ? "Pronomi" :
+            w.it.match(/^(Pap|Mam|Frat|Sorel|Nonn|Tesor)/i) ? "Famiglia" :
+            w.it.match(/^(Gatt|Can[e ]|Caval|Mucc|Conigl|Gallin|Gabb|Tigr)/i) ? "Animali" :
+            w.it.match(/^(Ris[o ]|Soia|Latt|Caff|Vin|Angur|Per[a ]|Buon.*mangia|Buon.*bere|Cibo|Cucin|Bevand)/i) ? "Cibo & Bevande" :
+            w.it.match(/^(Bianc|Nero|Grand|Piccol|Ben[e ]|Non buon|Alto|Tropp|Piccan|Amar|Bianco.*nero|Bell)/i) ? "Aggettivi" :
+            w.it.match(/^(Esser|Aver[e ]|Mangia|Ber[e ]|Compra|Vender|Fare$|Andar|Venir|Guard|Ascolt|Parla|Legger|Scriv|Impar|Saper|Volar|Correr|Abbrac|Piang|Aprir|Inizi|Alzar|Seder|Ripos|Ripar|Salvar|Contin|Prend|Tirar|Pensar|Radun|Cavalc|Piacer|Scalare|Sollev|Avere paur|Lavar)/i) ? "Verbi" :
+            w.it.match(/^(Bocc|Pel[ie]|Test|Sopracc|Cappel|Occh|Pell|Barb|Panc|Femm|Naso|Pied)/i) ? "Corpo" :
+            w.it.match(/^(Libr|Penn|Tazz|Bors|Cellu|Telev|Aere|Pantal|Sciar|Rivist|Pallon)/i) ? "Oggetti" :
+            w.it.match(/^(Strad|Mare|Palazz|Roma)/i) ? "Luoghi" :
+            w.it.match(/^\d|^(uno|due|tre|quat|cinq|sei$|sett|otto|nov|diec|sedic|sessan)/i) ? "Numeri" :
+            w.it.match(/^(Oggi|Settim|Giorn|Anno|Stagion|Autun|Ogni|Ieri|Prest)/i) ? "Tempo" :
+            w.it.match(/^(Non |Anche|Partic|Dare|Class|Due |Quant|Quest|Poter|Sinist|Sbagl|Ideog|Parol|Amor|Essere in|Non aver|Superl|Chi)/i) ? "Grammatica" :
+            w.it.match(/^(Ho fame|Hai fame|Mi manc|Mangi|Piover|Quante pers|Hai la bar|Non so vol|Hai sete|Ho sete|Corri|La vostra|Ti piac|Possiam|Oggi ho|La mamma|Sei saz|Pap.*rivi|Buongior|non ci|riunion|Numero)/i) ? "Frasi" :
+            w.it.match(/^(Pall[a ]|Pallav|Sollev.*pall)/i) ? "Sport" :
+            w.it.match(/^(Manda|Lingua|Caratter|Sistema|Cinese|Frase$)/i) ? "Cultura & Lingua" :
+            "Vari";
+        if (!grouped[label]) grouped[label] = [];
+        grouped[label].push(w);
+    });
+    const order = ["Pronomi","Famiglia","Animali","Cibo & Bevande","Aggettivi","Verbi","Corpo","Oggetti","Luoghi","Numeri","Tempo","Grammatica","Frasi","Sport","Cultura & Lingua","Vari"];
+
+    return (React.createElement("div", { className: "mx-auto max-w-xl" },
+        React.createElement(SectionTitle, { cnLabel: "\u7F8E\u6668\u8BFE\u7A0B", it: "Corso MeiXi \u00B7 m\u011Bix\u012B k\u00E8ch\u00E9ng" }),
+        React.createElement("div", { className: "mb-4 flex gap-2" },
+            React.createElement("button", { onClick: () => setMode("flash"), className: `flex-1 flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-semibold transition active:scale-95 ${mode === "flash" ? "bg-red-800 text-white shadow" : "border border-stone-300 bg-white text-stone-500"}` },
+                React.createElement(BookOpen, { size: 16 }),
+                " Flashcard"),
+            React.createElement("button", { onClick: () => setMode("vocab"), className: `flex-1 flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-semibold transition active:scale-95 ${mode === "vocab" ? "bg-red-800 text-white shadow" : "border border-stone-300 bg-white text-stone-500"}` },
+                React.createElement(ScrollText, { size: 16 }),
+                " Vocabolario")),
+
+        mode === "flash" ? React.createElement("div", { className: "mx-auto max-w-md" },
+            React.createElement("div", { className: "mb-3 overflow-x-auto", style: { scrollbarWidth: "none" } },
+                React.createElement("div", { className: "flex gap-1.5" }, MEIXI_CATS.map((c) => (React.createElement("button", { key: c.id, onClick: () => { setSubCat(c.id); rebuild(c.id); }, className: `shrink-0 rounded-full px-3 py-1.5 text-xs font-medium transition active:scale-95 ${subCat === c.id ? "bg-stone-800 text-white shadow" : "border border-stone-300 bg-white text-stone-500 hover:text-stone-800"}` }, c.id === "all" ? "Tutte" : c.id.charAt(0).toUpperCase() + c.id.slice(1)))))),
+            React.createElement("div", { className: "mb-4 flex items-center justify-between gap-3" },
+                React.createElement("button", { onClick: () => setDir(dir === "it2cn" ? "cn2it" : "it2cn"), className: "inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white px-4 py-2 text-sm font-medium text-stone-700 shadow-sm transition hover:border-red-300 hover:text-red-700 active:scale-95" },
+                    React.createElement(ArrowRightLeft, { size: 16 }),
+                    dir === "it2cn" ? "ITA → 中文" : "中文 → ITA"),
+                deck.length > 0 && !finished && React.createElement("span", { className: "text-sm font-medium text-stone-400" },
+                    pos + 1,
+                    " / ",
+                    deck.length)),
+            finished ? React.createElement("div", { className: "text-center" },
+                React.createElement("div", { className: "mb-4 text-6xl" }, "\uD83C\uDF89"),
+                React.createElement("h3", { className: "mb-2 text-2xl font-bold text-stone-800", style: { fontFamily: display } }, "Mazzo completato!"),
+                React.createElement("p", { className: "mb-2 text-stone-500" },
+                    "Hai ripassato ",
+                    deck.length,
+                    " parole."),
+                React.createElement("div", { className: "mb-6 flex justify-center gap-4 text-sm" },
+                    React.createElement("span", { className: "inline-flex items-center gap-1 text-emerald-600" },
+                        React.createElement(Check, { size: 15 }),
+                        " ",
+                        score.ok,
+                        " sapute"),
+                    React.createElement("span", { className: "inline-flex items-center gap-1 text-amber-600" },
+                        React.createElement(Star, { size: 15 }),
+                        " ",
+                        score.ko,
+                        " da rivedere")),
+                React.createElement("button", { onClick: () => rebuild(subCat), className: "inline-flex items-center gap-2 rounded-full bg-red-800 px-6 py-3 font-semibold text-white shadow-lg shadow-red-900/20 transition hover:bg-red-900 active:scale-95" },
+                    React.createElement(Shuffle, { size: 18 }),
+                    " Rimescola"))
+            : deck.length === 0 ? React.createElement("div", { className: "rounded-3xl border border-dashed border-stone-300 bg-white p-10 text-center text-stone-500" },
+                React.createElement("div", { className: "mb-2 text-4xl" }, "\uD83C\uDF31"),
+                "Nessuna parola in questa categoria.")
+            : React.createElement(React.Fragment, null,
+                React.createElement("div", { className: "mb-5 h-1.5 w-full overflow-hidden rounded-full bg-stone-200" },
+                    React.createElement("div", { className: "h-full rounded-full bg-gradient-to-r from-red-700 to-amber-500 transition-all duration-300", style: { width: `${(pos / deck.length) * 100}%` } })),
+                React.createElement("div", { onClick: () => setFlipped((f) => !f), className: "relative flex min-h-[18rem] cursor-pointer select-none flex-col items-center justify-center rounded-3xl border border-stone-200 bg-white p-8 text-center shadow-xl shadow-stone-300/40 transition active:scale-[0.98]" },
+                    React.createElement("span", { className: "absolute right-4 top-4 text-[11px] font-medium uppercase tracking-widest text-stone-300" }, flipped ? "risposta" : "domanda"),
+                    !flipped ? (React.createElement("div", { className: "flex flex-col items-center gap-3" },
+                        dir === "cn2it" ? (React.createElement(React.Fragment, null,
+                            React.createElement("div", { className: "text-stone-900", style: { fontFamily: cn, fontSize: "3.5rem", lineHeight: 1.1 } }, card.cn),
+                            React.createElement(Speak, { text: card.cn, size: 22 }))) : (React.createElement("div", { className: "text-stone-800", style: { fontFamily: display, fontSize: "2.1rem" } }, card.it)),
+                        React.createElement("span", { className: "mt-2 text-xs text-stone-400" }, "tocca per girare"))) : (React.createElement("div", { className: "flex flex-col items-center gap-2" }, dir === "it2cn" ? (React.createElement(React.Fragment, null,
+                        React.createElement("span", { className: "text-red-800", style: { fontFamily: cn, fontSize: "3.25rem", lineHeight: 1.1 } }, card.cn),
+                        React.createElement(Speak, { text: card.cn, size: 22 }),
+                        React.createElement("span", { className: "text-lg italic text-stone-500" }, card.py))) : (React.createElement(React.Fragment, null,
+                        React.createElement("div", { className: "text-stone-800", style: { fontFamily: display, fontSize: "2rem" } }, card.it),
+                        React.createElement("span", { className: "text-lg italic text-stone-500" }, card.py)))))),
+                React.createElement("div", { className: "mt-6 grid grid-cols-2 gap-3" },
+                    React.createElement("button", { onClick: () => next(false), className: "inline-flex items-center justify-center gap-2 rounded-2xl border border-amber-300 bg-amber-50 py-3.5 font-semibold text-amber-700 shadow-sm transition hover:bg-amber-100 active:scale-95" },
+                        React.createElement(Star, { size: 18 }),
+                        " Da rivedere"),
+                    React.createElement("button", { onClick: () => next(true), className: "inline-flex items-center justify-center gap-2 rounded-2xl bg-emerald-600 py-3.5 font-semibold text-white shadow-lg shadow-emerald-700/20 transition hover:bg-emerald-700 active:scale-95" },
+                        React.createElement(Check, { size: 18 }),
+                        " Lo so"))))
+
+        : React.createElement(React.Fragment, null,
+            React.createElement("p", { className: "mb-4 text-sm text-stone-500" },
+                "Vocabolario completo del corso MeiXi: ",
+                MEIXI.length,
+                " parole organizzate per argomento. Tocca ",
+                React.createElement(Volume2, { size: 12, className: "inline" }),
+                " per ascoltare la pronuncia."),
+            order.filter((k) => grouped[k]).map((k) => (React.createElement("div", { key: k, className: "mb-5" },
+                React.createElement("h3", { className: "mb-2 text-sm font-medium uppercase tracking-widest text-stone-400" }, k),
+                React.createElement(CardBox, null, grouped[k].map((w, i) => React.createElement(RefRow, { key: i, cnText: w.cn, py: w.py, it: w.it })))))))));
+}
 function Methods() {
     return (React.createElement("div", { className: "mx-auto max-w-xl" },
         React.createElement(SectionTitle, { cnLabel: "\u65B9\u6CD5", it: "Metodi di studio del corso" }),
@@ -2436,6 +2908,8 @@ const TABS = [
     { id: "teocratici", label: "Teocratici", icon: Library },
     { id: "chengyu", label: "Proverbi", icon: Quote },
     { id: "pron", label: "Pronuncia", icon: Languages },
+    { id: "classificatori", label: "Classificatori", icon: Layers },
+    { id: "meixi", label: "Corso MeiXi", icon: School },
     { id: "metodi", label: "Metodi", icon: Lightbulb },
 ];
 function App() {
@@ -2519,6 +2993,8 @@ function App() {
             tab === "bibbia" && React.createElement(Bible, null),
             tab === "teocratici" && React.createElement(Teocratic, null),
             tab === "chengyu" && React.createElement(Chengyu, null),
+            tab === "classificatori" && React.createElement(ClassificatoriSection, null),
+            tab === "meixi" && React.createElement(MeiXiSection, null),
             tab === "pron" && React.createElement(Pronuncia, null),
             tab === "metodi" && React.createElement(Methods, null)),
         React.createElement("footer", { className: "pb-8 text-center text-xs text-stone-400" },
